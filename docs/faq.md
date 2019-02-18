@@ -35,8 +35,8 @@ If you are starting zec-qt-wallet for the first time, then you can choose the **
 If you have an existing data directory you would like to move, you can achieve this through the following steps, with zec-qt-wallet closed:
 
 * Create the new directory
-* Copy everything in your [existing data directory](/faq/#where-is-the-default-data-directory-on-each-platform) to the new location
-* Update [zcash.conf](/using-zec-qt-wallet/#customising-zcashconf) to add the line `datadir=/your/new/path` specifying the path to the newly created folder
+* Move everything in your [existing data directory](/faq/#where-is-the-default-data-directory-on-each-platform) to the new location with the exception of `zcash.conf` which must remain in the original data directory location.
+* Update [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) to add the line `datadir=/your/new/path` specifying the path to the newly created folder
 * Restart zec-qt-wallet
 
 ### Can I move the params directory?
