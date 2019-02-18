@@ -1,0 +1,12 @@
+/* Increase the size of the logo */
+a.md-logo img {
+
+    width: 40px;
+    height: 40px;
+    margin-top: -5px;
+}
+
+/* Increase size of social media links in page footer */
+.md-footer-social {
+    font-size: 20px;
+}
