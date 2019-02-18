@@ -32,7 +32,7 @@ If your node isn't syncing or is slow to sync, first check that you are running 
 
 ![zec-qt-wallet connections](images/connections.png)
 
-You can also find this information in the **zcashd** tab on the main menu (if you are running the embedded `zcashd`) and it will list the number of connections to other peers which should be greater than 0. If you do not have any connections then check your internet connection, then check that the [ports required](/troubleshooting/#zcashd-ports) for `zcashd` are not blocked and that you have not specified a TOR connection in the options but do not have TOR running.
+You can also find this information in the **zcashd** tab on the main menu (if you are running the embedded `zcashd`) and it will list the number of connections to other peers, which should be greater than 0. If you do not have any connections then check your internet connection, then check that the [ports required](/troubleshooting/#zcashd-ports) for `zcashd` are not blocked and that you have not specified a TOR connection in the options but do not have TOR running.
 
 If you are still having issues, then look in the [debug log](/troubleshooting/#the-zcashd-debug-log) to identify any error messages.
 
@@ -95,11 +95,11 @@ Once the rescan has been completed and the external `zcashd` node has been stopp
 
 ### Editing `zcash.conf`
 
-As an alternative to the external `zcashd` you can edit the [`zcash.conf` file](/using-zec-qt-wallet/#customising-zcashconf) and add the line `rescan=1` and then start and stop zec-qt-wallet normally. After you have opened zec-qt-wallet and the rescan is complete you must remove the line from `zcash.conf` to prevent the wallet from rescanning every time it is opened.
+As an alternative to the external `zcashd` you can edit the [`zcash.conf` file](/using-zec-qt-wallet/#customising-zcashconf) and add the line `rescan=1` and then start zec-qt-wallet normally. After you have opened zec-qt-wallet and the rescan is complete you must remove the line from `zcash.conf` to prevent the wallet from rescanning every time it is opened and close zec-qt-wallet as normal.
 
 ## How to perform a reindex
 
-A reindex is sometimes required when the blockchain data becomes corrupted or you wish to enable certain features. When a reindex happens the full blockchain is redownloaded (~22GB) so it will take some time to complete and should only be performed where absolutely necessary.
+A reindex is sometimes required when the blockchain data becomes corrupted or you wish to enable certain features. When a reindex happens the full blockchain is redownloaded so it will take some time to complete and should only be performed where absolutely necessary.
 
 To complete a reindex simply [follow the instruction for a wallet rescan](/troubleshooting/#how-to-perform-a-wallet-rescan) replacing `-rescan` with `-reindex`.
 
