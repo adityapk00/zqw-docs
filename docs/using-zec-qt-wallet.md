@@ -80,20 +80,20 @@ To export a single private key on the **Balance** tab right click on the address
 
 You can export all private keys for addresses in your wallet by choosing the **File->Export all private keys** menu option. This will provide a list of all private keys in the wallet.
 
-Note that by default when `zcashd` starts it creates 100 transparent addresses for the keypool for use as change addresses hence this list will always contain at least 100 transparent address keys, not all of which have been used. 
+Note that by default when `zcashd` starts it creates 100 transparent addresses for the keypool for use as change addresses, hence this list will always contain at least 100 transparent address keys, not all of which have been used. 
 
 ### Backing up wallet.dat
 
 You can backup all of your private keys by making a copy of the `wallet.dat` file. To restore, you then replace any existing `wallet.dat` file in the [data directory](/faq/#where-is-the-default-data-directory-on-each-platform) and start zec-qt-wallet as normal. 
 
 !!! danger "Create a new backup after each new address generated"
-    As new addresses are generated you will need to create an updated backup else the new private keys will not be included.
+    As new addresses are generated you will need to create an updated backup, else the new private keys will not be included.
 
-While this is a convenient method of backing up, it means that you are restricted to importing to software compatible with `zcashd` and also if you have many addresses that are unused it will slow rescanning of the wallet over say importing only your addresses with funds.
+While this is a convenient method of backing up, it means that you are restricted to importing to software compatible with `zcashd` and also if you have many addresses that are unused it will slow rescanning of the wallet over importing only your addresses with funds.
 
 ## Importing private keys
 
-To import a private key, choose the **Import private key** from the File main menu. You may paste in multiple keys, one per line that will be imported into the wallet. Note that depending on the number of keys to import and if they are shielded addresses it may take some time for the import to be completed.
+To import a private key, choose **File->Import private key** from the menu. You may paste in multiple keys, one per line that will be imported into the wallet. Note that depending on the number of keys to import and if they are shielded addresses it may take some time for the import to be completed.
 
 ![Import private key](images/import-private-key.png)
 
@@ -105,7 +105,7 @@ zec-qt wallet has a number of options that allow you to customise how the applic
 
 ### Remember shielded transactions
 
-By default `zcashd` will not store information about your outgoing fully shielded transactions (z->z). By default, zec-qt-wallet will store outgoing transactions locally so that any shielded spends will appear in the transactions tab. If you do not wish these transactions to be saved by zec-qt-wallet simply toggle the option for **Remember shielded transactions**. At any point, you may clear your shielded transaction history locally by choosing the **Clear History** button (there is no way of recovering this data once cleared).
+By default `zcashd` will not store information about your outgoing fully shielded transactions (z->z). If this option is selected, zec-qt-wallet will store outgoing transactions locally so that any shielded spends will appear in the transactions tab. If you do not wish these transactions to be saved by zec-qt-wallet simply toggle the option for **Remember shielded transactions**. At any point, you may clear your shielded transaction history locally by choosing the **Clear History** button (there is no way of recovering this data once cleared).
 
 ### Allow custom fees
 
@@ -113,7 +113,7 @@ Choose this option to allow the ability to change the default 0.0001 ZEC transac
 
 ### Shield change to your Sapling address
 
-Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address which can lead to your funds being spread over multiple addresses. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the **Shield change from t-Addresses to your sapling address** option. As for transparent addresses this was a measure to preserve privacy and prevent trivial linking of transactions on the blockchain shielded (z) addresses do not have this property and any change is returned to the sending address.
+Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address which can lead to your funds being spread over multiple addresses. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the **Shield change from t-Addresses to your sapling address** option. This was implemented in Bitcoin (and inherited in Zcash transparent addresses) as a privacy measure to prevent trivial linking of transactions on the blockchain so shielded (z) addresses do not have this property and any change is returned to the sending (z) address.
 
 ### Connect via TOR
 
@@ -121,17 +121,17 @@ When using Zcash [it does nothing to preserve your network level privacy](https:
 
 You will first need to have TOR installed which you may do from the [official site](https://www.torproject.org/download/download.html). You will need to download and run the TOR Expert Bundle (not TOR browser). TOR is also available on all popular package managers, e.g. macOS `brew install tor` or Debian `apt install tor`.
 
-Once running choose the option in zec-qt-wallet to **Connect via TOR** and the following line will be added to your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file to configure TOR usage `proxy=127.0.0.1:9050`. Restart `zcashd`  to enable the service running over TOR.
+Once running, choose the option in zec-qt-wallet to **Connect via TOR** and the following line will be added to your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file to configure TOR usage `proxy=127.0.0.1:9050`. Restart zec-qt-wallet to enable the service running over TOR.
 
 Use the advanced options when installing zec-qt-wallet to run `zcashd` over TOR from the initial startup, so your IP is never exposed to the network.
 
 !!! warning "Parameters are not currently downloaded over TOR"
-    As per this [issue](https://github.com/ZcashFoundation/zec-qt-wallet/issues/97) the Zcash parameters that are downloaded on the first launch are not done so over TOR. 
+    The Zcash parameters that are downloaded on the first launch are not done so over TOR depending on your network configuration.
 
 
 #### Onion Nodes
 
-You can connect to Zcash nodes only behind onion addresses by adding the following into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file which will ensure that your IP address is not exposed to any Zcash-related services when running `zcashd`.
+You can connect to Zcash nodes only behind onion addresses by adding the following into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file, which will ensure that your IP address is not exposed to any Zcash-related services when running zec-qt-wallet.
 
 ```
 proxy=127.0.0.1:9050
@@ -186,8 +186,9 @@ If you receive a transaction with a memo that contains a [reply address](#/using
 
 zec-qt-wallet allows you to export all transactions via the **File->Export Transactions** menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: 
 
-| Type   | Address  | Date/Time    | Amount    | Memo   |
-| ---    | ---      | ---          | ---       | ---    |
+| Type    | Address | Date/Time                | Amount | Memo               |
+| ---     | ---     | ---                      | ---    | ---                |
+| receive | zs123...| Sun Feb 17 13:42:38 2019 | 10 ZEC | I am a secret memo |
 
 ## Apps
 
@@ -205,7 +206,7 @@ See the [page on the turnstile migration](#turnstile-migration) for full details
 
 ## Customising `zcash.conf`
 
-The `zcash.conf` file may be used to customise how the `zcashd` software behaves. There are many [configuration options available](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html). When zec-qt-wallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random rpcpassword. The location of `zcash.conf` varies by system. It is located in the following location on each platform:
+The `zcash.conf` file may be used to customise how the underlying `zcashd` software behaves. There are many [configuration options available](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html). When zec-qt-wallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random rpcpassword. The location of `zcash.conf` varies by system. It is located in the following location on each platform:
 
 * Windows: `%HOMEPATH%\AppData\Roaming\Zcash\zcash.conf`
 * macOS: `~/Library/Application Support/Zcash/zcash.conf`
@@ -215,7 +216,7 @@ The `zcash.conf` file may be used to customise how the `zcashd` software behaves
 
 If you have an external `zcashd` running zec-qt-wallet will attempt to connect to it automatically. If this fails you can manually set the required settings via the **Edit->Settings** menu item and specifying the connection details in the **zcashd connection** tab.
 
-Note that the easiest way to connect to a remote node is probably to ssh to it with port forwarding:
+Note that the easiest way to connect to a remote node is to SSH to it with port forwarding:
 
 ``` bash
 ssh -L8232:127.0.0.1:8232 user@remotehost
