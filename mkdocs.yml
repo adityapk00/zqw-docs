@@ -1,0 +1,61 @@
+# Project information
+site_name: 'zec-qt-wallet Docs'
+site_description: 'zec-qt-wallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS'
+site_author: 'Zcash Foundation'
+site_url: 'https://github.com/ZcashFoundation/zec-qt-wallet'
+
+# Repository
+repo_name: 'adityapk00/zqw-docs'
+repo_url: 'https://github.com/adityapk00/zqw-docs'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'teal'
+    accent: 'teal'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  logo: 'images/logo.svg'
+  favicon: 'images/favicon.ico'  
+
+# Customization
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/ZcashFoundation/zec-qt-wallet/'
+    - type: 'twitter'
+      link: 'https://twitter.com/zecqtwallet'
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.footnotes
+  - markdown.extensions.smarty
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite
+  - markdown.extensions.toc:
+      permalink: true
+  - markdown.extensions.tables
+  - pymdownx.details
+
+# Additional 
+copyright: If you wish to improve these docs, please <a href="https://github.com/adityapk00/zqw-docs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/adityapk00/zqw-docs/compare"><i class="fa fa-github"></i> send a pull request</a>
+
+extra_css:
+  - css/style.css
+
+# Fix the navigation
+nav:
+  - Home: index.md
+  - Installation:
+    - Installing on Windows, Mac and Linux: installation.md
+    - Compiling from source: compile-from-source.md
+    - Setting up a build environment: setting-up-build-env.md
+  - Using zec-qt-wallet: using-zec-qt-wallet.md
+  - Troubleshooting Issues: troubleshooting.md
+  - Turnstile Migration: turnstile-migration.md
+  - Android Companion App: android.md
+  - Translating zec-qt-wallet: translations.md
+  - FAQ: faq.md
