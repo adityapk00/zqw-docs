@@ -7,26 +7,26 @@ zec-qt-wallet runs on Windows, macOS and Linux and is [available to download](ht
 
 ??? info "Windows instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and run the .msi installer (named `Windows-installer-zec-qt-wallet-v0.5.9.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the release binary (named `Windows-binaries-zec-qt-wallet-v0.5.9.zip`), unzip it and double click on zec-qt-wallet to start.
+    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and run the .msi installer (named `Windows-installer-zec-qt-wallet-v0.5.10.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the release binary (named `Windows-binaries-zec-qt-wallet-v0.5.10.zip`), unzip it and double click on zec-qt-wallet to start.
 
 ??? info "macOS instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the macOS release named `macOS-zec-qt-wallet-v0.5.9.dmg`
+    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the macOS release named `macOS-zec-qt-wallet-v0.5.10.dmg`
     and double-click on the .dmg file to open it, and drag zec-qt-wallet on to the Applications link to install. You will need to give authorisation for the program to run.
 
 ??? info "Linux instructions (click to expand)"
 
     If you are on Debian/Ubuntu, download the `.deb` package and install it.
     
-    `sudo dpkg -i linux-deb-zec-qt-wallet-v0.5.9.deb`
+    `sudo dpkg -i linux-deb-zec-qt-wallet-v0.5.10.deb`
     
     `sudo apt install -f`
 
     Or you can download and run the binaries directly.
     
-    `tar -xvf zec-qt-wallet-v0.5.9.tar.gz`
+    `tar -xvf zec-qt-wallet-v0.5.10.tar.gz`
     
-    `./zec-qt-wallet-v0.5.9/zec-qt-wallet` 
+    `./zec-qt-wallet-v0.5.10/zec-qt-wallet` 
 
 ## zcashd
 
