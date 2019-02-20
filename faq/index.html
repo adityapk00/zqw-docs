@@ -1,0 +1,1260 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="zec-qt-wallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
+      
+      
+        <link rel="canonical" href="https://github.com/ZcashFoundation/zec-qt-wallet/faq/">
+      
+      
+        <meta name="author" content="Zcash Foundation">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+    
+    
+      
+        <title>FAQ - zec-qt-wallet Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#faq" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.com/ZcashFoundation/zec-qt-wallet" title="zec-qt-wallet Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              zec-qt-wallet Docs
+            </span>
+            <span class="md-header-nav__topic">
+              FAQ
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/adityapk00/zqw-docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    adityapk00/zqw-docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://github.com/ZcashFoundation/zec-qt-wallet" title="zec-qt-wallet Docs" class="md-nav__button md-logo">
+      
+        <img src="../images/logo.svg" width="48" height="48">
+      
+    </a>
+    zec-qt-wallet Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/adityapk00/zqw-docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    adityapk00/zqw-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installing on Windows, Mac and Linux" class="md-nav__link">
+      Installing on Windows, Mac and Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../compile-from-source/" title="Compiling from source" class="md-nav__link">
+      Compiling from source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setting-up-build-env/" title="Setting up a build environment" class="md-nav__link">
+      Setting up a build environment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-nav__link">
+      Using zec-qt-wallet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting/" title="Troubleshooting Issues" class="md-nav__link">
+      Troubleshooting Issues
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../turnstile-migration/" title="Turnstile Migration" class="md-nav__link">
+      Turnstile Migration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../android/" title="Android Companion App" class="md-nav__link">
+      Android Companion App
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../translations/" title="Translating zec-qt-wallet" class="md-nav__link">
+      Translating zec-qt-wallet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        FAQ
+      </label>
+    
+    <a href="./" title="FAQ" class="md-nav__link md-nav__link--active">
+      FAQ
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-do-i-download-the-software" title="Where do I download the software?" class="md-nav__link">
+    Where do I download the software?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-version-should-i-download" title="Which version should I download?" class="md-nav__link">
+    Which version should I download?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockchain" title="Blockchain" class="md-nav__link">
+    Blockchain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-zec-qt-wallet-a-light-client" title="Is zec-qt-wallet a light client?" class="md-nav__link">
+    Is zec-qt-wallet a light client?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-large-is-the-blockchain" title="How large is the blockchain?" class="md-nav__link">
+    How large is the blockchain?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-change-the-location-of-the-data-directory" title="Can I change the location of the data directory?" class="md-nav__link">
+    Can I change the location of the data directory?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-move-the-params-directory" title="Can I move the params directory?" class="md-nav__link">
+    Can I move the params directory?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactions" title="Transactions" class="md-nav__link">
+    Transactions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-funds-with-zero-confirmations" title="Can I use funds with zero confirmations?" class="md-nav__link">
+    Can I use funds with zero confirmations?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-a-custom-fee" title="Can I use a custom fee?" class="md-nav__link">
+    Can I use a custom fee?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-difference-between-transparent-sprout-and-sapling-addresses" title="What's the difference between Transparent, Sprout and Sapling addresses?" class="md-nav__link">
+    What's the difference between Transparent, Sprout and Sapling addresses?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-long-does-a-sapling-transaction-take" title="How long does a Sapling transaction take?" class="md-nav__link">
+    How long does a Sapling transaction take?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zcashd-node" title="zcashd node" class="md-nav__link">
+    zcashd node
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-is-the-default-data-directory-on-each-platform" title="Where is the default data directory on each platform?" class="md-nav__link">
+    Where is the default data directory on each platform?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-is-zcashconf-located" title="Where is zcash.conf located?" class="md-nav__link">
+    Where is zcash.conf located?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-zec-qt-wallet-with-an-external-node" title="Can I use zec-qt-wallet with an external node?" class="md-nav__link">
+    Can I use zec-qt-wallet with an external node?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-find-the-version-of-zcashd-that-i-am-running" title="How do I find the version of zcashd that I am running?" class="md-nav__link">
+    How do I find the version of zcashd that I am running?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-zec-qt-wallet-work-on-testnet" title="Does zec-qt-wallet work on testnet?" class="md-nav__link">
+    Does zec-qt-wallet work on testnet?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-zec-qt-wallet-support-payment-disclosure" title="Does zec-qt-wallet support payment disclosure?" class="md-nav__link">
+    Does zec-qt-wallet support payment disclosure?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-zec-qt-wallet-support-viewing-keys" title="Does zec-qt-wallet support viewing keys?" class="md-nav__link">
+    Does zec-qt-wallet support viewing keys?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet" title="Wallet" class="md-nav__link">
+    Wallet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-the-wallet-encrypted" title="Is the wallet encrypted?" class="md-nav__link">
+    Is the wallet encrypted?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-my-change-go-to-a-new-address" title="Why does my change go to a new address?" class="md-nav__link">
+    Why does my change go to a new address?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#will-zec-qt-wallet-remember-my-outgoing-shielded-sends" title="Will zec-qt wallet remember my outgoing shielded sends?" class="md-nav__link">
+    Will zec-qt wallet remember my outgoing shielded sends?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-read-a-memo" title="How do I read a memo?" class="md-nav__link">
+    How do I read a memo?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-zec-qt-wallet-with-a-hardware-wallet" title="Can I use zec-qt-wallet with a hardware wallet?" class="md-nav__link">
+    Can I use zec-qt-wallet with a hardware wallet?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-remove-an-address-from-the-wallet" title="Can I remove an address from the wallet?" class="md-nav__link">
+    Can I remove an address from the wallet?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-phrases" title="Seed phrases" class="md-nav__link">
+    Seed phrases
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-i-import-private-keys-from-a-recovery-phrase-bip39-mnemonic" title="Can I import private keys from a recovery phrase / BIP39 Mnemonic?" class="md-nav__link">
+    Can I import private keys from a recovery phrase / BIP39 Mnemonic?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-export-a-bip39-seed-phrase" title="Can I export a BIP39 seed phrase?" class="md-nav__link">
+    Can I export a BIP39 seed phrase?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-export-the-sapling-hd-seed" title="Can I export the Sapling HD seed?" class="md-nav__link">
+    Can I export the Sapling HD seed?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-import-the-sapling-hd-seed" title="Can I import the Sapling HD seed?" class="md-nav__link">
+    Can I import the Sapling HD seed?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-mine-with-zec-qt-wallet" title="Can I mine with zec-qt-wallet?" class="md-nav__link">
+    Can I mine with zec-qt-wallet?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#winzec" title="WinZEC" class="md-nav__link">
+    WinZEC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-upgrade-from-winzec" title="How do I upgrade from WinZEC?" class="md-nav__link">
+    How do I upgrade from WinZEC?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-import-the-winzec-address-book" title="Can I import the WinZEC address book?" class="md-nav__link">
+    Can I import the WinZEC address book?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-what-languages-is-zec-qt-wallet-available" title="In what languages is zec-qt-wallet available?" class="md-nav__link">
+    In what languages is zec-qt-wallet available?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-do-i-download-the-software" title="Where do I download the software?" class="md-nav__link">
+    Where do I download the software?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-version-should-i-download" title="Which version should I download?" class="md-nav__link">
+    Which version should I download?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockchain" title="Blockchain" class="md-nav__link">
+    Blockchain
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-zec-qt-wallet-a-light-client" title="Is zec-qt-wallet a light client?" class="md-nav__link">
+    Is zec-qt-wallet a light client?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-large-is-the-blockchain" title="How large is the blockchain?" class="md-nav__link">
+    How large is the blockchain?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-change-the-location-of-the-data-directory" title="Can I change the location of the data directory?" class="md-nav__link">
+    Can I change the location of the data directory?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-move-the-params-directory" title="Can I move the params directory?" class="md-nav__link">
+    Can I move the params directory?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transactions" title="Transactions" class="md-nav__link">
+    Transactions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-funds-with-zero-confirmations" title="Can I use funds with zero confirmations?" class="md-nav__link">
+    Can I use funds with zero confirmations?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-a-custom-fee" title="Can I use a custom fee?" class="md-nav__link">
+    Can I use a custom fee?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-difference-between-transparent-sprout-and-sapling-addresses" title="What's the difference between Transparent, Sprout and Sapling addresses?" class="md-nav__link">
+    What's the difference between Transparent, Sprout and Sapling addresses?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-long-does-a-sapling-transaction-take" title="How long does a Sapling transaction take?" class="md-nav__link">
+    How long does a Sapling transaction take?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zcashd-node" title="zcashd node" class="md-nav__link">
+    zcashd node
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-is-the-default-data-directory-on-each-platform" title="Where is the default data directory on each platform?" class="md-nav__link">
+    Where is the default data directory on each platform?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-is-zcashconf-located" title="Where is zcash.conf located?" class="md-nav__link">
+    Where is zcash.conf located?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-zec-qt-wallet-with-an-external-node" title="Can I use zec-qt-wallet with an external node?" class="md-nav__link">
+    Can I use zec-qt-wallet with an external node?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-find-the-version-of-zcashd-that-i-am-running" title="How do I find the version of zcashd that I am running?" class="md-nav__link">
+    How do I find the version of zcashd that I am running?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-zec-qt-wallet-work-on-testnet" title="Does zec-qt-wallet work on testnet?" class="md-nav__link">
+    Does zec-qt-wallet work on testnet?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-zec-qt-wallet-support-payment-disclosure" title="Does zec-qt-wallet support payment disclosure?" class="md-nav__link">
+    Does zec-qt-wallet support payment disclosure?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#does-zec-qt-wallet-support-viewing-keys" title="Does zec-qt-wallet support viewing keys?" class="md-nav__link">
+    Does zec-qt-wallet support viewing keys?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wallet" title="Wallet" class="md-nav__link">
+    Wallet
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-the-wallet-encrypted" title="Is the wallet encrypted?" class="md-nav__link">
+    Is the wallet encrypted?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-does-my-change-go-to-a-new-address" title="Why does my change go to a new address?" class="md-nav__link">
+    Why does my change go to a new address?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#will-zec-qt-wallet-remember-my-outgoing-shielded-sends" title="Will zec-qt wallet remember my outgoing shielded sends?" class="md-nav__link">
+    Will zec-qt wallet remember my outgoing shielded sends?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-read-a-memo" title="How do I read a memo?" class="md-nav__link">
+    How do I read a memo?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-use-zec-qt-wallet-with-a-hardware-wallet" title="Can I use zec-qt-wallet with a hardware wallet?" class="md-nav__link">
+    Can I use zec-qt-wallet with a hardware wallet?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-remove-an-address-from-the-wallet" title="Can I remove an address from the wallet?" class="md-nav__link">
+    Can I remove an address from the wallet?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-phrases" title="Seed phrases" class="md-nav__link">
+    Seed phrases
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-i-import-private-keys-from-a-recovery-phrase-bip39-mnemonic" title="Can I import private keys from a recovery phrase / BIP39 Mnemonic?" class="md-nav__link">
+    Can I import private keys from a recovery phrase / BIP39 Mnemonic?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-export-a-bip39-seed-phrase" title="Can I export a BIP39 seed phrase?" class="md-nav__link">
+    Can I export a BIP39 seed phrase?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-export-the-sapling-hd-seed" title="Can I export the Sapling HD seed?" class="md-nav__link">
+    Can I export the Sapling HD seed?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-import-the-sapling-hd-seed" title="Can I import the Sapling HD seed?" class="md-nav__link">
+    Can I import the Sapling HD seed?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-mine-with-zec-qt-wallet" title="Can I mine with zec-qt-wallet?" class="md-nav__link">
+    Can I mine with zec-qt-wallet?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#winzec" title="WinZEC" class="md-nav__link">
+    WinZEC
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-upgrade-from-winzec" title="How do I upgrade from WinZEC?" class="md-nav__link">
+    How do I upgrade from WinZEC?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-import-the-winzec-address-book" title="Can I import the WinZEC address book?" class="md-nav__link">
+    Can I import the WinZEC address book?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-what-languages-is-zec-qt-wallet-available" title="In what languages is zec-qt-wallet available?" class="md-nav__link">
+    In what languages is zec-qt-wallet available?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/adityapk00/zqw-docs/edit/master/docs/faq.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="where-do-i-download-the-software">Where do I download the software?<a class="headerlink" href="#where-do-i-download-the-software" title="Permanent link">&para;</a></h3>
+<p>zec-qt-wallet is available to download from the <a href="https://github.com/ZcashFoundation/zec-qt-wallet">Zcash Foundation Github repository</a>. The <a href="https://github.com/ZcashFoundation/zec-qt-wallet/releases">releases page</a> lists the latest available downloads for each platform.</p>
+<p>The Android application, which is still in beta, may be downloaded <a href="https://github.com/adityapk00/zqwandroid/releases">from here</a>.</p>
+<h3 id="which-version-should-i-download">Which version should I download?<a class="headerlink" href="#which-version-should-i-download" title="Permanent link">&para;</a></h3>
+<p>See the <a href="/installation/#download-and-install">installation</a> section for more details specific for your platform.</p>
+<h2 id="blockchain">Blockchain<a class="headerlink" href="#blockchain" title="Permanent link">&para;</a></h2>
+<h3 id="is-zec-qt-wallet-a-light-client">Is zec-qt-wallet a light client?<a class="headerlink" href="#is-zec-qt-wallet-a-light-client" title="Permanent link">&para;</a></h3>
+<p>No, zec-qt-wallet requires a full <code>zcashd</code> node to operate. A <a href="https://z.cash/blog/zcash-reference-wallet-light-client-protocol/">light client protocol</a> is currently in development that would substantially reduce the storage and bandwidth requirements for a light wallet. Currently, to use shielded transactions, you need to run a full node.</p>
+<h3 id="how-large-is-the-blockchain">How large is the blockchain?<a class="headerlink" href="#how-large-is-the-blockchain" title="Permanent link">&para;</a></h3>
+<p>Currently, the blockchain data directory is around 22GB (Feb 2019) and will continue to grow with time.</p>
+<h3 id="can-i-change-the-location-of-the-data-directory">Can I change the location of the data directory?<a class="headerlink" href="#can-i-change-the-location-of-the-data-directory" title="Permanent link">&para;</a></h3>
+<p>If you are starting zec-qt-wallet for the first time, then you can choose the <strong>Advanced Config</strong> option and select the desired location of your data directory, which may, for example, be on a separate disk. </p>
+<p><img alt="Choose data directory" src="../images/choose-data-dir.png" /></p>
+<p>If you have an existing data directory you would like to move, you can achieve this through the following steps, with zec-qt-wallet closed:</p>
+<ul>
+<li>Create the new directory</li>
+<li>Move everything in your <a href="/faq/#where-is-the-default-data-directory-on-each-platform">existing data directory</a> to the new location with the exception of <code>zcash.conf</code> which must remain in the original data directory location.</li>
+<li>Update <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> to add the line <code>datadir=/your/new/path</code> specifying the path to the newly created folder</li>
+<li>Restart zec-qt-wallet</li>
+</ul>
+<h3 id="can-i-move-the-params-directory">Can I move the params directory?<a class="headerlink" href="#can-i-move-the-params-directory" title="Permanent link">&para;</a></h3>
+<p>No, unlike the data directory there is no configurable option to specify the params directory and <code>zcashd</code> expects the params directory to be in the following locations:</p>
+<ul>
+<li>Windows: <code>%HOMEPATH%\AppData\Roaming\ZcashParams</code></li>
+<li>macOS: <code>~/Library/Application Support/ZcashParams</code></li>
+<li>Linux: <code>~/.zcash-params</code></li>
+</ul>
+<p>The folder should contain the following files and all are (currently) required for <code>zcashd</code> to function.</p>
+<div class="codehilite"><pre><span></span>3.5M sapling-output.params
+46M  sapling-spend.params
+692M sprout-groth16.params
+869M sprout-proving.key
+1.5K sprout-verifying.key
+</pre></div>
+
+
+<p>As a workaround, you can use any filesystem operations for your OS, e.g. creating a symlink of the directory but these are unsupported.</p>
+<h2 id="transactions">Transactions<a class="headerlink" href="#transactions" title="Permanent link">&para;</a></h2>
+<h3 id="can-i-use-funds-with-zero-confirmations">Can I use funds with zero confirmations?<a class="headerlink" href="#can-i-use-funds-with-zero-confirmations" title="Permanent link">&para;</a></h3>
+<p>No, Zcash requires that you have at least 1 confirmation before sending. Trying to spend unconfirmed funds will <a href="/troubleshooting/#not-enough-balance-when-sending-transactions">result in an error</a>.</p>
+<h3 id="can-i-use-a-custom-fee">Can I use a custom fee?<a class="headerlink" href="#can-i-use-a-custom-fee" title="Permanent link">&para;</a></h3>
+<p>Yes, though it is advised to use the default 0.0001 fee to prevent your transactions from being distinguishable, you may override this behaviour in the app <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a>.</p>
+<h3 id="whats-the-difference-between-transparent-sprout-and-sapling-addresses">What&rsquo;s the difference between Transparent, Sprout and Sapling addresses?<a class="headerlink" href="#whats-the-difference-between-transparent-sprout-and-sapling-addresses" title="Permanent link">&para;</a></h3>
+<p>Transparent addresses start with a <strong>t</strong> prefix and are transparent like Bitcoin and offer no privacy properties. Sprout addresses have a <strong>zc</strong> prefix and are the first generation of shielded addresses. Sprout addresses have been superseded by Sapling addresses which have a <strong>zs</strong> prefix. While Sprout addresses may still be used, it is recommended to use Sapling addresses due to the <a href="/faq/#how-long-does-a-sapling-transaction-take">performance improvements</a> and updated system parameters. To move funds between Sprout and Sapling addresses see the <a href="/turnstile-migration/">turnstile migration documentation</a>. For more detailed information on the types of addresses in Zcash <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html">see this page</a>.</p>
+<p>Note that on testnet, transparent addresses have a prefix <strong>tm</strong>, Sprout have a <strong>zt</strong> prefix and Sapling <strong>ztestsapling</strong>.</p>
+<h3 id="how-long-does-a-sapling-transaction-take">How long does a Sapling transaction take?<a class="headerlink" href="#how-long-does-a-sapling-transaction-take" title="Permanent link">&para;</a></h3>
+<p>Sapling greatly reduced the time taken to perform shielded proofs down to just a few seconds though this value does depend on hardware and the number of shielded inputs/outputs. Sending from a transparent address to a Sapling one is typically completed in under 0.5 seconds. Legacy Sprout transactions take in the order of 70-90 seconds but this is also dependent on hardware and the number of JoinSplits. For more information see <a href="https://z.cash/blog/reducing-shielded-proving-time-in-sapling/">this post</a>.</p>
+<h2 id="zcashd-node">zcashd node<a class="headerlink" href="#zcashd-node" title="Permanent link">&para;</a></h2>
+<h3 id="where-is-the-default-data-directory-on-each-platform">Where is the default data directory on each platform?<a class="headerlink" href="#where-is-the-default-data-directory-on-each-platform" title="Permanent link">&para;</a></h3>
+<p>By default, the location of the data directory, which stores the wallet, <code>zcash.conf</code> and all blockchain data, is found in the following locations. It is possible to <a href="/faq/#can-i-change-the-location-of-the-data-directory">move this data directory</a>.</p>
+<ul>
+<li>Windows: <code>%HOMEPATH%\AppData\Roaming\Zcash</code></li>
+<li>macOS: <code>~/Library/Application Support/Zcash</code></li>
+<li>Linux: <code>~/.zcash</code></li>
+</ul>
+<h3 id="where-is-zcashconf-located">Where is <code>zcash.conf</code> located?<a class="headerlink" href="#where-is-zcashconf-located" title="Permanent link">&para;</a></h3>
+<p><code>zcash.conf</code> is located in the <a href="/faq/#where-is-the-default-data-directory-on-each-platform">default data directory</a> and will be in this location even if the <code>datadir</code> parameter has been set to a custom value.</p>
+<h3 id="can-i-use-zec-qt-wallet-with-an-external-node">Can I use zec-qt-wallet with an external node?<a class="headerlink" href="#can-i-use-zec-qt-wallet-with-an-external-node" title="Permanent link">&para;</a></h3>
+<p>Yes, see <a href="/using-zec-qt-wallet/#connecting-to-an-external-zcashd">this section</a> for how to connect to an external <code>zcashd</code>.</p>
+<h3 id="how-do-i-find-the-version-of-zcashd-that-i-am-running">How do I find the version of zcashd that I am running?<a class="headerlink" href="#how-do-i-find-the-version-of-zcashd-that-i-am-running" title="Permanent link">&para;</a></h3>
+<p>To find the version of <code>zcashd</code> you are running simply hover over the blockchain data in the lower right-hand corner and a popup will appear with the <code>zcashd</code> version string:</p>
+<p><img alt="zcashd version" src="../images/zcashd-version.png" /></p>
+<h3 id="does-zec-qt-wallet-work-on-testnet">Does zec-qt-wallet work on testnet?<a class="headerlink" href="#does-zec-qt-wallet-work-on-testnet" title="Permanent link">&para;</a></h3>
+<p>Yes, zec-qt-wallet will work on testnet. To do so add the following lines to your <a href="using-zec-qt-wallet/#customising-zcashconf">zcash.conf</a> file, replacing the existing values if present:</p>
+<div class="codehilite"><pre><span></span><span class="nv">addnode</span><span class="o">=</span>testnet.z.cash
+<span class="nv">testnet</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+
+
+<h3 id="does-zec-qt-wallet-support-payment-disclosure">Does zec-qt-wallet support payment disclosure?<a class="headerlink" href="#does-zec-qt-wallet-support-payment-disclosure" title="Permanent link">&para;</a></h3>
+<p>Not yet. While <a href="https://z.cash/blog/viewing-keys-selective-disclosure/">payment disclosure</a> works on Sprout addresses, <code>zcashd</code> has not yet been updated to support Sapling. There is <a href="https://github.com/ZcashFoundation/zec-qt-wallet/issues/47">a plan to support this</a> once implemented by <code>zcashd</code>.</p>
+<h3 id="does-zec-qt-wallet-support-viewing-keys">Does zec-qt-wallet support viewing keys?<a class="headerlink" href="#does-zec-qt-wallet-support-viewing-keys" title="Permanent link">&para;</a></h3>
+<p>Not yet, as <code>zcashd</code> doesn’t currently support Sapling viewing keys and will be implemented in zec-qt-wallet once supported.</p>
+<h2 id="wallet">Wallet<a class="headerlink" href="#wallet" title="Permanent link">&para;</a></h2>
+<h3 id="is-the-wallet-encrypted">Is the wallet encrypted?<a class="headerlink" href="#is-the-wallet-encrypted" title="Permanent link">&para;</a></h3>
+<p>No, wallet encryption is <a href="https://github.com/zcash/zcash/blob/master/doc/security-warnings.md#wallet-encryption">currently disabled</a> by <code>zcashd</code>. You should use full-disk encryption (or encryption of your home directory) to protect your <code>wallet.dat</code> file at rest, and should assume (even unprivileged) users who are running on your OS can read your <code>wallet.dat</code> file.</p>
+<h3 id="why-does-my-change-go-to-a-new-address">Why does my change go to a new address?<a class="headerlink" href="#why-does-my-change-go-to-a-new-address" title="Permanent link">&para;</a></h3>
+<p>Like Bitcoin when using transparent addresses, change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the application <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a>. As the &lsquo;feature&rsquo; was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.</p>
+<h3 id="will-zec-qt-wallet-remember-my-outgoing-shielded-sends">Will zec-qt wallet remember my outgoing shielded sends?<a class="headerlink" href="#will-zec-qt-wallet-remember-my-outgoing-shielded-sends" title="Permanent link">&para;</a></h3>
+<p>Yes, by default zec-qt-wallet will store shielded sends locally as <code>zcashd</code> does not provide this information. You can override this behaviour via the <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a> setting and you can remove any stored transactions at any time by choosing the <strong>Clear History</strong> button (note that these will not be later recoverable if you delete them).</p>
+<h3 id="how-do-i-read-a-memo">How do I read a memo?<a class="headerlink" href="#how-do-i-read-a-memo" title="Permanent link">&para;</a></h3>
+<p>If there is a <a href="/using-zec-qt-wallet/#encrypted-memo-field">memo</a> attached to a transaction then it will be visible by a message icon in the transaction listing. Simply right-click the transaction and choose <strong>View Memo</strong> to read its encrypted contents.</p>
+<p><img alt="Memo" src="../images/memo.png" /></p>
+<h3 id="can-i-use-zec-qt-wallet-with-a-hardware-wallet">Can I use zec-qt-wallet with a hardware wallet?<a class="headerlink" href="#can-i-use-zec-qt-wallet-with-a-hardware-wallet" title="Permanent link">&para;</a></h3>
+<p>No, this is currently not supported.</p>
+<h3 id="can-i-remove-an-address-from-the-wallet">Can I remove an address from the wallet?<a class="headerlink" href="#can-i-remove-an-address-from-the-wallet" title="Permanent link">&para;</a></h3>
+<p>No, addresses cannot be removed from the wallet. It is advised that you <a href="/using-zec-qt-wallet/#export-a-single-private-key">export the private keys</a> for addresses you are interested in and then delete the <code>wallet.dat</code> file. You can then <a href="/using-zec-qt-wallet/#importing-private-keys">import the private keys</a> you require in a fresh, empty wallet.</p>
+<h3 id="seed-phrases">Seed phrases<a class="headerlink" href="#seed-phrases" title="Permanent link">&para;</a></h3>
+<h4 id="can-i-import-private-keys-from-a-recovery-phrase-bip39-mnemonic">Can I import private keys from a recovery phrase / BIP39 Mnemonic?<a class="headerlink" href="#can-i-import-private-keys-from-a-recovery-phrase-bip39-mnemonic" title="Permanent link">&para;</a></h4>
+<p>No, zec-qt-wallet cannot import private keys from a recovery phrase directly. To do so you will need to extract your private keys from the recovery phrase. You can use a tool such as <a href="https://iancoleman.io/bip39/">https://iancoleman.io/bip39/</a> entering the BIP39 Mnemonic (your recovery phrase) and choosing Zcash as the coin.</p>
+<p>Once you have entered these values look for the section entitled <strong>Derived Addresses</strong> which will list all the derived addresses and private keys for those addresses. You will need to <a href="using-zec-qt-wallet/#importing-private-keys">import the private keys</a> for any transparent addresses where you have funds, remembering that <a href="/faq/#why-does-my-change-go-to-a-new-address">change in transparent addresses goes to a new address</a>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Be very careful with your recovery seed</p>
+<p>Access to your recovery seed allows anyone to steal all of your Zcash. Though the tool listed above runs locally in your browser and is fully open source, you can always <a href="https://iancoleman.io/bip39/">save the HTML</a> file and run on an airgapped offline device for extra security.</p>
+</div>
+<h4 id="can-i-export-a-bip39-seed-phrase">Can I export a BIP39 seed phrase?<a class="headerlink" href="#can-i-export-a-bip39-seed-phrase" title="Permanent link">&para;</a></h4>
+<p>No, this is not supported.</p>
+<h4 id="can-i-export-the-sapling-hd-seed">Can I export the Sapling HD seed?<a class="headerlink" href="#can-i-export-the-sapling-hd-seed" title="Permanent link">&para;</a></h4>
+<p>Sapling does <a href="https://z.cash/blog/sapling-in-hd/">implement a HD wallet</a> however at present the only way to extract this is to perform the <code>z_exportwallet</code> command via <code>zcashd</code> and is unsupported in zec-qt-wallet due to needing to write to an export directory. To extract the Sapling HD seed you need to run <code>zcash-cli z_exportwallet</code> after specifying an <code>exportdir</code> in <code>zcash.conf</code>. See <a href="/troubleshooting/#via-an-external-zcashd">these instructions</a> for more details on working with the Zcash RPC CLI. </p>
+<h4 id="can-i-import-the-sapling-hd-seed">Can I import the Sapling HD seed?<a class="headerlink" href="#can-i-import-the-sapling-hd-seed" title="Permanent link">&para;</a></h4>
+<p>Not at present, however, this feature will be added when supported by <code>zcashd</code>.</p>
+<h3 id="can-i-mine-with-zec-qt-wallet">Can I mine with zec-qt-wallet?<a class="headerlink" href="#can-i-mine-with-zec-qt-wallet" title="Permanent link">&para;</a></h3>
+<p>No, zec-qt-wallet is a wallet and full node. While you can configure <code>zcashd</code> to run the inbuilt CPU miner this isn&rsquo;t practical to run on mainnet and you need alternative hardware and software to run. See <a href="https://www.zcashcommunity.com/mining/">this page</a> for more information on mining.</p>
+<h2 id="winzec">WinZEC<a class="headerlink" href="#winzec" title="Permanent link">&para;</a></h2>
+<h3 id="how-do-i-upgrade-from-winzec">How do I upgrade from WinZEC?<a class="headerlink" href="#how-do-i-upgrade-from-winzec" title="Permanent link">&para;</a></h3>
+<p><a href="http://winzec.com/">WinZEC</a> has now been deprecated. You can simply install zec-qt-wallet and it&rsquo;ll use the existing data directory and wallet from WinZEC and operate as normal.</p>
+<h3 id="can-i-import-the-winzec-address-book">Can I import the WinZEC address book?<a class="headerlink" href="#can-i-import-the-winzec-address-book" title="Permanent link">&para;</a></h3>
+<p>Yes, in the <a href="/using-zec-qt-wallet/#address-book">address book</a> click to <strong>Import Address Book</strong> and browse to the location of the WinZEC address book file. By default this will be <code>%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv</code> where <code>%/HOMEPATH%</code> is typically <code>C:\Users\username\</code> and you may need to enable viewing hidden files to browse to the <code>AppData</code> folder location.</p>
+<p><img alt="Import address book" src="../images/import-address-book.png" /></p>
+<h2 id="in-what-languages-is-zec-qt-wallet-available">In what languages is zec-qt-wallet available?<a class="headerlink" href="#in-what-languages-is-zec-qt-wallet-available" title="Permanent link">&para;</a></h2>
+<p>Currently, it is available in French, Spanish and Portuguese. If you want to help by translating see the <a href="/translations/">Translating zec-qt-wallet</a> page.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../translations/" title="Translating zec-qt-wallet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Translating zec-qt-wallet
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            If you wish to improve these docs, please <a href="https://github.com/adityapk00/zqw-docs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/adityapk00/zqw-docs/compare"><i class="fa fa-github"></i> send a pull request</a>
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b806dc00.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

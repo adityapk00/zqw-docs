@@ -1,0 +1,877 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="zec-qt-wallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
+      
+      
+        <link rel="canonical" href="https://github.com/ZcashFoundation/zec-qt-wallet/setting-up-build-env/">
+      
+      
+        <meta name="author" content="Zcash Foundation">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+    
+    
+      
+        <title>Setting up a build environment - zec-qt-wallet Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#setting-up-a-build-environment" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.com/ZcashFoundation/zec-qt-wallet" title="zec-qt-wallet Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              zec-qt-wallet Docs
+            </span>
+            <span class="md-header-nav__topic">
+              Setting up a build environment
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/adityapk00/zqw-docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    adityapk00/zqw-docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://github.com/ZcashFoundation/zec-qt-wallet" title="zec-qt-wallet Docs" class="md-nav__button md-logo">
+      
+        <img src="../images/logo.svg" width="48" height="48">
+      
+    </a>
+    zec-qt-wallet Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/adityapk00/zqw-docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    adityapk00/zqw-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installing on Windows, Mac and Linux" class="md-nav__link">
+      Installing on Windows, Mac and Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../compile-from-source/" title="Compiling from source" class="md-nav__link">
+      Compiling from source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Setting up a build environment
+      </label>
+    
+    <a href="./" title="Setting up a build environment" class="md-nav__link md-nav__link--active">
+      Setting up a build environment
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-openssl" title="Compile OpenSSL" class="md-nav__link">
+    Compile OpenSSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-build-of-qt5" title="Static build of Qt5" class="md-nav__link">
+    Static build of Qt5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-mxe-cross-compiled-qt5-for-windows-in-linux" title="Build MXE (Cross-compiled Qt5 for Windows in Linux)" class="md-nav__link">
+    Build MXE (Cross-compiled Qt5 for Windows in Linux)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-zec-qt-wallet" title="Build zec-qt-wallet" class="md-nav__link">
+    Build zec-qt-wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-zcashd-for-embedded-zcashd" title="Compiling zcashd for embedded zcashd" class="md-nav__link">
+    Compiling zcashd for embedded zcashd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-environment" title="Setup Environment" class="md-nav__link">
+    Setup Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-release-build" title="Make release build" class="md-nav__link">
+    Make release build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" title="macOS" class="md-nav__link">
+    macOS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-zcashd" title="Building zcashd" class="md-nav__link">
+    Building zcashd
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-unified-build" title="Running the unified build" class="md-nav__link">
+    Running the unified build
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-nav__link">
+      Using zec-qt-wallet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting/" title="Troubleshooting Issues" class="md-nav__link">
+      Troubleshooting Issues
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../turnstile-migration/" title="Turnstile Migration" class="md-nav__link">
+      Turnstile Migration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../android/" title="Android Companion App" class="md-nav__link">
+      Android Companion App
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../translations/" title="Translating zec-qt-wallet" class="md-nav__link">
+      Translating zec-qt-wallet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#linux" title="Linux" class="md-nav__link">
+    Linux
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-requisites" title="Pre-requisites" class="md-nav__link">
+    Pre-requisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compile-openssl" title="Compile OpenSSL" class="md-nav__link">
+    Compile OpenSSL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-build-of-qt5" title="Static build of Qt5" class="md-nav__link">
+    Static build of Qt5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-mxe-cross-compiled-qt5-for-windows-in-linux" title="Build MXE (Cross-compiled Qt5 for Windows in Linux)" class="md-nav__link">
+    Build MXE (Cross-compiled Qt5 for Windows in Linux)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-zec-qt-wallet" title="Build zec-qt-wallet" class="md-nav__link">
+    Build zec-qt-wallet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compiling-zcashd-for-embedded-zcashd" title="Compiling zcashd for embedded zcashd" class="md-nav__link">
+    Compiling zcashd for embedded zcashd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-environment" title="Setup Environment" class="md-nav__link">
+    Setup Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-release-build" title="Make release build" class="md-nav__link">
+    Make release build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macos" title="macOS" class="md-nav__link">
+    macOS
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-zcashd" title="Building zcashd" class="md-nav__link">
+    Building zcashd
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows" title="Windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-unified-build" title="Running the unified build" class="md-nav__link">
+    Running the unified build
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/adityapk00/zqw-docs/edit/master/docs/setting-up-build-env.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="setting-up-a-build-environment">Setting up a build environment<a class="headerlink" href="#setting-up-a-build-environment" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h2>
+<h3 id="pre-requisites">Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h3>
+<p>It is best to set up a build environment on Ubuntu 16.04. It brings the right versions of libc and libstdc++ that ensures maximum compatibility. You can build on newer versions of Linux distros, but binaries compiled on these platforms may not work on older versions.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># build dependencies</span>
+sudo apt install clang g++ build-essential make mingw-w64 git pkg-config libc6-dev m4 g++-multilib autoconf libtool-bin ncurses-dev unzip python python-zmq zlib1g-dev wget curl bsdmainutils automake libgl1-mesa-dev libglu1-mesa-dev libfontconfig1-dev autopoint libssl-dev
+
+<span class="c1"># MXE dependencies</span>
+sudo apt install bash bison bzip2 flex  gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev libltdl-dev  libtool-bin libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby sed unzip wget xz-utils
+</pre></div>
+
+
+<h3 id="compile-openssl">Compile OpenSSL<a class="headerlink" href="#compile-openssl" title="Permanent link">&para;</a></h3>
+<p>You need to compile a static version of OpenSSL, which is passed to the Qt5 configuration script.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Download openssl 1.0.2</span>
+./Configure linux-x86_64
+make
+</pre></div>
+
+
+<h3 id="static-build-of-qt5">Static build of Qt5<a class="headerlink" href="#static-build-of-qt5" title="Permanent link">&para;</a></h3>
+<p>Download Qt5 sources</p>
+<div class="codehilite"><pre><span></span>mkdir -p ~/Qt/5.11.2 <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/Qt/5.11.2
+
+wget https://download.qt.io/archive/qt/5.11/5.11.2/single/qt-everywhere-src-5.11.2.tar.xz
+tar xvf qt-everywhere-src-5.11.2.tar.xz <span class="o">&amp;&amp;</span> <span class="nb">cd</span> qt-everywhere-src-5.11.2
+</pre></div>
+
+
+<p>Configure and build Qt5 statically.</p>
+<div class="codehilite"><pre><span></span><span class="nv">OPENSSL_LIBS</span><span class="o">=</span><span class="s1">&#39;-L/path/to/openssl-1.0.2q -lssl -lcrypto&#39;</span> ./configure -static -prefix ~/Qt/5.11.2/static  -skip qtlocation -skip qtmacextras -skip qtpurchasing -skip qtscript -skip qtsensors -skip qtserialbus -skip qtserialport -skip qtspeech -skip qtdatavis3d -skip qtdoc -skip qtcharts -skip qtdeclarative -skip qt3d -skip qtwebengine -skip qtandroidextras -skip qtwebview -skip qtgamepad -skip qtquickcontrols -skip qtquickcontrols2 -skip qtremoteobjects -skip qtwebview -skip qtwebchannel -skip qtwebglplugin  -nomake examples -nomake tests -qt-zlib -qt-libpng -qt-xcb -qt-xkbcommon -feature-fontconfig -no-feature-getentropy  -release -openssl-linked -opensource
+
+make -j<span class="k">$(</span>nproc<span class="k">)</span>
+make -j<span class="k">$(</span>nproc<span class="k">)</span> install
+</pre></div>
+
+
+<h3 id="build-mxe-cross-compiled-qt5-for-windows-in-linux">Build MXE (Cross-compiled Qt5 for Windows in Linux)<a class="headerlink" href="#build-mxe-cross-compiled-qt5-for-windows-in-linux" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>mkdir ~/github <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ~/github
+git clone https://github.com/mxe/mxe.git
+<span class="nb">cd</span> mxe
+
+make -j<span class="k">$(</span>nproc<span class="k">)</span> <span class="nv">MXE_TARGETS</span><span class="o">=</span>x86_64-w64-mingw32.static qtbase qtwebsockets
+</pre></div>
+
+
+<h3 id="build-zec-qt-wallet">Build zec-qt-wallet<a class="headerlink" href="#build-zec-qt-wallet" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>git clone git@github.com:ZcashFoundation/zec-qt-wallet.git
+~/Qt/5.11.2/static/bin/qmake zec-qt-wallet.pro <span class="nv">CONFIG</span><span class="o">+=</span>debug-spec linux-clang
+
+make -j<span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+
+
+<h3 id="compiling-zcashd-for-embedded-zcashd">Compiling <code>zcashd</code> for embedded zcashd<a class="headerlink" href="#compiling-zcashd-for-embedded-zcashd" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Compile embedded <code>zcashd</code> from adityapk00/zcashd</p>
+<p>The zcashd compilation is specific to <a href="https://github.com/adityapk00/zcash">adityapk00/zcashd</a> as there are some custom patches for new RPC calls that help with the embedding of zcashd that are not included in the upstream <a href="https://github.com/zcash/zcash">zcash/zcash</a> repository.</p>
+</div>
+<div class="codehilite"><pre><span></span>git clone git@github.com:adityapk00/zcash zcash-linux
+git clone git@github.com:adityapk00/zcash zcash-win
+mkdir -p ~/zcash/artifacts <span class="c1"># Built zcashd goes here.</span>
+</pre></div>
+
+
+<p>Note that we create two separate folders because we&rsquo;re going to compile <code>zcashd</code> for Windows and Linux. </p>
+<p><strong>Build <code>zcashd</code> windows</strong></p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> zcash-win
+./mkreleasewin.sh
+</pre></div>
+
+
+<p><strong>Build <code>zcashd</code> Linux</strong></p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> zcash-linux
+./mkreleaselinux.sh
+</pre></div>
+
+
+<h3 id="setup-environment">Setup Environment<a class="headerlink" href="#setup-environment" title="Permanent link">&para;</a></h3>
+<p>Add the following paths to your <code>~/.bashrc</code>. Remember to add it at the very top, before the interactivity check, because we need these variables even in an ssh shell.</p>
+<div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">QT_STATIC</span><span class="o">=</span>~/Qt/5.11.2/static/
+<span class="nb">export</span> <span class="nv">MXE_PATH</span><span class="o">=</span>~/github/mxe/usr/bin/
+<span class="nb">export</span> <span class="nv">ZCASH_DIR</span><span class="o">=</span>~/github/zcash
+</pre></div>
+
+
+<h3 id="make-release-build">Make release build<a class="headerlink" href="#make-release-build" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="nv">PREV_VERSION</span><span class="o">=</span><span class="m">0</span>.2.5 <span class="nv">APP_VERSION</span><span class="o">=</span><span class="m">0</span>.2.6 src/scripts/mkrelease.sh
+</pre></div>
+
+
+<p>This will put all the Windows and Linux compiled binaries into the <code>artifacts</code> folder</p>
+<h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
+<p>Install Xcode or Xcode Command Line Tools, and then install Qt 5.11.</p>
+<p>From a terminal:</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/github/zec-qt-wallet/
+<span class="nv">APP_VERSION</span><span class="o">=</span><span class="m">0</span>.3.0 src/scripts/mkmacdmg.sh
+</pre></div>
+
+
+<p>This will build the app and package it into a dmg and place it in the <code>artifacts/</code> folder</p>
+<h3 id="building-zcashd">Building <code>zcashd</code><a class="headerlink" href="#building-zcashd" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>git clone git@github.com:adityapk00/zcash
+<span class="nb">cd</span> zcash 
+./zcutil/build.sh -j<span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+
+
+<h2 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
+<p>Even though zec-qt-wallet for Windows is cross-compiled on Linux, we still need a Windows machine to build the installer. The Windows installer is built using WiX toolset. Install WiX toolset 3.11.1 from <a href="http://wixtoolset.org/releases/">here</a>. After installation, add the directory to the system path (both <code>candle.exe</code> and <code>light.exe</code> are runnable)</p>
+<p>To build the installer, in Powershell, run:</p>
+<div class="codehilite"><pre><span></span><span class="nv">APP_VERSION</span><span class="o">=</span><span class="m">0</span>.3.0 src/scripts/mkwininstaller.ps1
+</pre></div>
+
+
+<h2 id="running-the-unified-build">Running the unified build<a class="headerlink" href="#running-the-unified-build" title="Permanent link">&para;</a></h2>
+<p>After all these 3 machines have been set up, we can build all the release artifacts (Windows, Linux, macOS binaries and installers) with one command, triggered from the Windows machine.</p>
+<p>(Replace <code>u1604</code>and <code>macmini</code> with names of the Linux and macOS machines respectively)</p>
+<div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/github/zec-qt-wallet
+.<span class="se">\s</span>rc<span class="se">\s</span>cripts<span class="se">\d</span>obuild.ps1 -version <span class="m">0</span>.4.1 -prev <span class="m">0</span>.4.0 -server u1604 -macserver macmini
+</pre></div>
+
+
+<p>This will build all three platforms and their installers, and place everything in the <code>artifacts</code> folder on the Windows machine.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../compile-from-source/" title="Compiling from source" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Compiling from source
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Using zec-qt-wallet
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            If you wish to improve these docs, please <a href="https://github.com/adityapk00/zqw-docs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/adityapk00/zqw-docs/compare"><i class="fa fa-github"></i> send a pull request</a>
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b806dc00.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

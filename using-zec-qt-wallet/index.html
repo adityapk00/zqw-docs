@@ -1,0 +1,1151 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="zec-qt-wallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
+      
+      
+        <link rel="canonical" href="https://github.com/ZcashFoundation/zec-qt-wallet/using-zec-qt-wallet/">
+      
+      
+        <meta name="author" content="Zcash Foundation">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+    
+    
+      
+        <title>Using zec-qt-wallet - zec-qt-wallet Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#using-zec-qt-wallet" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.com/ZcashFoundation/zec-qt-wallet" title="zec-qt-wallet Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              zec-qt-wallet Docs
+            </span>
+            <span class="md-header-nav__topic">
+              Using zec-qt-wallet
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/adityapk00/zqw-docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    adityapk00/zqw-docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://github.com/ZcashFoundation/zec-qt-wallet" title="zec-qt-wallet Docs" class="md-nav__button md-logo">
+      
+        <img src="../images/logo.svg" width="48" height="48">
+      
+    </a>
+    zec-qt-wallet Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/adityapk00/zqw-docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    adityapk00/zqw-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installing on Windows, Mac and Linux" class="md-nav__link">
+      Installing on Windows, Mac and Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../compile-from-source/" title="Compiling from source" class="md-nav__link">
+      Compiling from source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setting-up-build-env/" title="Setting up a build environment" class="md-nav__link">
+      Setting up a build environment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Using zec-qt-wallet
+      </label>
+    
+    <a href="./" title="Using zec-qt-wallet" class="md-nav__link md-nav__link--active">
+      Using zec-qt-wallet
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-a-new-address" title="Generating a new address" class="md-nav__link">
+    Generating a new address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-a-transaction" title="Sending a transaction" class="md-nav__link">
+    Sending a transaction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-transaction-on-explorer" title="Viewing transaction on explorer" class="md-nav__link">
+    Viewing transaction on explorer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-zcash-uri" title="Pay Zcash URI" class="md-nav__link">
+    Pay Zcash URI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#address-book" title="Address book" class="md-nav__link">
+    Address book
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backing-up" title="Backing up" class="md-nav__link">
+    Backing up
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-a-single-private-key" title="Export a single private key" class="md-nav__link">
+    Export a single private key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-all-private-keys" title="Export all private keys" class="md-nav__link">
+    Export all private keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backing-up-walletdat" title="Backing up wallet.dat" class="md-nav__link">
+    Backing up wallet.dat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-private-keys" title="Importing private keys" class="md-nav__link">
+    Importing private keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeq-qt-wallet-options" title="zeq-qt-wallet options" class="md-nav__link">
+    zeq-qt-wallet options
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remember-shielded-transactions" title="Remember shielded transactions" class="md-nav__link">
+    Remember shielded transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-custom-fees" title="Allow custom fees" class="md-nav__link">
+    Allow custom fees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shield-change-to-your-sapling-address" title="Shield change to your Sapling address" class="md-nav__link">
+    Shield change to your Sapling address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-via-tor" title="Connect via TOR" class="md-nav__link">
+    Connect via TOR
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onion-nodes" title="Onion Nodes" class="md-nav__link">
+    Onion Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encrypted-memo-field" title="Encrypted Memo field" class="md-nav__link">
+    Encrypted Memo field
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#including-a-reply-to-address" title="Including a reply-to address" class="md-nav__link">
+    Including a reply-to address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replying-to-a-memo" title="Replying to a memo" class="md-nav__link">
+    Replying to a memo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-transactions" title="Exporting transactions" class="md-nav__link">
+    Exporting transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apps" title="Apps" class="md-nav__link">
+    Apps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-z-boardnet" title="Using z-board.net" class="md-nav__link">
+    Using z-board.net
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turnstile-migration" title="Turnstile migration" class="md-nav__link">
+    Turnstile migration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customising-zcashconf" title="Customising zcash.conf" class="md-nav__link">
+    Customising zcash.conf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-an-external-zcashd" title="Connecting to an external zcashd" class="md-nav__link">
+    Connecting to an external zcashd
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting/" title="Troubleshooting Issues" class="md-nav__link">
+      Troubleshooting Issues
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../turnstile-migration/" title="Turnstile Migration" class="md-nav__link">
+      Turnstile Migration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../android/" title="Android Companion App" class="md-nav__link">
+      Android Companion App
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../translations/" title="Translating zec-qt-wallet" class="md-nav__link">
+      Translating zec-qt-wallet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generating-a-new-address" title="Generating a new address" class="md-nav__link">
+    Generating a new address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-a-transaction" title="Sending a transaction" class="md-nav__link">
+    Sending a transaction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-transaction-on-explorer" title="Viewing transaction on explorer" class="md-nav__link">
+    Viewing transaction on explorer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pay-zcash-uri" title="Pay Zcash URI" class="md-nav__link">
+    Pay Zcash URI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#address-book" title="Address book" class="md-nav__link">
+    Address book
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backing-up" title="Backing up" class="md-nav__link">
+    Backing up
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-a-single-private-key" title="Export a single private key" class="md-nav__link">
+    Export a single private key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-all-private-keys" title="Export all private keys" class="md-nav__link">
+    Export all private keys
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backing-up-walletdat" title="Backing up wallet.dat" class="md-nav__link">
+    Backing up wallet.dat
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importing-private-keys" title="Importing private keys" class="md-nav__link">
+    Importing private keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zeq-qt-wallet-options" title="zeq-qt-wallet options" class="md-nav__link">
+    zeq-qt-wallet options
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remember-shielded-transactions" title="Remember shielded transactions" class="md-nav__link">
+    Remember shielded transactions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allow-custom-fees" title="Allow custom fees" class="md-nav__link">
+    Allow custom fees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shield-change-to-your-sapling-address" title="Shield change to your Sapling address" class="md-nav__link">
+    Shield change to your Sapling address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-via-tor" title="Connect via TOR" class="md-nav__link">
+    Connect via TOR
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onion-nodes" title="Onion Nodes" class="md-nav__link">
+    Onion Nodes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encrypted-memo-field" title="Encrypted Memo field" class="md-nav__link">
+    Encrypted Memo field
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#including-a-reply-to-address" title="Including a reply-to address" class="md-nav__link">
+    Including a reply-to address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replying-to-a-memo" title="Replying to a memo" class="md-nav__link">
+    Replying to a memo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exporting-transactions" title="Exporting transactions" class="md-nav__link">
+    Exporting transactions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apps" title="Apps" class="md-nav__link">
+    Apps
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-z-boardnet" title="Using z-board.net" class="md-nav__link">
+    Using z-board.net
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#turnstile-migration" title="Turnstile migration" class="md-nav__link">
+    Turnstile migration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customising-zcashconf" title="Customising zcash.conf" class="md-nav__link">
+    Customising zcash.conf
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connecting-to-an-external-zcashd" title="Connecting to an external zcashd" class="md-nav__link">
+    Connecting to an external zcashd
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/adityapk00/zqw-docs/edit/master/docs/using-zec-qt-wallet.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="using-zec-qt-wallet">Using zec-qt-wallet<a class="headerlink" href="#using-zec-qt-wallet" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Initial Parameters Download</p>
+<p>The first time zec-qt-wallet starts it will create a <code>zcash.conf</code> file with default configuration values as well as downloading the parameters required for sending and validating shielded transactions. These parameters are currently around 1.7GB in size and only need to be downloaded once.</p>
+</div>
+<p>Now that you have zec-qt-wallet <a href="/installation">installed</a> it is time to start using the software. </p>
+<p>If you are using the embedded <code>zcashd</code> and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> file created specifying some default configuration values. The blockchain will then begin to sync, which is a time-consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner of zec-qt-wallet which displays the number of blocks downloaded and a sync percentage.</p>
+<p><img alt="Syncing" src="../images/sync.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Initial Sync</p>
+<p>The blockchain is around <strong>22GB</strong> in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of zec-qt-wallet.</p>
+</div>
+<h2 id="generating-a-new-address">Generating a new address<a class="headerlink" href="#generating-a-new-address" title="Permanent link">&para;</a></h2>
+<p>Visiting the <strong>Receive</strong> tab of zec-qt-wallet will show all current addresses in the wallet and enable you to generate new ones. To learn about the different types of addresses available in Zcash which are transparent, shielded (Sprout and Sapling) please visit <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html">this page</a>. It is not possible to remove an address from the wallet once it has been generated.</p>
+<div class="admonition tip">
+<p class="admonition-title">Backup after generating a new address</p>
+<p>Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be <a href="https://z.cash/blog/sapling-in-hd/">recreated from a seed</a> whereas transparent or Sprout addresses either require the private key or a <code>wallet.dat</code> backup made after the address was created. See the <a href="/using-zec-qt-wallet/#backing-up">Backing up section</a> for more details.</p>
+</div>
+<p><img alt="Receive Tab" src="../images/addresses.png" /></p>
+<p>Transparent addresses are automatically created when clicking the <strong>t-Addr</strong> button as transparent addresses should not be reused. Unlike transparent addresses, it is fine to <a href="https://z.cash/blog/shielded-address-contexts/">reuse shielded addresses</a> and so new addresses can be manually created on-demand via the <strong>New Address</strong> button.</p>
+<p>Optionally, add a label to easily identify the address and add it to your address book. A QR code is also provided for the address which may be used to scan into a compatible application to receive funds.</p>
+<p>zec-qt-wallet will also show if the address has been previously used.</p>
+<h2 id="sending-a-transaction">Sending a transaction<a class="headerlink" href="#sending-a-transaction" title="Permanent link">&para;</a></h2>
+<p>Once you&rsquo;ve generated an address and have sent some funds to it, you can send some ZEC. Click on the <strong>Send</strong> tab:</p>
+<p><img alt="Send Tab" src="../images/send.png" /></p>
+<p>You can only send funds with at least one confirmation. While transactions are being confirmed, they are easily identifiable as they are highlighted in red.</p>
+<p>Choose an address with funds in it and enter the recipient address. You may specify multiple recipients per transaction, and there may be a mixture of transparent and shielded recipients. <a href="/using-zec-qt-wallet/#encrypted-memo-field">The Memo field</a> is only available when sending <strong>to</strong> a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options">Options section</a> if you wish to customise this behaviour and understand the implications.</p>
+<div class="admonition info">
+<p class="admonition-title">Shielded send requirements</p>
+<p>Sending Sapling transaction require little resource usage and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 70-90 seconds and require an additional 1.3GB of memory to perform the spend. </p>
+</div>
+<h3 id="viewing-transaction-on-explorer">Viewing transaction on explorer<a class="headerlink" href="#viewing-transaction-on-explorer" title="Permanent link">&para;</a></h3>
+<p>Once complete, the txid will be displayed. Right-click to bring up a menu to view on a block explorer. Alternatively, for any transactions on the <strong>Transactions</strong> tab right click and choose <strong>View on block explorer</strong>.</p>
+<p>This will open up the transaction <a href="https://explorer.testnet.z.cash/tx/9f790a9522dc049ef57d6ef75e2dc1fe65969c933dcaaeb7c230b2df288fbeb0">on a block explorer</a>. If your transaction is a shielded one there will not be any public information available except the fee paid.</p>
+<h3 id="pay-zcash-uri">Pay Zcash URI<a class="headerlink" href="#pay-zcash-uri" title="Permanent link">&para;</a></h3>
+<p>You can enter a Zcash URI by visiting <strong>File-&gt;Pay Zcash URI</strong> and pasting in the payment link. Zcash payment URIs encode the address, amount and memo into a single convenient string, so you can enter it into zec-qt-wallet and make payments easily.</p>
+<p><img alt="Pay Zcash URI" src="../images/pay-zcash-uri.png" /></p>
+<h2 id="address-book">Address book<a class="headerlink" href="#address-book" title="Permanent link">&para;</a></h2>
+<p>The address book makes managing addresses and labels simple. Either select <strong>Address Book</strong> in the application menu or select the button on the <strong>Send</strong> tab. </p>
+<p>You can import an address book in csv format and users of WinZEC can <a href="/faq/#can-i-import-the-winzec-address-book">import an existing address book</a>.</p>
+<p><img alt="Import Address Book" src="../images/import-address-book.png" /></p>
+<h2 id="backing-up">Backing up<a class="headerlink" href="#backing-up" title="Permanent link">&para;</a></h2>
+<p>zec-qt-wallet provides multiple options to ensure your wallet and keys are backed up. It is important that you perform regular backups if you are not exclusively using Sapling addresses and have the Sapling seed. While Sapling has a <a href="https://z.cash/blog/sapling-in-hd/">HD wallet</a>, support for importing the seed is not yet available.</p>
+<div class="admonition warning">
+<p class="admonition-title">It is not yet possible to import a Sapling HD seed</p>
+<p>While Sapling provides a <a href="https://z.cash/blog/sapling-in-hd/">HD wallet</a> the feature for importing the seed does not yet exist, so while your funds would not be lost in the situation where you have the seed they would be rendered unusable until this feature is added. Therefore it is recommended you keep regular backups of either private keys or the <code>wallet.dat</code> file until this feature is implemented. </p>
+</div>
+<h3 id="export-a-single-private-key">Export a single private key<a class="headerlink" href="#export-a-single-private-key" title="Permanent link">&para;</a></h3>
+<p>To export a single private key on the <strong>Balance</strong> tab right click on the address and choose <strong>Get private key</strong> from the context menu. Alternatively, on the <strong>Receive</strong> tab choose the address in question and click the <strong>Export Private Key</strong>. The output of both is the private key which you can copy to a secure storage medium or be used to import into other applications.</p>
+<p><img alt="backup private key" src="../images/backup-private-key.png" /></p>
+<h3 id="export-all-private-keys">Export all private keys<a class="headerlink" href="#export-all-private-keys" title="Permanent link">&para;</a></h3>
+<p>You can export all private keys for addresses in your wallet by choosing the <strong>File-&gt;Export all private keys</strong> menu option. This will provide a list of all private keys in the wallet.</p>
+<p>Note that by default when <code>zcashd</code> starts it creates 100 transparent addresses for the keypool for use as change addresses, hence this list will always contain at least 100 transparent address keys, not all of which have been used. </p>
+<h3 id="backing-up-walletdat">Backing up wallet.dat<a class="headerlink" href="#backing-up-walletdat" title="Permanent link">&para;</a></h3>
+<p>You can backup all of your private keys by making a copy of the <code>wallet.dat</code> file. To restore, you then replace any existing <code>wallet.dat</code> file in the <a href="/faq/#where-is-the-default-data-directory-on-each-platform">data directory</a> and start zec-qt-wallet as normal. </p>
+<div class="admonition danger">
+<p class="admonition-title">Create a new backup after each new address generated</p>
+<p>As new addresses are generated you will need to create an updated backup, else the new private keys will not be included.</p>
+</div>
+<p>While this is a convenient method of backing up, it means that you are restricted to importing to software compatible with <code>zcashd</code> and also if you have many addresses that are unused it will slow rescanning of the wallet over importing only your addresses with funds.</p>
+<h2 id="importing-private-keys">Importing private keys<a class="headerlink" href="#importing-private-keys" title="Permanent link">&para;</a></h2>
+<p>To import a private key, choose <strong>File-&gt;Import private key</strong> from the menu. You may paste in multiple keys, one per line that will be imported into the wallet. Note that depending on the number of keys to import and if they are shielded addresses it may take some time for the import to be completed.</p>
+<p><img alt="Import private key" src="../images/import-private-key.png" /></p>
+<h2 id="zeq-qt-wallet-options">zeq-qt-wallet options<a class="headerlink" href="#zeq-qt-wallet-options" title="Permanent link">&para;</a></h2>
+<p>zec-qt wallet has a number of options that allow you to customise how the application behaves and may be accessed in the <strong>Settings-&gt;Options</strong> menu as shown below.</p>
+<p><img alt="zec-qt-wallet options" src="../images/options.png" /></p>
+<h3 id="remember-shielded-transactions">Remember shielded transactions<a class="headerlink" href="#remember-shielded-transactions" title="Permanent link">&para;</a></h3>
+<p>By default <code>zcashd</code> will not store information about your outgoing fully shielded transactions (z-&gt;z). If this option is selected, zec-qt-wallet will store outgoing transactions locally so that any shielded spends will appear in the transactions tab. If you do not wish these transactions to be saved by zec-qt-wallet simply toggle the option for <strong>Remember shielded transactions</strong>. At any point, you may clear your shielded transaction history locally by choosing the <strong>Clear History</strong> button (there is no way of recovering this data once cleared).</p>
+<h3 id="allow-custom-fees">Allow custom fees<a class="headerlink" href="#allow-custom-fees" title="Permanent link">&para;</a></h3>
+<p>Choose this option to allow the ability to change the default 0.0001 ZEC transaction fee. As all fees are transparent it is highly recommended that you use the default fee for all transactions to make your transactions indistinguishable. </p>
+<h3 id="shield-change-to-your-sapling-address">Shield change to your Sapling address<a class="headerlink" href="#shield-change-to-your-sapling-address" title="Permanent link">&para;</a></h3>
+<p>Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address which can lead to your funds being spread over multiple addresses. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the <strong>Shield change from t-Addresses to your sapling address</strong> option. This was implemented in Bitcoin (and inherited in Zcash transparent addresses) as a privacy measure to prevent trivial linking of transactions on the blockchain so shielded (z) addresses do not have this property and any change is returned to the sending (z) address.</p>
+<h3 id="connect-via-tor">Connect via TOR<a class="headerlink" href="#connect-via-tor" title="Permanent link">&para;</a></h3>
+<p>When using Zcash <a href="https://z.cash/support/security/privacy-security-recommendations">it does nothing to preserve your network level privacy</a> so a unique IP address can allow network observers to correlate your Zcash transactions with each other and with your other traffic. To overcome this, you may use TOR to obfuscate your IP address.</p>
+<p>You will first need to have TOR installed which you may do from the <a href="https://www.torproject.org/download/download.html">official site</a>. You will need to download and run the TOR Expert Bundle (not TOR browser). TOR is also available on all popular package managers, e.g. macOS <code>brew install tor</code> or Debian <code>apt install tor</code>.</p>
+<p>Once running, choose the option in zec-qt-wallet to <strong>Connect via TOR</strong> and the following line will be added to your <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> file to configure TOR usage <code>proxy=127.0.0.1:9050</code>. Restart zec-qt-wallet to enable the service running over TOR.</p>
+<p>Use the advanced options when installing zec-qt-wallet to run <code>zcashd</code> over TOR from the initial startup, so your IP is never exposed to the network.</p>
+<div class="admonition warning">
+<p class="admonition-title">Parameters are not currently downloaded over TOR</p>
+<p>The Zcash parameters that are downloaded on the first launch are not done so over TOR depending on your network configuration.</p>
+</div>
+<h4 id="onion-nodes">Onion Nodes<a class="headerlink" href="#onion-nodes" title="Permanent link">&para;</a></h4>
+<p>You can connect to Zcash nodes only behind onion addresses by adding the following into your <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> file, which will ensure that your IP address is not exposed to any Zcash-related services when running zec-qt-wallet.</p>
+<div class="codehilite"><pre><span></span>proxy=127.0.0.1:9050
+onlynet=onion
+</pre></div>
+
+
+<p>Then provide a list of onion nodes to connect to. A sample list is provided below but these may change over time.</p>
+<div class="codehilite"><pre><span></span>addnode=zcmaintvsivr7pcn.onion
+addnode=zcashiqykswlzpsu.onion
+addnode=zcashqhrmju6zfhn.onion
+addnode=zcashgmvxwrmjsut.onion
+addnode=zcashz3uma65ix7b.onion
+addnode=zcashiyf4kxluf3x.onion
+addnode=zcashwfe4x3jkz2b.onion
+addnode=zcashvkeki52iqpc.onion
+addnode=zcasha3cmfrpy7b7.onion
+addnode=zcashz7ed3nvbdxm.onion
+addnode=zcash5adwfpxfuvf.onion
+addnode=zcashixg5ol2ndo4.onion
+addnode=zcashuzwa365oh3n.onion
+addnode=zcashskbeoiwtym3.onion
+addnode=zcashuyvk5e7qfzy.onion
+addnode=fhsxfrwpyrtoxeal.onion
+addnode=zcash2iihed2wdux.onion
+addnode=w3dxku36wbp3lowx.onion
+addnode=zcashuhmzycmlwld.onion
+</pre></div>
+
+
+<h2 id="encrypted-memo-field">Encrypted Memo field<a class="headerlink" href="#encrypted-memo-field" title="Permanent link">&para;</a></h2>
+<p>The encrypted memo field allows a user to include an optional memo of up to 512 bytes in their transaction. As the transaction is encrypted on the blockchain only the recipient of the transaction can read the memo. This could, for example, be used to include information about the sender for a purchase or a refund address and there is more detail about potential uses of this field in this <a href="https://z.cash/blog/encrypted-memo-field/">blog post</a>.</p>
+<p>You can only include a memo when sending <strong>to</strong> a shielded address. To include a memo in a transaction click the <strong>Memo</strong> button and it will provide a textbox allowing you to enter 512 characters. </p>
+<p><img alt="Memo" src="../images/send-memo.png" /></p>
+<h3 id="including-a-reply-to-address">Including a reply-to address<a class="headerlink" href="#including-a-reply-to-address" title="Permanent link">&para;</a></h3>
+<p>If you want to send a reply-to address in the memo field, for example, if you are using the memo field as an encrypted chat application, zec-qt-wallet allows you to include a reply-to address in a standard format. To use, press the <strong>Include Reply Address</strong> and the sending address will automatically be inserted.</p>
+<p><img alt="Memo reply to address" src="../images/memo-reply-address.png" /></p>
+<h3 id="replying-to-a-memo">Replying to a memo<a class="headerlink" href="#replying-to-a-memo" title="Permanent link">&para;</a></h3>
+<p>If you receive a transaction with a memo that contains a <a href="#/using-zec-qt-wallet/#including-a-reply-address">reply address</a>, you can reply to it directly from the transactions table. Simply right-click the transaction and choose <strong>Reply to xxx</strong>.</p>
+<p><img alt="Reply to a memo" src="../images/memo-reply-to.png" /></p>
+<h2 id="exporting-transactions">Exporting transactions<a class="headerlink" href="#exporting-transactions" title="Permanent link">&para;</a></h2>
+<p>zec-qt-wallet allows you to export all transactions via the <strong>File-&gt;Export Transactions</strong> menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: </p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Address</th>
+<th>Date/Time</th>
+<th>Amount</th>
+<th>Memo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>receive</td>
+<td>zs123&hellip;</td>
+<td>Sun Feb 17 13:42:38 2019</td>
+<td>10 ZEC</td>
+<td>I am a secret memo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apps">Apps<a class="headerlink" href="#apps" title="Permanent link">&para;</a></h2>
+<p>zec-qt-wallet bundles some applications to make common tasks simpler.</p>
+<h3 id="using-z-boardnet">Using z-board.net<a class="headerlink" href="#using-z-boardnet" title="Permanent link">&para;</a></h3>
+<p><a href="http://z-board.net/">z-board.net</a> is a message board based on the <a href="/using-zec-qt-wallet/#encrypted-memo-field">encrypted memo field</a>. When using shielded addresses messages are anonymous. zec-qt-wallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address without manually adding it.</p>
+<p><img alt="zboard" src="../images/zboard.png" /></p>
+<h3 id="turnstile-migration">Turnstile migration<a class="headerlink" href="#turnstile-migration" title="Permanent link">&para;</a></h3>
+<p>See the <a href="#turnstile-migration">page on the turnstile migration</a> for full details.</p>
+<h2 id="customising-zcashconf">Customising <code>zcash.conf</code><a class="headerlink" href="#customising-zcashconf" title="Permanent link">&para;</a></h2>
+<p>The <code>zcash.conf</code> file may be used to customise how the underlying <code>zcashd</code> software behaves. There are many <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html">configuration options available</a>. When zec-qt-wallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random rpcpassword. The location of <code>zcash.conf</code> varies by system. It is located in the following location on each platform:</p>
+<ul>
+<li>Windows: <code>%HOMEPATH%\AppData\Roaming\Zcash\zcash.conf</code></li>
+<li>macOS: <code>~/Library/Application Support/Zcash/zcash.conf</code></li>
+<li>Linux: <code>~/.zcash/zcash.conf</code></li>
+</ul>
+<h2 id="connecting-to-an-external-zcashd">Connecting to an external <code>zcashd</code><a class="headerlink" href="#connecting-to-an-external-zcashd" title="Permanent link">&para;</a></h2>
+<p>If you have an external <code>zcashd</code> running zec-qt-wallet will attempt to connect to it automatically. If this fails you can manually set the required settings via the <strong>Edit-&gt;Settings</strong> menu item and specifying the connection details in the <strong>zcashd connection</strong> tab.</p>
+<p>Note that the easiest way to connect to a remote node is to SSH to it with port forwarding:</p>
+<div class="codehilite"><pre><span></span>ssh -L8232:127.0.0.1:8232 user@remotehost
+</pre></div>
+
+
+<p>You can disable the embedded <code>zcashd</code> and force zec-qt-wallet to only connect to an external node by starting zec-qt-wallet with the <code>-no-embedded</code> option.</p>
+<div class="admonition danger">
+<p class="admonition-title">Exposing RPC port</p>
+<p>Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash and take over the OS account running zcashd.</p>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../setting-up-build-env/" title="Setting up a build environment" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Setting up a build environment
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../troubleshooting/" title="Troubleshooting Issues" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Troubleshooting Issues
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            If you wish to improve these docs, please <a href="https://github.com/adityapk00/zqw-docs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/adityapk00/zqw-docs/compare"><i class="fa fa-github"></i> send a pull request</a>
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b806dc00.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,922 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="zec-qt-wallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
+      
+      
+        <link rel="canonical" href="https://github.com/ZcashFoundation/zec-qt-wallet/troubleshooting/">
+      
+      
+        <meta name="author" content="Zcash Foundation">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+    
+    
+      
+        <title>Troubleshooting Issues - zec-qt-wallet Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#009688">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../css/style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#troubleshooting-issues" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.com/ZcashFoundation/zec-qt-wallet" title="zec-qt-wallet Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../images/logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              zec-qt-wallet Docs
+            </span>
+            <span class="md-header-nav__topic">
+              Troubleshooting Issues
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/adityapk00/zqw-docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    adityapk00/zqw-docs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://github.com/ZcashFoundation/zec-qt-wallet" title="zec-qt-wallet Docs" class="md-nav__button md-logo">
+      
+        <img src="../images/logo.svg" width="48" height="48">
+      
+    </a>
+    zec-qt-wallet Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/adityapk00/zqw-docs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    adityapk00/zqw-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../installation/" title="Installing on Windows, Mac and Linux" class="md-nav__link">
+      Installing on Windows, Mac and Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../compile-from-source/" title="Compiling from source" class="md-nav__link">
+      Compiling from source
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../setting-up-build-env/" title="Setting up a build environment" class="md-nav__link">
+      Setting up a build environment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-nav__link">
+      Using zec-qt-wallet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Troubleshooting Issues
+      </label>
+    
+    <a href="./" title="Troubleshooting Issues" class="md-nav__link md-nav__link--active">
+      Troubleshooting Issues
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-zcashd-debug-log" title="The zcashd debug log" class="md-nav__link">
+    The zcashd debug log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-zec-qt-walletlog-file" title="The zec-qt-wallet.log file" class="md-nav__link">
+    The zec-qt-wallet.log file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-node-isnt-syncing-or-is-slow-to-sync" title="My node isn't syncing or is slow to sync" class="md-nav__link">
+    My node isn't syncing or is slow to sync
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zcashd-ports" title="zcashd ports" class="md-nav__link">
+    zcashd ports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-transaction-didnt-get-mined" title="My transaction didn't get mined" class="md-nav__link">
+    My transaction didn't get mined
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zcashd-has-no-connections" title="zcashd has no connections" class="md-nav__link">
+    zcashd has no connections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Some of my shielded transactions are not displayed in the transaction tab" class="md-nav__link">
+    Some of my shielded transactions are not displayed in the transaction tab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-from-sprout-address-to-sapling-gives-an-error" title="Sending from Sprout address to Sapling gives an error" class="md-nav__link">
+    Sending from Sprout address to Sapling gives an error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-perform-a-wallet-rescan" title="How to perform a wallet rescan" class="md-nav__link">
+    How to perform a wallet rescan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-an-external-zcashd" title="Via an external zcashd" class="md-nav__link">
+    Via an external zcashd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-zcashconf" title="Editing zcash.conf" class="md-nav__link">
+    Editing zcash.conf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-perform-a-reindex" title="How to perform a reindex" class="md-nav__link">
+    How to perform a reindex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-displayed-balance-is-incorrect" title="The displayed balance is incorrect" class="md-nav__link">
+    The displayed balance is incorrect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-error-messages" title="Common error messages" class="md-nav__link">
+    Common error messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#could-not-start-embedded-zcashd" title="Could not start embedded zcashd" class="md-nav__link">
+    Could not start embedded zcashd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-error" title="Authentication error" class="md-nav__link">
+    Authentication error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-enough-balance-when-sending-transactions" title="Not enough balance when sending transactions" class="md-nav__link">
+    Not enough balance when sending transactions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-issue-isnt-resolved" title="My issue isn't resolved" class="md-nav__link">
+    My issue isn't resolved
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../turnstile-migration/" title="Turnstile Migration" class="md-nav__link">
+      Turnstile Migration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../android/" title="Android Companion App" class="md-nav__link">
+      Android Companion App
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../translations/" title="Translating zec-qt-wallet" class="md-nav__link">
+      Translating zec-qt-wallet
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-zcashd-debug-log" title="The zcashd debug log" class="md-nav__link">
+    The zcashd debug log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-zec-qt-walletlog-file" title="The zec-qt-wallet.log file" class="md-nav__link">
+    The zec-qt-wallet.log file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-node-isnt-syncing-or-is-slow-to-sync" title="My node isn't syncing or is slow to sync" class="md-nav__link">
+    My node isn't syncing or is slow to sync
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zcashd-ports" title="zcashd ports" class="md-nav__link">
+    zcashd ports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-transaction-didnt-get-mined" title="My transaction didn't get mined" class="md-nav__link">
+    My transaction didn't get mined
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zcashd-has-no-connections" title="zcashd has no connections" class="md-nav__link">
+    zcashd has no connections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Some of my shielded transactions are not displayed in the transaction tab" class="md-nav__link">
+    Some of my shielded transactions are not displayed in the transaction tab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-from-sprout-address-to-sapling-gives-an-error" title="Sending from Sprout address to Sapling gives an error" class="md-nav__link">
+    Sending from Sprout address to Sapling gives an error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-perform-a-wallet-rescan" title="How to perform a wallet rescan" class="md-nav__link">
+    How to perform a wallet rescan
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-an-external-zcashd" title="Via an external zcashd" class="md-nav__link">
+    Via an external zcashd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-zcashconf" title="Editing zcash.conf" class="md-nav__link">
+    Editing zcash.conf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-perform-a-reindex" title="How to perform a reindex" class="md-nav__link">
+    How to perform a reindex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-displayed-balance-is-incorrect" title="The displayed balance is incorrect" class="md-nav__link">
+    The displayed balance is incorrect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-error-messages" title="Common error messages" class="md-nav__link">
+    Common error messages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#could-not-start-embedded-zcashd" title="Could not start embedded zcashd" class="md-nav__link">
+    Could not start embedded zcashd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-error" title="Authentication error" class="md-nav__link">
+    Authentication error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#not-enough-balance-when-sending-transactions" title="Not enough balance when sending transactions" class="md-nav__link">
+    Not enough balance when sending transactions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-issue-isnt-resolved" title="My issue isn't resolved" class="md-nav__link">
+    My issue isn't resolved
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/adityapk00/zqw-docs/edit/master/docs/troubleshooting.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="troubleshooting-issues">Troubleshooting issues<a class="headerlink" href="#troubleshooting-issues" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="the-zcashd-debug-log">The <code>zcashd</code> debug log<a class="headerlink" href="#the-zcashd-debug-log" title="Permanent link">&para;</a></h2>
+<p>The <code>debug.log</code> file is the first place to start for troubleshooting issues. The file is located in the <a href="/faq/#where-is-the-default-data-directory-on-each-platform">data directory</a> and by default is found in the following locations:</p>
+<ul>
+<li>Windows: <code>%HOMEPATH%\AppData\Roaming\Zcash\debug.log</code></li>
+<li>macOS: <code>~/Library/Application Support/Zcash/debug.log</code></li>
+<li>Linux: <code>~/.zcash/debug.log</code></li>
+</ul>
+<p>If you have specified a custom <code>datadir</code> option then the <code>debug.log</code> file will be located in that directory. Using a tool such as <code>tail</code> you can view the last 100 lines with the following command:</p>
+<div class="codehilite"><pre><span></span>tail -n <span class="m">100</span> ~/.zcash/debug.log
+</pre></div>
+
+
+<p>On Windows <code>%HOMEPATH%</code> is typically <code>C:\Users\username</code> where <code>username</code> is your username. </p>
+<h2 id="the-zec-qt-walletlog-file">The <code>zec-qt-wallet.log</code> file<a class="headerlink" href="#the-zec-qt-walletlog-file" title="Permanent link">&para;</a></h2>
+<p>As with the <code>debug.log</code> file, the <code>zec-qt-wallet.log</code> file will help to identify issues with the zec-qt-wallet application. Providing the latest output of this file can help in troubleshooting issues. The location of this file is in the following location for each platform: </p>
+<ul>
+<li>Windows: <code>%HOMEPATH%\AppData\Roaming\zec-qt-wallet-org\zec-qt-wallet\zec-qt-wallet.log</code></li>
+<li>macOS: <code>/Users/gareth/Library/Application Support/zec-qt-wallet-org/zec-qt-wallet/zec-qt-wallet.log</code></li>
+<li>Linux: <code>~/.local/share/zec-qt-wallet-org/zec-qt-wallet/zec-qt-wallet.log</code></li>
+</ul>
+<h2 id="my-node-isnt-syncing-or-is-slow-to-sync">My node isn&rsquo;t syncing or is slow to sync<a class="headerlink" href="#my-node-isnt-syncing-or-is-slow-to-sync" title="Permanent link">&para;</a></h2>
+<p>If your node isn&rsquo;t syncing or is slow to sync, first check that you are running the <a href="https://github.com/ZcashFoundation/zec-qt-wallet/releases">latest version</a> of zec-qt-wallet then check that you have connections to other nodes as you may have a network issue. zec-qt-wallet will display if you are connected via the application footer. </p>
+<p><img alt="zec-qt-wallet connections" src="../images/connections.png" /></p>
+<p>You can also find this information in the <strong>zcashd</strong> tab on the main menu (if you are running the embedded <code>zcashd</code>) and it will list the number of connections to other peers, which should be greater than 0. If you do not have any connections then check your internet connection, then check that the <a href="/troubleshooting/#zcashd-ports">ports required</a> for <code>zcashd</code> are not blocked and that you have not specified a TOR connection in the options but do not have TOR running.</p>
+<p>If you are still having issues, then look in the <a href="/troubleshooting/#the-zcashd-debug-log">debug log</a> to identify any error messages.</p>
+<p>The speed of syncing is dependent on a number of variables such as memory, CPU and bandwidth as blocks are also verified in addition to being downloaded. </p>
+<h2 id="zcashd-ports">zcashd ports<a class="headerlink" href="#zcashd-ports" title="Permanent link">&para;</a></h2>
+<p>By default <code>zcashd</code> runs on the following ports.</p>
+<ul>
+<li><strong>8232</strong> for mainnet RPC</li>
+<li><strong>8233</strong> for mainnet peer-to-peer network</li>
+<li><strong>18232</strong> for testnet RPC</li>
+<li><strong>18233</strong> for testnet peer-to-peer network</li>
+</ul>
+<p>You may override any of these values in <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a>.</p>
+<h2 id="my-transaction-didnt-get-mined">My transaction didn&rsquo;t get mined<a class="headerlink" href="#my-transaction-didnt-get-mined" title="Permanent link">&para;</a></h2>
+<p>If you send a transaction before the node is fully synced, or perhaps due to network congestion then the transaction may fail and be returned to your wallet due to the <a href="https://z.cash/blog/transaction-expiry/">Transaction Expiry</a> feature. When a user submits a transaction to the network, by default it will persist in the mempool for 20 blocks (currently approximately 50 minutes). If it has not been mined after that period, it is no longer valid and will be evicted from all mempools. The value will return to the sender’s wallet. </p>
+<h2 id="zcashd-has-no-connections"><code>zcashd</code> has no connections<a class="headerlink" href="#zcashd-has-no-connections" title="Permanent link">&para;</a></h2>
+<p>See the section on <a href="/troubleshooting/#my-node-isnt-syncing">syncing issues</a> for common resolutions to this issue.</p>
+<h2 id="some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab">Some of my shielded transactions are not displayed in the transaction tab<a class="headerlink" href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Permanent link">&para;</a></h2>
+<p>By default <code>zcashd</code> does not store outgoing shielded transactions. To overcome this, zec-qt-wallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to <strong>Remember shielded transactions</strong> is selected in the <a href="/using-zec-qt-wallet/#remember-shielded-transactions">wallet options</a>. There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.</p>
+<h2 id="sending-from-sprout-address-to-sapling-gives-an-error">Sending from Sprout address to Sapling gives an error<a class="headerlink" href="#sending-from-sprout-address-to-sapling-gives-an-error" title="Permanent link">&para;</a></h2>
+<p>You cannot send directly from a Sprout address (zc) to a Sapling address (zs) as it must pass through the <a href="https://z.cash/blog/sapling-addresses-turnstile-migration/">Sapling turnstile</a>. See the details on the <a href="/turnstile-migration">turnstile migration</a> for details on how to move your funds from a Sprout address to a Sapling one in a privacy-preserving way.</p>
+<h2 id="how-to-perform-a-wallet-rescan">How to perform a wallet rescan<a class="headerlink" href="#how-to-perform-a-wallet-rescan" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Potentially slow wallet rescan</p>
+<p>Depending on the number of addresses in your wallet (particularly shielded addresses) a wallet rescan can be slow. Simply leave it running until the process is complete.</p>
+</div>
+<p>If you need to perform a wallet rescan due to missing transactions or balance errors you will need to start <code>zcashd</code> with the <code>-rescan</code> option. There are a couple of methods to achieve this and this process will be improved in future versions of the zec-qt-wallet.</p>
+<h3 id="via-an-external-zcashd">Via an external <code>zcashd</code><a class="headerlink" href="#via-an-external-zcashd" title="Permanent link">&para;</a></h3>
+<p>If you are running the embedded <code>zcashd</code> you will need to run <code>zcashd</code> externally to run the rescan and once complete you can safely shut down the external <code>zcashd</code> and run zec-qt-wallet as normal. With zec-qt-wallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).</p>
+<ul>
+<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcashd.exe" -rescan"</code></li>
+<li>Windows (binaries): <code>zcashd.exe -rescan</code> from the directory of the downloaded binaries.</li>
+<li>macOS: <code>/Applications/zec-qt-wallet.app/Contents/MacOS/zcashd -rescan</code></li>
+<li>Linux (deb): <code>zcashd -rescan</code> </li>
+<li>Linux (binaries): <code>./zcashd -rescan</code> from the directory of the downloaded binaries.</li>
+</ul>
+<p>Then open zec-qt-wallet and it should connect to the running <code>zcashd</code> and you can monitor the progress of the rescan on the startup screen.</p>
+<p>Note that the command above will open an instance of <code>zcashd</code> in the foreground, you can change this behaviour by adding the <code>-daemon</code> option. You will need to manually stop <code>zcashd</code> as zec-qt-wallet will not close an externally running node. The simplest method is to run the <code>zcash-cli</code> stop command:</p>
+<ul>
+<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcash-cli.exe" stop"</code></li>
+<li>Windows (binaries): <code>zcash-cli.exe stop</code> from the directory of the downloaded binaries.</li>
+<li>macOS: <code>/Applications/zec-qt-wallet.app/Contents/MacOS/zcash-cli stop</code></li>
+<li>Linux (deb): <code>zcash-cli stop</code></li>
+<li>Linux (binaries): <code>./zcash-cli stop</code> from the directory of the downloaded binaries.</li>
+</ul>
+<p>Once the rescan has been completed and the external <code>zcashd</code> node has been stopped you can continue to run zec-qt-wallet as normal.</p>
+<h3 id="editing-zcashconf">Editing <code>zcash.conf</code><a class="headerlink" href="#editing-zcashconf" title="Permanent link">&para;</a></h3>
+<p>As an alternative to the external <code>zcashd</code> you can edit the <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code> file</a> and add the line <code>rescan=1</code> and then start zec-qt-wallet normally. After you have opened zec-qt-wallet and the rescan is complete you must remove the line from <code>zcash.conf</code> to prevent the wallet from rescanning every time it is opened and close zec-qt-wallet as normal.</p>
+<h2 id="how-to-perform-a-reindex">How to perform a reindex<a class="headerlink" href="#how-to-perform-a-reindex" title="Permanent link">&para;</a></h2>
+<p>A reindex is sometimes required when the blockchain data becomes corrupted or you wish to enable certain features. When a reindex happens the full blockchain is redownloaded so it will take some time to complete and should only be performed where absolutely necessary.</p>
+<p>To complete a reindex simply <a href="/troubleshooting/#how-to-perform-a-wallet-rescan">follow the instruction for a wallet rescan</a> replacing <code>-rescan</code> with <code>-reindex</code>.</p>
+<div class="codehilite"><pre><span></span>zcashd -reindex
+</pre></div>
+
+
+<h2 id="the-displayed-balance-is-incorrect">The displayed balance is incorrect<a class="headerlink" href="#the-displayed-balance-is-incorrect" title="Permanent link">&para;</a></h2>
+<p>If your balance is not being correctly displayed, first ensure that your software is up to date and that your node is fully synced. If your balance is still incorrect you can perform a manual <a href="/troubleshooting/#how-to-perform-a-wallet-rescan">wallet rescan</a> which will rescan the blockchain for missing wallet transactions on startup. Depending on the number of (shielded) addresses in the wallet, this can be (very) slow so just leave it running until complete and your balance should be reflected accurately.</p>
+<h2 id="common-error-messages">Common error messages<a class="headerlink" href="#common-error-messages" title="Permanent link">&para;</a></h2>
+<h3 id="could-not-start-embedded-zcashd">Could not start embedded zcashd<a class="headerlink" href="#could-not-start-embedded-zcashd" title="Permanent link">&para;</a></h3>
+<p>This means zec-qt-wallet couldn&rsquo;t start its embedded <code>zcashd</code> for some reason. zec-qt-wallet will show you another dialog box with the error reported from <code>zcashd</code> for debugging purposes as well. You might be able to solve this by simply restarting zec-qt-wallet, but if you repeatedly see this error, it might be one of the following reasons:</p>
+<ul>
+<li>If you compiled zec-qt-wallet yourself and are running it: <code>zcashd</code> doesn&rsquo;t come with the Github repository, so you&rsquo;ll have to compile <code>zcashd</code> separately and copy it over into your zec-qt-wallet directory.</li>
+<li>You might have corrupt zcash params: In this case, you may try deleting your params and letting zec-qt-wallet download them again.</li>
+</ul>
+<p>If all else fails, you can run an external <code>zcashd</code> and zec-qt-wallet will connect to it.</p>
+<h3 id="authentication-error">Authentication error<a class="headerlink" href="#authentication-error" title="Permanent link">&para;</a></h3>
+<p>Normally, zec-qt-wallet can pick up the rpcuser/rpcpassword from <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a>. If it doesn&rsquo;t for some reason, you can set the username/password in the <strong>File-&gt;Settings</strong> menu. If you are connecting to a remote node, make sure that <code>zcashd</code> on the remote machine is accepting connections from your machine. The target machine&rsquo;s firewall needs to allow connections from your host and also <code>zcashd</code> is set to be configured to accept connections from this host.</p>
+<div class="admonition danger">
+<p class="admonition-title">Using the RPC port over a remote interface is NOT RECOMMENDED</p>
+<p>Using the RPC port over a remote interface is NOT RECOMMENDED, because
+that will cause the rpcpassword to be transmitted over the network
+unencrypted, allowing any observer to steal your keys and take
+over the OS account running zcashd.</p>
+</div>
+<h3 id="not-enough-balance-when-sending-transactions">Not enough balance when sending transactions<a class="headerlink" href="#not-enough-balance-when-sending-transactions" title="Permanent link">&para;</a></h3>
+<p>The most likely cause for this is that you are trying to spend unconfirmed funds. Unlike Bitcoin, the Zcash protocol doesn&rsquo;t let you spent unconfirmed funds. Wait for at least one confirmation and then retry the transaction.</p>
+<h2 id="my-issue-isnt-resolved">My issue isn&rsquo;t resolved<a class="headerlink" href="#my-issue-isnt-resolved" title="Permanent link">&para;</a></h2>
+<p>Open an <a href="https://github.com/ZcashFoundation/zec-qt-wallet/issues">issue on Github</a> or tweet at <a href="https://twitter.com/zecqtwallet">@zecqtwallet</a> for help.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../using-zec-qt-wallet/" title="Using zec-qt-wallet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Using zec-qt-wallet
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../turnstile-migration/" title="Turnstile Migration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Turnstile Migration
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            If you wish to improve these docs, please <a href="https://github.com/adityapk00/zqw-docs/issues/new"><i class="fa fa-github"></i> open an issue</a> or <a href="https://github.com/adityapk00/zqw-docs/compare"><i class="fa fa-github"></i> send a pull request</a>
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/ZcashFoundation/zec-qt-wallet/" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.b806dc00.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
