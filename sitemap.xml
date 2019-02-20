@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/</loc>
+     <loc>https://docs.zecqtwallet.com/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/installation/</loc>
+     <loc>https://docs.zecqtwallet.com/installation/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/compile-from-source/</loc>
+     <loc>https://docs.zecqtwallet.com/compile-from-source/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/setting-up-build-env/</loc>
+     <loc>https://docs.zecqtwallet.com/setting-up-build-env/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/using-zec-qt-wallet/</loc>
+     <loc>https://docs.zecqtwallet.com/using-zec-qt-wallet/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/troubleshooting/</loc>
+     <loc>https://docs.zecqtwallet.com/troubleshooting/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/turnstile-migration/</loc>
+     <loc>https://docs.zecqtwallet.com/turnstile-migration/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/android/</loc>
+     <loc>https://docs.zecqtwallet.com/android/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/translations/</loc>
+     <loc>https://docs.zecqtwallet.com/translations/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/ZcashFoundation/zec-qt-wallet/faq/</loc>
+     <loc>https://docs.zecqtwallet.com/faq/</loc>
      <lastmod>2019-02-19</lastmod>
      <changefreq>daily</changefreq>
     </url>
