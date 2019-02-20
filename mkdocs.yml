@@ -2,7 +2,7 @@
 site_name: 'zec-qt-wallet Docs'
 site_description: 'zec-qt-wallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS'
 site_author: 'Zcash Foundation'
-site_url: 'https://github.com/ZcashFoundation/zec-qt-wallet'
+site_url: 'https://docs.zecqtwallet.com'
 
 # Repository
 repo_name: 'adityapk00/zqw-docs'
