@@ -177,9 +177,9 @@ No, zec-qt-wallet is a wallet and full node. While you can configure `zcashd` to
 
 ## WinZEC
 
-### How do I upgrade from WinZEC?
+### How do I upgrade from WinZEC / zcash4mac / zcash4win?
 
-[WinZEC](http://winzec.com/) has now been deprecated. You can simply install zec-qt-wallet and it'll use the existing data directory and wallet from WinZEC and operate as normal.
+[WinZEC](http://winzec.com/) and its predecessor zcash4win (and zcash4mac) have now been deprecated. You can simply install zec-qt-wallet and it'll use the existing data directory and wallet from any previous installation and operate as normal.
 
 ### Can I import the WinZEC address book?
 
