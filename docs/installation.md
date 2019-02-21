@@ -28,6 +28,98 @@ zec-qt-wallet runs on Windows, macOS and Linux and is [available to download](ht
     
     `./zec-qt-wallet-v0.5.11/zec-qt-wallet` 
 
+### Verifying the download
+
+Starting from v0.5.10 all [zec-qt-wallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed and contain checksums that may be validated to ensure the integrity of the downloaded software.
+
+#### Validating signatures
+
+Installing the key.
+
+Fingerprint is `C231 72D0 C956 9591 ECEC  8ECB 0E1E 9027 9521 EBB4`
+KeyID is: `9521EBB4`
+
+Performing the signature check
+
+Checksums
+
+either get the key from the Github repo: 
+
+```
+wget -qO - https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc | sudo apt-key add -
+```
+
+or download from a key server
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E1E90279521EBB4
+```
+
+On Mac, you should use GPG tools.
+
+Windows?
+
+This directory contains the hashes and signatures for zec-qt-wallet
+
+Verify signatures:
+1. First, import the public key (Available on github 
+   at https://github.com/ZcashFoundation/zec-qt-wallet/blob/master/public_key.asc)
+gpg --import public_key.asc
+
+2. Verify signature 
+gpg --verify <filename.sig> <downloaded-filename-to-verify>
+
+#### Checksums
+
+Verify the hashes by running:
+sha256sum -c sha256sum-vX.Y.Z.txt
+
+### Verifying the download
+
+Starting from v0.5.10 all [zec-qt-wallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed and contain checksums that may be validated to ensure the integrity of the downloaded software.
+
+#### Validating signatures
+
+Installing the key.
+
+Fingerprint is `C231 72D0 C956 9591 ECEC  8ECB 0E1E 9027 9521 EBB4`
+KeyID is: `9521EBB4`
+
+Performing the signature check
+
+Checksums
+
+either get the key from the Github repo: 
+
+```
+wget -qO - https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc | sudo apt-key add -
+```
+
+or download from a key server
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0E1E90279521EBB4
+```
+
+On Mac, you should use GPG tools.
+
+Windows?
+
+This directory contains the hashes and signatures for zec-qt-wallet
+
+Verify signatures:
+1. First, import the public key (Available on github 
+   at https://github.com/ZcashFoundation/zec-qt-wallet/blob/master/public_key.asc)
+gpg --import public_key.asc
+
+2. Verify signature 
+gpg --verify <filename.sig> <downloaded-filename-to-verify>
+
+#### Checksums
+
+Verify the hashes by running:
+sha256sum -c sha256sum-vX.Y.Z.txt
+
 ## zcashd
 
 zec-qt-wallet needs a [Zcash node](https://zcash.readthedocs.io/en/latest/rtd_pages/user_guide.html#installation) running `zcashd`. If you already have a `zcashd` node running, zec-qt-wallet will connect to it. 
