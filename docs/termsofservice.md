@@ -1,7 +1,7 @@
 # Terms of Service
 
 ---
-										
+								
 ## zcash-qt-wallet Terms of Service
 
 ### 1. Terms
@@ -10,22 +10,19 @@ By accessing the website at https://docs.zecqtwallet.com, you are agreeing to be
 
 ### 2. Use License
 Permission is granted to temporarily download one copy of the materials (information or software) on zcash-qt-wallet's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-      
+
 * modify or copy the materials;
 * use the materials for any commercial purpose, or for any public display (commercial or non-commercial);
 * attempt to decompile or reverse engineer any software contained on zcash-qt-wallet's website;
 * remove any copyright or other proprietary notations from the materials; or
 * transfer the materials to another person or "mirror" the materials on any other server.
-      
-    
+
 This license shall automatically terminate if you violate any of these restrictions and may be terminated by zcash-qt-wallet at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
-  
 
 ### 3. Disclaimer
 The materials on zcash-qt-wallet's website are provided on an 'as is' basis. zcash-qt-wallet makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
 
 Further, zcash-qt-wallet does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
-  
 
 ### 4. Limitations
 In no event shall zcash-qt-wallet or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on zcash-qt-wallet's website, even if zcash-qt-wallet or a zcash-qt-wallet authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
@@ -41,4 +38,3 @@ zcash-qt-wallet may revise these terms of service for its website at any time wi
 
 ### 8. Governing Law
 These terms and conditions are governed by and construed in accordance with the laws of USA and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
-									
