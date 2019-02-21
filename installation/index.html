@@ -320,6 +320,53 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#verifying-the-download" title="Verifying the download" class="md-nav__link">
+    Verifying the download
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signatures" title="Signatures" class="md-nav__link">
+    Signatures
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-public-key" title="Import public key" class="md-nav__link">
+    Import public key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-signatures" title="Verifying signatures" class="md-nav__link">
+    Verifying signatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checksums" title="Checksums" class="md-nav__link">
+    Checksums
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zcashd" title="zcashd" class="md-nav__link">
     zcashd
   </a>
@@ -483,8 +530,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../termsofservice/" title="Terms of service" class="md-nav__link">
-      Terms of service
+    <a href="../termsofservice/" title="Terms of Service" class="md-nav__link">
+      Terms of Service
     </a>
   </li>
 
@@ -513,6 +560,53 @@
   <a href="#download-and-install" title="Download and Install" class="md-nav__link">
     Download and Install
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-the-download" title="Verifying the download" class="md-nav__link">
+    Verifying the download
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signatures" title="Signatures" class="md-nav__link">
+    Signatures
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import-public-key" title="Import public key" class="md-nav__link">
+    Import public key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-signatures" title="Verifying signatures" class="md-nav__link">
+    Verifying signatures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checksums" title="Checksums" class="md-nav__link">
+    Checksums
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -585,6 +679,35 @@ and double-click on the .dmg file to open it, and drag zec-qt-wallet on to the A
 <p><code>tar -xvf zec-qt-wallet-v0.5.11.tar.gz</code></p>
 <p><code>./zec-qt-wallet-v0.5.11/zec-qt-wallet</code> </p>
 </details>
+<h2 id="verifying-the-download">Verifying the download<a class="headerlink" href="#verifying-the-download" title="Permanent link">&para;</a></h2>
+<p>Starting from v0.5.10 all <a href="https://github.com/ZcashFoundation/zec-qt-wallet/releases">zec-qt-wallet releases</a> are signed and contain checksums that may be validated to ensure the integrity of the downloaded software. The current signatures and checksums are available to download via the signatures-v0.5.11.tar.gz file on the <a href="https://github.com/ZcashFoundation/zec-qt-wallet/releases">releases page</a>.</p>
+<h3 id="signatures">Signatures<a class="headerlink" href="#signatures" title="Permanent link">&para;</a></h3>
+<h4 id="import-public-key">Import public key<a class="headerlink" href="#import-public-key" title="Permanent link">&para;</a></h4>
+<p>The public key is available to download from <a href="https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc">the GitHub repository</a>. Save the file and import via: </p>
+<p><code>gpg --import public_key.asc</code></p>
+<div class="admonition tip">
+<p>The public key fingerprint is C231 72D0 C956 9591 ECEC  8ECB 0E1E 9027 9521 EBB4</p>
+</div>
+<p>Alternatively, you can import from a keyserver using the following command:</p>
+<p><code>gpg --keyserver pool.sks-keyservers.net --recv-keys 0E1E90279521EBB4</code></p>
+<h4 id="verifying-signatures">Verifying signatures<a class="headerlink" href="#verifying-signatures" title="Permanent link">&para;</a></h4>
+<p>Once the key has been imported, you can run the following command to verify the signature:</p>
+<p><code>gpg --verify &lt;filename.sig&gt; &lt;downloaded-filename-to-verify&gt;</code></p>
+<p>Assuming a good signature, you will see a similar output to the below.</p>
+<div class="codehilite"><pre><span></span>gpg --verify macOS-zec-qt-wallet-v0.5.11.dmg.sig macOS-zec-qt-wallet-v0.5.11.dmg
+gpg: Signature made Wed 20 Feb 11:06:04 2019 PST
+gpg:                using RSA key C23172D0C9569591ECEC8ECB0E1E90279521EBB4
+gpg: Good signature from &quot;adityapk00 (PGP Key for zec-qt-wallet) &lt;zcash@adityapk.com&gt;&quot; [full]
+</pre></div>
+
+
+<h3 id="checksums">Checksums<a class="headerlink" href="#checksums" title="Permanent link">&para;</a></h3>
+<p>The file <code>sha256sum-v0.5.11.txt</code> contains the SHA256 checksums for each download. You can verify that the file you downloaded matches this checksum via the following command:</p>
+<div class="codehilite"><pre><span></span>sha256sum macOS-zec-qt-wallet-v0.5.11.dmg
+5efd75fcfc94bb4ff9bf0d47b28bb603979237d04617082edf2ea241d84c51fb  macOS-zec-qt-wallet-v0.5.11.dmg
+</pre></div>
+
+
 <h2 id="zcashd">zcashd<a class="headerlink" href="#zcashd" title="Permanent link">&para;</a></h2>
 <p>zec-qt-wallet needs a <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/user_guide.html#installation">Zcash node</a> running <code>zcashd</code>. If you already have a <code>zcashd</code> node running, zec-qt-wallet will connect to it. </p>
 <p>If you don&rsquo;t have one running, zec-qt-wallet will start its embedded <code>zcashd</code> node. </p>
