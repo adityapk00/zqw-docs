@@ -15,7 +15,7 @@ See the [installation](/installation/#download-and-install) section for more det
 
 ### How do I verify the download file?
 
-Starting from v0.5.10 all [zec-qt-wallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed. You may download the detached signatures on the [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and verify that the software was signed with the published [public key](https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc). In addition. each release contains SHA256 checksums that may additionally be verified. For more information, see the [Verifying the download](/installation/#verifying-the-download) section of the [Installation guide](/installation/).
+Starting from v0.5.10 all [zec-qt-wallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed. You may download the detached signatures on the [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and verify that the software was signed with the published [public key](https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc). In addition, each release contains SHA256 checksums that may additionally be verified. For more information, see the [Verifying the download](/installation/#verifying-the-download) section of the [Installation guide](/installation/).
 
 ## Blockchain
 
