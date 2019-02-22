@@ -5,7 +5,7 @@
 !!! warning "The Android app is beta software."
     Although everything will work fine on mainnet, since this is beta software, it is recommended you run it on the Zcash testnet. Add `testnet=1` into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) to [enable the testnet](/faq/#does-zec-qt-wallet-work-on-testnet).
 
-**ZecQT Android** is an Android frontend for zec-qt-wallet that lets you send and receive shielded payments from your mobile phone.
+**ZecQT Android** is an Android frontend for zec-qt-wallet that lets you send and receive shielded payments from your mobile phone. It is available on the [Google Play Store](https://play.google.com/store/apps/details?id=com.adityapk.zcash.zqwandroid) or via [direct download of the APK](https://github.com/adityapk00/zqwandroid/releases).
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SIhG8fPsE8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
