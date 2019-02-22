@@ -68,7 +68,7 @@ The file `sha256sum-v0.6.0.txt` contains the SHA256 checksums for each download.
 
 ```
 sha256sum macOS-zec-qt-wallet-v0.6.0.dmg
-5efd75fcfc94bb4ff9bf0d47b28bb603979237d04617082edf2ea241d84c51fb  macOS-zec-qt-wallet-v0.6.0.dmg
+ccbab463063e7c310a1a3579d17995ea00cd494ab9637a8205a0e46f752fac25  macOS-zec-qt-wallet-v0.6.0.dmg
 ```
 
 ## zcashd
