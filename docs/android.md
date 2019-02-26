@@ -12,7 +12,9 @@
 ### Run zec-qt-wallet
 In order to let your Android phone connect to your desktop, you need to the deskop [zec-qt-wallet](https://github.com/ZcashFoundation/zec-qt-wallet).
 
-After your node is synced, go to `Apps -> Connect Mobile App` to view the connection QR Code, which you can scan from the Android App. 
+After your node is synced, go to `Apps -> Connect Mobile App` to view the connection QR Code, which you can scan from the Android App.
+
+![Connect to Android App](images/android-connection.png)
 
 ### Install the Android APK directly
 If you're installing the APK directly, you'll need to allow `Install from untrusted sources` on your Android phone.
