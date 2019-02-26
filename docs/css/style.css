@@ -10,3 +10,19 @@ a.md-logo img {
 .md-footer-social {
     font-size: 20px;
 }
+
+div.button {
+    text-align: center;
+}
+
+div button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
