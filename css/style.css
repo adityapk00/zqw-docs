@@ -11,11 +11,11 @@ a.md-logo img {
     font-size: 20px;
 }
 
-div.button {
+div.downloadbinbutton {
     text-align: center;
 }
 
-div button {
+div.downloadbinbutton button {
     background-color: #4CAF50; /* Green */
     border: none;
     cursor: pointer;
