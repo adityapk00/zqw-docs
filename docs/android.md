@@ -10,7 +10,7 @@
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SIhG8fPsE8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Run zec-qt-wallet
-In order to let your Android phone connect to your desktop, you need to the deskop [zec-qt-wallet](https://github.com/ZcashFoundation/zec-qt-wallet).
+In order to let your Android phone connect to your desktop, you need to run the desktop [zec-qt-wallet](https://github.com/ZcashFoundation/zec-qt-wallet).
 
 After your node is synced, go to `Apps -> Connect Mobile App` to view the connection QR Code, which you can scan from the Android App.
 
@@ -43,7 +43,7 @@ All communication is encrypted end-to-end, so the wormhole service can't see the
 
 ### Will it always connect via the wormhole service?
 
-The Android app will first attempt a direct connection each time you open the App. If a direct connection is not possible, it will then attempt to connect via wormhole (if enabled)
+The Android app will first attempt a direct connection each time you open the App. If a direct connection is not possible, it will then attempt to connect via wormhole (if enabled).
 
 ### How can I connect over the internet without using the wormhole service?
 You'll need to install a VPN on your home network, so you can VPN into your network from 4G/LTE networks, and then connect directly to your node. For example, you can use a service such as [Pi VPN](https://www.pivpn.io/).
@@ -53,8 +53,8 @@ You'll need to install a VPN on your home network, so you can VPN into your netw
 After you download and install the APK, launch the program and scan the QR Code from your desktop to connect the two.
 Currently known limitations
 
-* Old-style Sprout addresses are not supported
-* You can't select which address to send from. zec-qt-wallet will try to send Transactions from a Sapling address, given you have enough balance
+* Old-style Sprout addresses are not supported.
+* You can't select which address to send from. zec-qt-wallet will try to send Transactions from a Sapling address, given you have enough balance.
 * You can't generate new z-addrs or t-addrs from the phone.
 
 ## Issues or feature requests

@@ -48,7 +48,7 @@ c:\Qt5\bin\qmake.exe zec-qt-wallet.pro -tp vc CONFIG+=debug
 ```
 
 ## Building on Mac
-You need to install the [Xcode](https://developer.apple.com/xcode/) app or the [Xcode](https://developer.apple.com/xcode/) command line tools first, and then install Qt. 
+You need to install the [Xcode](https://developer.apple.com/xcode/) app or the [Xcode Command Line Tools](https://developer.apple.com/downloads/index.action) first, and then install Qt. 
 
 ``` bash
 git clone https://github.com/ZcashFoundation/zec-qt-wallet.git

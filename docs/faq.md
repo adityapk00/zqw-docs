@@ -5,7 +5,7 @@
 
 ### Where do I download the software?
 
-zec-qt-wallet is available to download from the [Zcash Foundation Github repository](https://github.com/ZcashFoundation/zec-qt-wallet). The [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) lists the latest available downloads for each platform.
+zec-qt-wallet is available to download from the [Zcash Foundation GitHub repository](https://github.com/ZcashFoundation/zec-qt-wallet). The [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) lists the latest available downloads for each platform.
 
 The Android application, which is still in beta, may be downloaded [from here](https://github.com/adityapk00/zqwandroid/releases).
 
@@ -25,7 +25,7 @@ No, zec-qt-wallet requires a full `zcashd` node to operate. A [light client prot
 
 ### How large is the blockchain?
 
-Currently, the blockchain data directory is around 22GB (Feb 2019) and will continue to grow with time.
+Currently, the blockchain data directory is around 22GB (Feb 2019) and will continue to grow over time.
 
 ### Can I change the location of the data directory?
 
@@ -35,10 +35,10 @@ If you are starting zec-qt-wallet for the first time, then you can choose the **
 
 If you have an existing data directory you would like to move, you can achieve this through the following steps, with zec-qt-wallet closed:
 
-* Create the new directory
+* Create the new directory.
 * Move everything in your [existing data directory](/faq/#where-is-the-default-data-directory-on-each-platform) to the new location with the exception of `zcash.conf` which must remain in the original data directory location.
-* Update [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) to add the line `datadir=/your/new/path` specifying the path to the newly created folder
-* Restart zec-qt-wallet
+* Update [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) to add the line `datadir=/your/new/path` specifying the path to the newly created folder.
+* Restart zec-qt-wallet.
 
 ### Can I move the params directory?
 
@@ -58,7 +58,7 @@ The folder should contain the following files and all are (currently) required f
 1.5K sprout-verifying.key
 ```
 
-As a workaround, you can use any filesystem operations for your OS, e.g. creating a symlink of the directory but these are unsupported.
+As a workaround, you can use any filesystem operations for your OS, e.g. creating a symlink of the directory, but these are unsupported.
 
 ## Transactions
 
@@ -129,7 +129,7 @@ No, wallet encryption is [currently disabled](https://github.com/zcash/zcash/blo
 
 ### Why does my change go to a new address?
 
-Like Bitcoin when using transparent addresses, change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the application [**Options**](/using-zec-qt-wallet/#zeq-qt-wallet-options). As the 'feature' was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.
+Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the application [**Options**](/using-zec-qt-wallet/#zeq-qt-wallet-options). As the 'feature' was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.
 
 ### Will zec-qt wallet remember my outgoing shielded sends?
 
@@ -166,7 +166,7 @@ No, this is not supported.
 
 #### Can I export the Sapling HD seed?
 
-Sapling does [implement a HD wallet](https://z.cash/blog/sapling-in-hd/) however at present the only way to extract this is to perform the `z_exportwallet` command via `zcashd` and is unsupported in zec-qt-wallet due to needing to write to an export directory. To extract the Sapling HD seed you need to run `zcash-cli z_exportwallet` after specifying an `exportdir` in `zcash.conf`. See [these instructions](/troubleshooting/#via-an-external-zcashd) for more details on working with the Zcash RPC CLI. 
+Sapling does [implement an HD wallet](https://z.cash/blog/sapling-in-hd/) however at present the only way to extract this is to perform the `z_exportwallet` command via `zcashd` and is unsupported in zec-qt-wallet due to needing to write to an export directory. To extract the Sapling HD seed you need to run `zcash-cli z_exportwallet` after specifying an `exportdir` in `zcash.conf`. See [these instructions](/troubleshooting/#via-an-external-zcashd) for more details on working with the Zcash RPC CLI. 
 
 #### Can I import the Sapling HD seed?
 
@@ -174,7 +174,7 @@ Not at present, however, this feature will be added when supported by `zcashd`.
 
 ### Can I mine with zec-qt-wallet?
 
-No, zec-qt-wallet is a wallet and full node. While you can configure `zcashd` to run the inbuilt CPU miner this isn't practical to run on mainnet and you need alternative hardware and software to run. See [this page](https://www.zcashcommunity.com/mining/) for more information on mining.
+No, zec-qt-wallet is a wallet and full node. While you can configure `zcashd` to run the built-in CPU miner, this isn't practical to run on mainnet and you need alternative hardware and software to run. See [this page](https://www.zcashcommunity.com/mining/) for more information on mining.
 
 ## WinZEC
 
@@ -184,10 +184,10 @@ No, zec-qt-wallet is a wallet and full node. While you can configure `zcashd` to
 
 ### Can I import the WinZEC address book?
 
-Yes, in the [address book](/using-zec-qt-wallet/#address-book) click to **Import Address Book** and browse to the location of the WinZEC address book file. By default this will be `%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv` where `%/HOMEPATH%` is typically `C:\Users\username\` and you may need to enable viewing hidden files to browse to the `AppData` folder location.
+Yes, in the [Address Book](/using-zec-qt-wallet/#address-book) click to **Import Address Book** and browse to the location of the WinZEC address book file. By default this will be `%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv` where `%/HOMEPATH%` is typically `C:\Users\username\` and you may need to enable viewing hidden files to browse to the `AppData` folder location.
 
 ![Import address book](images/import-address-book.png)
 
 ## In what languages is zec-qt-wallet available?
 
-Currently, it is available in French, Spanish, Italian and Portuguese. If you want to help by translating see the [Translating zec-qt-wallet](/translations/) page.
+Currently, it is available in French, Spanish, Portuguese and Italian. If you want to help by translating see the [Translating zec-qt-wallet](/translations/) page.
