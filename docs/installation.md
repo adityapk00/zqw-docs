@@ -7,30 +7,30 @@ zec-qt-wallet runs on Windows, macOS and Linux and is [available to download](ht
 
 ??? info "Windows instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and run the .msi installer (named `Windows-installer-zec-qt-wallet-v0.6.0.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the release binary (named `Windows-binaries-zec-qt-wallet-v0.6.0.zip`), unzip it and double click on zec-qt-wallet to start.
+    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and run the .msi installer (named `Windows-installer-zec-qt-wallet-v0.6.1.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the release binary (named `Windows-binaries-zec-qt-wallet-v0.6.1.zip`), unzip it and double click on zec-qt-wallet to start.
 
 ??? info "macOS instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the macOS release named `macOS-zec-qt-wallet-v0.6.0.dmg`
+    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the macOS release named `macOS-zec-qt-wallet-v0.6.1.dmg`
     and double-click on the .dmg file to open it, and drag zec-qt-wallet on to the Applications link to install. You will need to give authorisation for the program to run.
 
 ??? info "Linux instructions (click to expand)"
 
     If you are on Debian/Ubuntu, download the `.deb` package and install it.
     
-    `sudo dpkg -i linux-deb-zec-qt-wallet-v0.6.0.deb`
+    `sudo dpkg -i linux-deb-zec-qt-wallet-v0.6.1.deb`
     
     `sudo apt install -f`
 
     Or you can download and run the binaries directly.
     
-    `tar -xvf zec-qt-wallet-v0.6.0.tar.gz`
+    `tar -xvf zec-qt-wallet-v0.6.1.tar.gz`
     
-    `./zec-qt-wallet-v0.6.0/zec-qt-wallet` 
+    `./zec-qt-wallet-v0.6.1/zec-qt-wallet` 
 
 ## Verifying the download
 
-Starting from v0.5.10 all [zec-qt-wallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed and contain checksums that may be validated to ensure the integrity of the downloaded software. The current signatures and checksums are available to download via the signatures-v0.6.0.tar.gz file on the [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases).
+Starting from v0.5.10 all [zec-qt-wallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed and contain checksums that may be validated to ensure the integrity of the downloaded software. The current signatures and checksums are available to download via the signatures-v0.6.1.tar.gz file on the [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases).
 
 ### Signatures
 
@@ -56,7 +56,7 @@ Once the key has been imported, you can run the following command to verify the 
 Assuming a good signature, you will see a similar output to the below.
 
 ```
-gpg --verify macOS-zec-qt-wallet-v0.6.0.dmg.sig macOS-zec-qt-wallet-v0.6.0.dmg
+gpg --verify macOS-zec-qt-wallet-v0.6.1.dmg.sig macOS-zec-qt-wallet-v0.6.1.dmg
 gpg: Signature made Wed 20 Feb 11:06:04 2019 PST
 gpg:                using RSA key C23172D0C9569591ECEC8ECB0E1E90279521EBB4
 gpg: Good signature from "adityapk00 (PGP Key for zec-qt-wallet) <zcash@adityapk.com>" [full]
@@ -64,11 +64,11 @@ gpg: Good signature from "adityapk00 (PGP Key for zec-qt-wallet) <zcash@adityapk
 
 ### Checksums
 
-The file `sha256sum-v0.6.0.txt` contains the SHA256 checksums for each download. You can verify that the file you downloaded matches this checksum via the following command:
+The file `sha256sum-v0.6.1.txt` contains the SHA256 checksums for each download. You can verify that the file you downloaded matches this checksum via the following command:
 
 ```
-sha256sum macOS-zec-qt-wallet-v0.6.0.dmg
-ccbab463063e7c310a1a3579d17995ea00cd494ab9637a8205a0e46f752fac25  macOS-zec-qt-wallet-v0.6.0.dmg
+sha256sum macOS-zec-qt-wallet-v0.6.1.dmg
+c133bf79162891b379ce5aacb0a7194be85c7fa6749bda24708d673686f51de5  macOS-zec-qt-wallet-v0.6.1.dmg
 ```
 
 ## zcashd
