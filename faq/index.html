@@ -1111,7 +1111,7 @@
 <hr />
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <h3 id="where-do-i-download-the-software">Where do I download the software?<a class="headerlink" href="#where-do-i-download-the-software" title="Permanent link">&para;</a></h3>
-<p>zec-qt-wallet is available to download from the <a href="https://github.com/ZcashFoundation/zec-qt-wallet">Zcash Foundation Github repository</a>. The <a href="https://github.com/ZcashFoundation/zec-qt-wallet/releases">releases page</a> lists the latest available downloads for each platform.</p>
+<p>zec-qt-wallet is available to download from the <a href="https://github.com/ZcashFoundation/zec-qt-wallet">Zcash Foundation GitHub repository</a>. The <a href="https://github.com/ZcashFoundation/zec-qt-wallet/releases">releases page</a> lists the latest available downloads for each platform.</p>
 <p>The Android application, which is still in beta, may be downloaded <a href="https://github.com/adityapk00/zqwandroid/releases">from here</a>.</p>
 <h3 id="which-version-should-i-download">Which version should I download?<a class="headerlink" href="#which-version-should-i-download" title="Permanent link">&para;</a></h3>
 <p>See the <a href="/installation/#download-and-install">installation</a> section for more details specific for your platform.</p>
@@ -1121,16 +1121,16 @@
 <h3 id="is-zec-qt-wallet-a-light-client">Is zec-qt-wallet a light client?<a class="headerlink" href="#is-zec-qt-wallet-a-light-client" title="Permanent link">&para;</a></h3>
 <p>No, zec-qt-wallet requires a full <code>zcashd</code> node to operate. A <a href="https://z.cash/blog/zcash-reference-wallet-light-client-protocol/">light client protocol</a> is currently in development that would substantially reduce the storage and bandwidth requirements for a light wallet. Currently, to use shielded transactions, you need to run a full node.</p>
 <h3 id="how-large-is-the-blockchain">How large is the blockchain?<a class="headerlink" href="#how-large-is-the-blockchain" title="Permanent link">&para;</a></h3>
-<p>Currently, the blockchain data directory is around 22GB (Feb 2019) and will continue to grow with time.</p>
+<p>Currently, the blockchain data directory is around 22GB (Feb 2019) and will continue to grow over time.</p>
 <h3 id="can-i-change-the-location-of-the-data-directory">Can I change the location of the data directory?<a class="headerlink" href="#can-i-change-the-location-of-the-data-directory" title="Permanent link">&para;</a></h3>
 <p>If you are starting zec-qt-wallet for the first time, then you can choose the <strong>Advanced Config</strong> option and select the desired location of your data directory, which may, for example, be on a separate disk. </p>
 <p><img alt="Choose data directory" src="../images/choose-data-dir.png" /></p>
 <p>If you have an existing data directory you would like to move, you can achieve this through the following steps, with zec-qt-wallet closed:</p>
 <ul>
-<li>Create the new directory</li>
+<li>Create the new directory.</li>
 <li>Move everything in your <a href="/faq/#where-is-the-default-data-directory-on-each-platform">existing data directory</a> to the new location with the exception of <code>zcash.conf</code> which must remain in the original data directory location.</li>
-<li>Update <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> to add the line <code>datadir=/your/new/path</code> specifying the path to the newly created folder</li>
-<li>Restart zec-qt-wallet</li>
+<li>Update <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> to add the line <code>datadir=/your/new/path</code> specifying the path to the newly created folder.</li>
+<li>Restart zec-qt-wallet.</li>
 </ul>
 <h3 id="can-i-move-the-params-directory">Can I move the params directory?<a class="headerlink" href="#can-i-move-the-params-directory" title="Permanent link">&para;</a></h3>
 <p>No, unlike the data directory there is no configurable option to specify the params directory and <code>zcashd</code> expects the params directory to be in the following locations:</p>
@@ -1148,7 +1148,7 @@
 </pre></div>
 
 
-<p>As a workaround, you can use any filesystem operations for your OS, e.g. creating a symlink of the directory but these are unsupported.</p>
+<p>As a workaround, you can use any filesystem operations for your OS, e.g. creating a symlink of the directory, but these are unsupported.</p>
 <h2 id="transactions">Transactions<a class="headerlink" href="#transactions" title="Permanent link">&para;</a></h2>
 <h3 id="can-i-use-funds-with-zero-confirmations">Can I use funds with zero confirmations?<a class="headerlink" href="#can-i-use-funds-with-zero-confirmations" title="Permanent link">&para;</a></h3>
 <p>No, Zcash requires that you have at least 1 confirmation before sending. Trying to spend unconfirmed funds will <a href="/troubleshooting/#not-enough-balance-when-sending-transactions">result in an error</a>.</p>
@@ -1189,7 +1189,7 @@
 <h3 id="is-the-wallet-encrypted">Is the wallet encrypted?<a class="headerlink" href="#is-the-wallet-encrypted" title="Permanent link">&para;</a></h3>
 <p>No, wallet encryption is <a href="https://github.com/zcash/zcash/blob/master/doc/security-warnings.md#wallet-encryption">currently disabled</a> by <code>zcashd</code>. You should use full-disk encryption (or encryption of your home directory) to protect your <code>wallet.dat</code> file at rest, and should assume (even unprivileged) users who are running on your OS can read your <code>wallet.dat</code> file.</p>
 <h3 id="why-does-my-change-go-to-a-new-address">Why does my change go to a new address?<a class="headerlink" href="#why-does-my-change-go-to-a-new-address" title="Permanent link">&para;</a></h3>
-<p>Like Bitcoin when using transparent addresses, change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the application <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a>. As the &lsquo;feature&rsquo; was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.</p>
+<p>Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the application <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a>. As the &lsquo;feature&rsquo; was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.</p>
 <h3 id="will-zec-qt-wallet-remember-my-outgoing-shielded-sends">Will zec-qt wallet remember my outgoing shielded sends?<a class="headerlink" href="#will-zec-qt-wallet-remember-my-outgoing-shielded-sends" title="Permanent link">&para;</a></h3>
 <p>Yes, by default zec-qt-wallet will store shielded sends locally as <code>zcashd</code> does not provide this information. You can override this behaviour via the <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a> setting and you can remove any stored transactions at any time by choosing the <strong>Clear History</strong> button (note that these will not be later recoverable if you delete them).</p>
 <h3 id="how-do-i-read-a-memo">How do I read a memo?<a class="headerlink" href="#how-do-i-read-a-memo" title="Permanent link">&para;</a></h3>
@@ -1210,19 +1210,19 @@
 <h4 id="can-i-export-a-bip39-seed-phrase">Can I export a BIP39 seed phrase?<a class="headerlink" href="#can-i-export-a-bip39-seed-phrase" title="Permanent link">&para;</a></h4>
 <p>No, this is not supported.</p>
 <h4 id="can-i-export-the-sapling-hd-seed">Can I export the Sapling HD seed?<a class="headerlink" href="#can-i-export-the-sapling-hd-seed" title="Permanent link">&para;</a></h4>
-<p>Sapling does <a href="https://z.cash/blog/sapling-in-hd/">implement a HD wallet</a> however at present the only way to extract this is to perform the <code>z_exportwallet</code> command via <code>zcashd</code> and is unsupported in zec-qt-wallet due to needing to write to an export directory. To extract the Sapling HD seed you need to run <code>zcash-cli z_exportwallet</code> after specifying an <code>exportdir</code> in <code>zcash.conf</code>. See <a href="/troubleshooting/#via-an-external-zcashd">these instructions</a> for more details on working with the Zcash RPC CLI. </p>
+<p>Sapling does <a href="https://z.cash/blog/sapling-in-hd/">implement an HD wallet</a> however at present the only way to extract this is to perform the <code>z_exportwallet</code> command via <code>zcashd</code> and is unsupported in zec-qt-wallet due to needing to write to an export directory. To extract the Sapling HD seed you need to run <code>zcash-cli z_exportwallet</code> after specifying an <code>exportdir</code> in <code>zcash.conf</code>. See <a href="/troubleshooting/#via-an-external-zcashd">these instructions</a> for more details on working with the Zcash RPC CLI. </p>
 <h4 id="can-i-import-the-sapling-hd-seed">Can I import the Sapling HD seed?<a class="headerlink" href="#can-i-import-the-sapling-hd-seed" title="Permanent link">&para;</a></h4>
 <p>Not at present, however, this feature will be added when supported by <code>zcashd</code>.</p>
 <h3 id="can-i-mine-with-zec-qt-wallet">Can I mine with zec-qt-wallet?<a class="headerlink" href="#can-i-mine-with-zec-qt-wallet" title="Permanent link">&para;</a></h3>
-<p>No, zec-qt-wallet is a wallet and full node. While you can configure <code>zcashd</code> to run the inbuilt CPU miner this isn&rsquo;t practical to run on mainnet and you need alternative hardware and software to run. See <a href="https://www.zcashcommunity.com/mining/">this page</a> for more information on mining.</p>
+<p>No, zec-qt-wallet is a wallet and full node. While you can configure <code>zcashd</code> to run the built-in CPU miner, this isn&rsquo;t practical to run on mainnet and you need alternative hardware and software to run. See <a href="https://www.zcashcommunity.com/mining/">this page</a> for more information on mining.</p>
 <h2 id="winzec">WinZEC<a class="headerlink" href="#winzec" title="Permanent link">&para;</a></h2>
 <h3 id="how-do-i-upgrade-from-winzec-zcash4mac-zcash4win">How do I upgrade from WinZEC / zcash4mac / zcash4win?<a class="headerlink" href="#how-do-i-upgrade-from-winzec-zcash4mac-zcash4win" title="Permanent link">&para;</a></h3>
 <p><a href="http://winzec.com/">WinZEC</a> and its predecessor zcash4win (and zcash4mac) have now been deprecated. You can simply install zec-qt-wallet and it&rsquo;ll use the existing data directory and wallet from any previous installation and operate as normal.</p>
 <h3 id="can-i-import-the-winzec-address-book">Can I import the WinZEC address book?<a class="headerlink" href="#can-i-import-the-winzec-address-book" title="Permanent link">&para;</a></h3>
-<p>Yes, in the <a href="/using-zec-qt-wallet/#address-book">address book</a> click to <strong>Import Address Book</strong> and browse to the location of the WinZEC address book file. By default this will be <code>%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv</code> where <code>%/HOMEPATH%</code> is typically <code>C:\Users\username\</code> and you may need to enable viewing hidden files to browse to the <code>AppData</code> folder location.</p>
+<p>Yes, in the <a href="/using-zec-qt-wallet/#address-book">Address Book</a> click to <strong>Import Address Book</strong> and browse to the location of the WinZEC address book file. By default this will be <code>%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv</code> where <code>%/HOMEPATH%</code> is typically <code>C:\Users\username\</code> and you may need to enable viewing hidden files to browse to the <code>AppData</code> folder location.</p>
 <p><img alt="Import address book" src="../images/import-address-book.png" /></p>
 <h2 id="in-what-languages-is-zec-qt-wallet-available">In what languages is zec-qt-wallet available?<a class="headerlink" href="#in-what-languages-is-zec-qt-wallet-available" title="Permanent link">&para;</a></h2>
-<p>Currently, it is available in French, Spanish, Italian and Portuguese. If you want to help by translating see the <a href="/translations/">Translating zec-qt-wallet</a> page.</p>
+<p>Currently, it is available in French, Spanish, Portuguese and Italian. If you want to help by translating see the <a href="/translations/">Translating zec-qt-wallet</a> page.</p>
                 
                   
                 

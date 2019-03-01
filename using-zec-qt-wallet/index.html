@@ -984,17 +984,17 @@
 <h3 id="remember-shielded-transactions">Remember shielded transactions<a class="headerlink" href="#remember-shielded-transactions" title="Permanent link">&para;</a></h3>
 <p>By default <code>zcashd</code> will not store information about your outgoing fully shielded transactions (z-&gt;z). If this option is selected, zec-qt-wallet will store outgoing transactions locally so that any shielded spends will appear in the transactions tab. If you do not wish these transactions to be saved by zec-qt-wallet simply toggle the option for <strong>Remember shielded transactions</strong>. At any point, you may clear your shielded transaction history locally by choosing the <strong>Clear History</strong> button (there is no way of recovering this data once cleared).</p>
 <h3 id="allow-custom-fees">Allow custom fees<a class="headerlink" href="#allow-custom-fees" title="Permanent link">&para;</a></h3>
-<p>Choose this option to allow the ability to change the default 0.0001 ZEC transaction fee. As all fees are transparent it is highly recommended that you use the default fee for all transactions to make your transactions indistinguishable. </p>
+<p>Choose this option to allow the ability to change the default 0.0001 ZEC transaction fee. As all fees are transparent, it is highly recommended that you use the default fee for all transactions, to make your transactions indistinguishable. </p>
 <h3 id="shield-change-to-your-sapling-address">Shield change to your Sapling address<a class="headerlink" href="#shield-change-to-your-sapling-address" title="Permanent link">&para;</a></h3>
 <p>Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address which can lead to your funds being spread over multiple addresses. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the <strong>Shield change from t-Addresses to your sapling address</strong> option. This was implemented in Bitcoin (and inherited in Zcash transparent addresses) as a privacy measure to prevent trivial linking of transactions on the blockchain so shielded (z) addresses do not have this property and any change is returned to the sending (z) address.</p>
 <h3 id="connect-via-tor">Connect via TOR<a class="headerlink" href="#connect-via-tor" title="Permanent link">&para;</a></h3>
 <p>When using Zcash <a href="https://z.cash/support/security/privacy-security-recommendations">it does nothing to preserve your network level privacy</a> so a unique IP address can allow network observers to correlate your Zcash transactions with each other and with your other traffic. To overcome this, you may use TOR to obfuscate your IP address.</p>
-<p>You will first need to have TOR installed which you may do from the <a href="https://www.torproject.org/download/download.html">official site</a>. You will need to download and run the TOR Expert Bundle (not TOR browser). TOR is also available on all popular package managers, e.g. macOS <code>brew install tor</code> or Debian <code>apt install tor</code>.</p>
+<p>You will first need to have TOR installed which you may do from the <a href="https://www.torproject.org/download/download.html">official site</a>. You will need to download and run the TOR Expert Bundle (not the TOR browser). TOR is also available on all popular package managers, e.g. macOS <code>brew install tor</code> or Debian <code>apt install tor</code>.</p>
 <p>Once running, choose the option in zec-qt-wallet to <strong>Connect via TOR</strong> and the following line will be added to your <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> file to configure TOR usage <code>proxy=127.0.0.1:9050</code>. Restart zec-qt-wallet to enable the service running over TOR.</p>
 <p>Use the advanced options when installing zec-qt-wallet to run <code>zcashd</code> over TOR from the initial startup, so your IP is never exposed to the network.</p>
 <div class="admonition warning">
 <p class="admonition-title">Parameters are not currently downloaded over TOR</p>
-<p>The Zcash parameters that are downloaded on the first launch are not done so over TOR depending on your network configuration.</p>
+<p>The Zcash parameters that are downloaded on the first launch are not done so over TOR, depending on your network configuration.</p>
 </div>
 <h4 id="onion-nodes">Onion Nodes<a class="headerlink" href="#onion-nodes" title="Permanent link">&para;</a></h4>
 <p>You can connect to Zcash nodes only behind onion addresses by adding the following into your <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> file, which will ensure that your IP address is not exposed to any Zcash-related services when running zec-qt-wallet.</p>
@@ -1028,7 +1028,7 @@ addnode=zcashuhmzycmlwld.onion
 
 <h2 id="encrypted-memo-field">Encrypted Memo field<a class="headerlink" href="#encrypted-memo-field" title="Permanent link">&para;</a></h2>
 <p>The encrypted memo field allows a user to include an optional memo of up to 512 bytes in their transaction. As the transaction is encrypted on the blockchain only the recipient of the transaction can read the memo. This could, for example, be used to include information about the sender for a purchase or a refund address and there is more detail about potential uses of this field in this <a href="https://z.cash/blog/encrypted-memo-field/">blog post</a>.</p>
-<p>You can only include a memo when sending <strong>to</strong> a shielded address. To include a memo in a transaction click the <strong>Memo</strong> button and it will provide a textbox allowing you to enter 512 characters. </p>
+<p>You can only include a memo when sending <strong>to</strong> a shielded address. To include a memo in a transaction, click the <strong>Memo</strong> button and it will provide a textbox allowing you to enter 512 characters. </p>
 <p><img alt="Memo" src="../images/send-memo.png" /></p>
 <h3 id="including-a-reply-to-address">Including a reply-to address<a class="headerlink" href="#including-a-reply-to-address" title="Permanent link">&para;</a></h3>
 <p>If you want to send a reply-to address in the memo field, for example, if you are using the memo field as an encrypted chat application, zec-qt-wallet allows you to include a reply-to address in a standard format. To use, press the <strong>Include Reply Address</strong> and the sending address will automatically be inserted.</p>
@@ -1082,7 +1082,7 @@ addnode=zcashuhmzycmlwld.onion
 <p>You can disable the embedded <code>zcashd</code> and force zec-qt-wallet to only connect to an external node by starting zec-qt-wallet with the <code>-no-embedded</code> option.</p>
 <div class="admonition danger">
 <p class="admonition-title">Exposing RPC port</p>
-<p>Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash and take over the OS account running zcashd.</p>
+<p>Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash, and take over the OS account running zcashd.</p>
 </div>
                 
                   

@@ -694,7 +694,7 @@
 sudo apt install clang g++ build-essential make mingw-w64 git pkg-config libc6-dev m4 g++-multilib autoconf libtool-bin ncurses-dev unzip python python-zmq zlib1g-dev wget curl bsdmainutils automake libgl1-mesa-dev libglu1-mesa-dev libfontconfig1-dev autopoint libssl-dev
 
 <span class="c1"># MXE dependencies</span>
-sudo apt install bash bison bzip2 flex  gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev libltdl-dev  libtool-bin libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby sed unzip wget xz-utils
+sudo apt install bash bison bzip2 flex gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev libltdl-dev libtool-bin libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby sed unzip wget xz-utils
 </pre></div>
 
 
@@ -779,7 +779,7 @@ mkdir -p ~/zcash/artifacts <span class="c1"># Built zcashd goes here.</span>
 
 <p>This will put all the Windows and Linux compiled binaries into the <code>artifacts</code> folder</p>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h2>
-<p>Install Xcode or Xcode Command Line Tools, and then install Qt 5.11.</p>
+<p>Install <a href="https://developer.apple.com/xcode/">Xcode</a> or the <a href="https://developer.apple.com/downloads/index.action">Xcode Command Line Tools</a>, and then install Qt 5.11.</p>
 <p>From a terminal:</p>
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> ~/github/zec-qt-wallet/
 <span class="nv">APP_VERSION</span><span class="o">=</span><span class="m">0</span>.3.0 src/scripts/mkmacdmg.sh
