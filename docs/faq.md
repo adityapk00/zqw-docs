@@ -190,4 +190,4 @@ Yes, in the [address book](/using-zec-qt-wallet/#address-book) click to **Import
 
 ## In what languages is zec-qt-wallet available?
 
-Currently, it is available in French, Spanish and Portuguese. If you want to help by translating see the [Translating zec-qt-wallet](/translations/) page.
+Currently, it is available in French, Spanish, Italian and Portuguese. If you want to help by translating see the [Translating zec-qt-wallet](/translations/) page.
