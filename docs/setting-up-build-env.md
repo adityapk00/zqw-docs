@@ -12,7 +12,7 @@ It is best to set up a build environment on Ubuntu 16.04. It brings the right ve
 sudo apt install clang g++ build-essential make mingw-w64 git pkg-config libc6-dev m4 g++-multilib autoconf libtool-bin ncurses-dev unzip python python-zmq zlib1g-dev wget curl bsdmainutils automake libgl1-mesa-dev libglu1-mesa-dev libfontconfig1-dev autopoint libssl-dev
 
 # MXE dependencies
-sudo apt install bash bison bzip2 flex  gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev libltdl-dev  libtool-bin libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby sed unzip wget xz-utils
+sudo apt install bash bison bzip2 flex gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev libltdl-dev libtool-bin libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby sed unzip wget xz-utils
 
 ```
 
@@ -113,7 +113,7 @@ This will put all the Windows and Linux compiled binaries into the `artifacts` f
 
 ## macOS
 
-Install Xcode or Xcode Command Line Tools, and then install Qt 5.11.
+Install [Xcode](https://developer.apple.com/xcode/) or the [Xcode Command Line Tools](https://developer.apple.com/downloads/index.action), and then install Qt 5.11.
 
 From a terminal:
 

@@ -109,7 +109,7 @@ By default `zcashd` will not store information about your outgoing fully shielde
 
 ### Allow custom fees
 
-Choose this option to allow the ability to change the default 0.0001 ZEC transaction fee. As all fees are transparent it is highly recommended that you use the default fee for all transactions to make your transactions indistinguishable. 
+Choose this option to allow the ability to change the default 0.0001 ZEC transaction fee. As all fees are transparent, it is highly recommended that you use the default fee for all transactions, to make your transactions indistinguishable. 
 
 ### Shield change to your Sapling address
 
@@ -119,14 +119,14 @@ Like Bitcoin, when using transparent addresses, change from a transaction goes t
 
 When using Zcash [it does nothing to preserve your network level privacy](https://z.cash/support/security/privacy-security-recommendations) so a unique IP address can allow network observers to correlate your Zcash transactions with each other and with your other traffic. To overcome this, you may use TOR to obfuscate your IP address.
 
-You will first need to have TOR installed which you may do from the [official site](https://www.torproject.org/download/download.html). You will need to download and run the TOR Expert Bundle (not TOR browser). TOR is also available on all popular package managers, e.g. macOS `brew install tor` or Debian `apt install tor`.
+You will first need to have TOR installed which you may do from the [official site](https://www.torproject.org/download/download.html). You will need to download and run the TOR Expert Bundle (not the TOR browser). TOR is also available on all popular package managers, e.g. macOS `brew install tor` or Debian `apt install tor`.
 
 Once running, choose the option in zec-qt-wallet to **Connect via TOR** and the following line will be added to your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file to configure TOR usage `proxy=127.0.0.1:9050`. Restart zec-qt-wallet to enable the service running over TOR.
 
 Use the advanced options when installing zec-qt-wallet to run `zcashd` over TOR from the initial startup, so your IP is never exposed to the network.
 
 !!! warning "Parameters are not currently downloaded over TOR"
-    The Zcash parameters that are downloaded on the first launch are not done so over TOR depending on your network configuration.
+    The Zcash parameters that are downloaded on the first launch are not done so over TOR, depending on your network configuration.
 
 
 #### Onion Nodes
@@ -166,7 +166,7 @@ addnode=zcashuhmzycmlwld.onion
 
 The encrypted memo field allows a user to include an optional memo of up to 512 bytes in their transaction. As the transaction is encrypted on the blockchain only the recipient of the transaction can read the memo. This could, for example, be used to include information about the sender for a purchase or a refund address and there is more detail about potential uses of this field in this [blog post](https://z.cash/blog/encrypted-memo-field/).
 
-You can only include a memo when sending **to** a shielded address. To include a memo in a transaction click the **Memo** button and it will provide a textbox allowing you to enter 512 characters. 
+You can only include a memo when sending **to** a shielded address. To include a memo in a transaction, click the **Memo** button and it will provide a textbox allowing you to enter 512 characters. 
 
 ![Memo](images/send-memo.png)
 
@@ -225,4 +225,4 @@ ssh -L8232:127.0.0.1:8232 user@remotehost
 You can disable the embedded `zcashd` and force zec-qt-wallet to only connect to an external node by starting zec-qt-wallet with the `-no-embedded` option.
 
 !!! danger "Exposing RPC port"
-    Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash and take over the OS account running zcashd.
+    Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash, and take over the OS account running zcashd.
