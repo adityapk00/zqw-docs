@@ -27,15 +27,15 @@ Generally, increasing the option to migrate over a larger number of blocks is th
 Note that you may only perform one migration at a time using the app.
 
 !!! tip "Closing the wallet during the migration."
-    If you shut down the wallet, then it'll send any pending transactions on reopening, which may result in the undesired behaviour of multiple transactions occuring back-to-back. The wallet **must** be open for any transactions to be sent so you should open it frequently and preferably leave it open throughout.
+    If you shut down the wallet, then it'll send any pending transactions on reopening, which may result in the undesired behaviour of multiple transactions occurring back-to-back. The wallet **must** be open for any transactions to be sent so you should open it frequently and preferably leave it open throughout.
 
-To check on the progress of the turnstile at any time visit **Apps->Sapling Turnstile** and you will be presented with the migration progress and the number of blocks until the next transaction.
+To check on the progress of the turnstile at any time, visit **Apps->Sapling Turnstile** and you will be presented with the migration progress and the number of blocks until the next transaction.
 
 ![Turnstile progress](images/turnstile-progress.png)
 
 !!! danger "Backup your wallet.dat file after starting the migration."
-    zec-qt-wallet creates **new** transparent addresses for the turnstile migration. You must create a backup after confirming the migration to ensure you have the private keys for these intermediate transparent addresses in case there is an issue. To do so visit **File->Backup wallet.dat**.
+    zec-qt-wallet creates **new** transparent addresses for the turnstile migration. You must create a backup after confirming the migration to ensure you have the private keys for these intermediate transparent addresses in case there is an issue. To do so, visit **File->Backup wallet.dat**.
 
 ### Aborting the turnstile migration
 
-If at any time you wish to abort the migration visit **Apps->Sapling Turnstile** and choose **Abort**, and no further transactions will take place. After aborting, all the funds remain in the addresses when the migration was aborted.
+If at any time you wish to abort the migration, visit **Apps->Sapling Turnstile** and choose **Abort**, and no further transactions will take place. After aborting, all the funds remain in the addresses when the migration was aborted.

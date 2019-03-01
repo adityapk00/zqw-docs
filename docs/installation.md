@@ -3,7 +3,7 @@
 
 ## Download and Install
 
-zec-qt-wallet runs on Windows, macOS and Linux and is [available to download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) from the releases page of the project [Github repository](https://github.com/ZcashFoundation/zec-qt-wallet/). Follow the instructions below for the platform of your choice to install zec-qt-wallet. To compile from source see [this section](compile-from-source).
+zec-qt-wallet runs on Windows, macOS and Linux and is [available to download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) from the releases page of the project [GitHub repository](https://github.com/ZcashFoundation/zec-qt-wallet/). Follow the instructions below for the platform of your choice to install zec-qt-wallet. To compile from source see [this section](compile-from-source).
 
 ??? info "Windows instructions (click to expand)"
 

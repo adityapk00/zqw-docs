@@ -59,9 +59,10 @@ See the section on [syncing issues](/troubleshooting/#my-node-isnt-syncing) for 
 
 ## Some of my shielded transactions are not displayed in the transaction tab
 
-By default `zcashd` does not store outgoing shielded transactions. To overcome this, zec-qt-wallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to **Remember shielded transactions** is selected in the [wallet options](/using-zec-qt-wallet/#remember-shielded-transactions). There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.
+By default, `zcashd` does not store outgoing shielded transactions. To overcome this, zec-qt-wallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to **Remember shielded transactions** is selected in the [wallet options](/using-zec-qt-wallet/#remember-shielded-transactions). There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.
 
 ## Sending from Sprout address to Sapling gives an error
+
 You cannot send directly from a Sprout address (zc) to a Sapling address (zs) as it must pass through the [Sapling turnstile](https://z.cash/blog/sapling-addresses-turnstile-migration/). See the details on the [turnstile migration](/turnstile-migration) for details on how to move your funds from a Sprout address to a Sapling one in a privacy-preserving way.
 
 ## How to perform a wallet rescan
@@ -117,7 +118,7 @@ If your balance is not being correctly displayed, first ensure that your softwar
 
 This means zec-qt-wallet couldn't start its embedded `zcashd` for some reason. zec-qt-wallet will show you another dialog box with the error reported from `zcashd` for debugging purposes as well. You might be able to solve this by simply restarting zec-qt-wallet, but if you repeatedly see this error, it might be one of the following reasons:
 
-* If you compiled zec-qt-wallet yourself and are running it: `zcashd` doesn't come with the Github repository, so you'll have to compile `zcashd` separately and copy it over into your zec-qt-wallet directory.
+* If you compiled zec-qt-wallet yourself and are running it: `zcashd` doesn't come with the GitHub repository, so you'll have to compile `zcashd` separately and copy it over into your zec-qt-wallet directory.
 * You might have corrupt zcash params: In this case, you may try deleting your params and letting zec-qt-wallet download them again.
 
 If all else fails, you can run an external `zcashd` and zec-qt-wallet will connect to it.
@@ -137,4 +138,4 @@ Normally, zec-qt-wallet can pick up the rpcuser/rpcpassword from [`zcash.conf`](
 The most likely cause for this is that you are trying to spend unconfirmed funds. Unlike Bitcoin, the Zcash protocol doesn't let you spent unconfirmed funds. Wait for at least one confirmation and then retry the transaction.
 
 ## My issue isn't resolved
-Open an [issue on Github](https://github.com/ZcashFoundation/zec-qt-wallet/issues) or tweet at [@zecqtwallet](https://twitter.com/zecqtwallet) for help.
+Open an [issue on GitHub](https://github.com/ZcashFoundation/zec-qt-wallet/issues) or tweet at [@zecqtwallet](https://twitter.com/zecqtwallet) for help.
