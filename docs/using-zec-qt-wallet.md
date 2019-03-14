@@ -13,7 +13,7 @@ If you are using the embedded `zcashd` and it is your first time using the softw
 ![Syncing](images/sync.png)
 
 !!! info "Initial Sync"
-    The blockchain is around **22GB** in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of zec-qt-wallet.
+    The blockchain is around **22GB** in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of ZecWallet.
 
 ## Generating a new address
 
@@ -131,7 +131,7 @@ Use the advanced options when installing ZecWallet to run `zcashd` over TOR from
 
 #### Onion Nodes
 
-You can connect to Zcash nodes only behind onion addresses by adding the following into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file, which will ensure that your IP address is not exposed to any Zcash-related services when running zec-qt-wallet.
+You can connect to Zcash nodes only behind onion addresses by adding the following into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file, which will ensure that your IP address is not exposed to any Zcash-related services when running ZecWallet.
 
 ```
 proxy=127.0.0.1:9050
