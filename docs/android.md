@@ -7,7 +7,9 @@
 
 **ZecWallet Android** is an Android frontend for ZecWallet that lets you send and receive shielded payments from your mobile phone. It is available on the [Google Play Store](https://play.google.com/store/apps/details?id=com.adityapk.zcash.zqwandroid) or via [direct download of the APK](https://github.com/adityapk00/zqwandroid/releases).
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SIhG8fPsE8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video_container">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SIhG8fPsE8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+</div>
 
 ### Run ZecWallet
 In order to let your Android phone connect to your desktop, you need to run the desktop [ZecWallet](https://github.com/ZcashFoundation/zec-qt-wallet).
