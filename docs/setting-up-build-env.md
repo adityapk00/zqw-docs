@@ -57,7 +57,7 @@ cd mxe
 make -j$(nproc) MXE_TARGETS=x86_64-w64-mingw32.static qtbase qtwebsockets
 ```
 
-### Build zec-qt-wallet
+### Build ZecWallet
 
 ``` bash
 git clone git@github.com:ZcashFoundation/zec-qt-wallet.git
@@ -133,7 +133,7 @@ cd zcash
 
 ## Windows
 
-Even though zec-qt-wallet for Windows is cross-compiled on Linux, we still need a Windows machine to build the installer. The Windows installer is built using WiX toolset. Install WiX toolset 3.11.1 from [here](http://wixtoolset.org/releases/). After installation, add the directory to the system path (both `candle.exe` and `light.exe` are runnable)
+Even though ZecWallet for Windows is cross-compiled on Linux, we still need a Windows machine to build the installer. The Windows installer is built using WiX toolset. Install WiX toolset 3.11.1 from [here](http://wixtoolset.org/releases/). After installation, add the directory to the system path (both `candle.exe` and `light.exe` are runnable)
 
 To build the installer, in Powershell, run:
 

@@ -54,11 +54,11 @@ nav:
     - Installing on Windows, Mac and Linux: installation.md
     - Compiling from source: compile-from-source.md
     - Setting up a build environment: setting-up-build-env.md
-  - Using zec-qt-wallet: using-zec-qt-wallet.md
+  - Using ZecWallet: using-zec-qt-wallet.md
   - Troubleshooting Issues: troubleshooting.md
   - Turnstile Migration: turnstile-migration.md
   - Android Companion App: android.md
-  - Translating zec-qt-wallet: translations.md
+  - Translating ZecWallet: translations.md
   - FAQ: faq.md
   - Privacy Policy: privacypolicy.md
   - Terms of Service: termsofservice.md

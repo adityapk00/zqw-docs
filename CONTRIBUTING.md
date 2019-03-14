@@ -4,13 +4,13 @@ Contributions are strongly encouraged. To do so fork the repo, make your changes
 
 ## Installing mkdocs
 
-zec-qt-wallet docs are built with [mkdocs](https://www.mkdocs.org/) so to test any changes you make locally you will need to install it. The mkdocs docs have a great [installation guide](https://www.mkdocs.org/#installation) to follow but if you have Python (and pip) installed you can do the following:
+ZecWallet docs are built with [mkdocs](https://www.mkdocs.org/) so to test any changes you make locally you will need to install it. The mkdocs docs have a great [installation guide](https://www.mkdocs.org/#installation) to follow but if you have Python (and pip) installed you can do the following:
 
 ```
 pip install mkdocs
 ```
 
-zec-qt-wallet docs also require some extra dependencies to build which you can install via:
+ZecWallet docs also require some extra dependencies to build which you can install via:
 
 ```
 pip install mkdocs-material pymdown-extensions pygments

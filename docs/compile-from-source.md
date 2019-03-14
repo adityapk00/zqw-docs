@@ -3,11 +3,11 @@
 ---
 
 ## Prerequisites
-To build zec-qt-wallet locally, you need to install Qt v5.11 or higher. You can get the latest opensource version from the [Qt download site](http://www.qt.io). Download and install the Qt version for your platform. During the installation, you should also select the build version for your platform/compiler. 
+To build ZecWallet locally, you need to install Qt v5.11 or higher. You can get the latest opensource version from the [Qt download site](http://www.qt.io). Download and install the Qt version for your platform. During the installation, you should also select the build version for your platform/compiler. 
 
 ![Qt installer](images/qt-install.png)
 
-zec-qt-wallet is written in C++ 14, so you'll also need a modern C++ compiler like g++/clang++/visual c++ depending on your platform. 
+ZecWallet is written in C++ 14, so you'll also need a modern C++ compiler like g++/clang++/visual c++ depending on your platform. 
 
 ## Building on Linux
 

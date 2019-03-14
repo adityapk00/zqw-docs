@@ -3,14 +3,14 @@
 ---
 
 !!! info "This is not an official implementation of the turnstile."
-    `zcashd` has yet to implement support for the Sapling turnstile. There is an existing proposal in the form of a ZIP and you can follow the progress of development [here](https://github.com/zcash/zips/pull/197). zec-qt-wallet is an individual implementation following the [suggested privacy recommendations](https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations) for implementation of the turnstile. If you are concerned, then wait until the official RPC tool is released into `zcashd` before migrating funds.
+    `zcashd` has yet to implement support for the Sapling turnstile. There is an existing proposal in the form of a ZIP and you can follow the progress of development [here](https://github.com/zcash/zips/pull/197). ZecWallet is an individual implementation following the [suggested privacy recommendations](https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations) for implementation of the turnstile. If you are concerned, then wait until the official RPC tool is released into `zcashd` before migrating funds.
 
 
 ## Turnstile Migration overview
 
 [The Sapling turnstile](https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html) is an auditing mechanism for the number of ZEC in circulation. The Sapling turnstile provides accounting for the ZEC held in Sprout shielded addresses as they are migrated to Sapling shielded addresses. To achieve this, owners of shielded ZEC are required to send their balances to a transparent address before sending to Sapling shielded addresses.
 
-If you simply send the funds from a Sprout address to a transparent address and onwards to a Sapling address it would be relatively trivial to link the balances. zec-qt-wallet can migrate your Sprout funds to a Sapling address in a privacy-preserving manner following the [privacy recommendations](https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations) by:
+If you simply send the funds from a Sprout address to a transparent address and onwards to a Sapling address it would be relatively trivial to link the balances. ZecWallet can migrate your Sprout funds to a Sapling address in a privacy-preserving manner following the [privacy recommendations](https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html#privacy-recommendations) by:
 
 * Creating new transparent addresses in your wallet to move from Sprout to transparent addresses.
 * Splits the funds across multiple transparent addresses over multiple blocks.
@@ -34,7 +34,7 @@ To check on the progress of the turnstile at any time, visit **Apps->Sapling Tur
 ![Turnstile progress](images/turnstile-progress.png)
 
 !!! danger "Backup your wallet.dat file after starting the migration."
-    zec-qt-wallet creates **new** transparent addresses for the turnstile migration. You must create a backup after confirming the migration to ensure you have the private keys for these intermediate transparent addresses in case there is an issue. To do so, visit **File->Backup wallet.dat**.
+    ZecWallet creates **new** transparent addresses for the turnstile migration. You must create a backup after confirming the migration to ensure you have the private keys for these intermediate transparent addresses in case there is an issue. To do so, visit **File->Backup wallet.dat**.
 
 ### Aborting the turnstile migration
 

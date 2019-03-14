@@ -4,11 +4,11 @@
 ## Getting started
 
 !!! info "Initial Parameters Download"
-    The first time zec-qt-wallet starts it will create a `zcash.conf` file with default configuration values as well as downloading the parameters required for sending and validating shielded transactions. These parameters are currently around 1.7GB in size and only need to be downloaded once.
+    The first time ZecWallet starts it will create a `zcash.conf` file with default configuration values as well as downloading the parameters required for sending and validating shielded transactions. These parameters are currently around 1.7GB in size and only need to be downloaded once.
 
-Now that you have zec-qt-wallet [installed](/installation) it is time to start using the software. 
+Now that you have ZecWallet [installed](/installation) it is time to start using the software. 
 
-If you are using the embedded `zcashd` and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file created specifying some default configuration values. The blockchain will then begin to sync, which is a time-consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner of zec-qt-wallet which displays the number of blocks downloaded and a sync percentage.
+If you are using the embedded `zcashd` and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file created specifying some default configuration values. The blockchain will then begin to sync, which is a time-consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner of ZecWallet which displays the number of blocks downloaded and a sync percentage.
 
 ![Syncing](images/sync.png)
 
@@ -17,7 +17,7 @@ If you are using the embedded `zcashd` and it is your first time using the softw
 
 ## Generating a new address
 
-Visiting the **Receive** tab of zec-qt-wallet will show all current addresses in the wallet and enable you to generate new ones. To learn about the different types of addresses available in Zcash which are transparent, shielded (Sprout and Sapling) please visit [this page](https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html). It is not possible to remove an address from the wallet once it has been generated.
+Visiting the **Receive** tab of ZecWallet will show all current addresses in the wallet and enable you to generate new ones. To learn about the different types of addresses available in Zcash which are transparent, shielded (Sprout and Sapling) please visit [this page](https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html). It is not possible to remove an address from the wallet once it has been generated.
 
 !!! tip "Backup after generating a new address"
     Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be [recreated from a seed](https://z.cash/blog/sapling-in-hd/) whereas transparent or Sprout addresses either require the private key or a `wallet.dat` backup made after the address was created. See the [Backing up section](/using-zec-qt-wallet/#backing-up) for more details.
@@ -28,7 +28,7 @@ Transparent addresses are automatically created when clicking the **t-Addr** but
 
 Optionally, add a label to easily identify the address and add it to your address book. A QR code is also provided for the address which may be used to scan into a compatible application to receive funds.
 
-zec-qt-wallet will also show if the address has been previously used.
+ZecWallet will also show if the address has been previously used.
 
 ## Sending a transaction
 
@@ -51,7 +51,7 @@ This will open up the transaction [on a block explorer](https://explorer.testnet
 
 ### Pay Zcash URI
 
-You can enter a Zcash URI by visiting **File->Pay Zcash URI** and pasting in the payment link. Zcash payment URIs encode the address, amount and memo into a single convenient string, so you can enter it into zec-qt-wallet and make payments easily.
+You can enter a Zcash URI by visiting **File->Pay Zcash URI** and pasting in the payment link. Zcash payment URIs encode the address, amount and memo into a single convenient string, so you can enter it into ZecWallet and make payments easily.
 
 ![Pay Zcash URI](images/pay-zcash-uri.png)
 
@@ -65,7 +65,7 @@ You can import an address book in csv format and users of WinZEC can [import an 
 
 ## Backing up
 
-zec-qt-wallet provides multiple options to ensure your wallet and keys are backed up. It is important that you perform regular backups if you are not exclusively using Sapling addresses and have the Sapling seed. While Sapling has a [HD wallet](https://z.cash/blog/sapling-in-hd/), support for importing the seed is not yet available.
+ZecWallet provides multiple options to ensure your wallet and keys are backed up. It is important that you perform regular backups if you are not exclusively using Sapling addresses and have the Sapling seed. While Sapling has a [HD wallet](https://z.cash/blog/sapling-in-hd/), support for importing the seed is not yet available.
 
 !!! warning "It is not yet possible to import a Sapling HD seed"
     While Sapling provides a [HD wallet](https://z.cash/blog/sapling-in-hd/) the feature for importing the seed does not yet exist, so while your funds would not be lost in the situation where you have the seed they would be rendered unusable until this feature is added. Therefore it is recommended you keep regular backups of either private keys or the `wallet.dat` file until this feature is implemented. 
@@ -84,7 +84,7 @@ Note that by default when `zcashd` starts it creates 100 transparent addresses f
 
 ### Backing up wallet.dat
 
-You can backup all of your private keys by making a copy of the `wallet.dat` file. To restore, you then replace any existing `wallet.dat` file in the [data directory](/faq/#where-is-the-default-data-directory-on-each-platform) and start zec-qt-wallet as normal. 
+You can backup all of your private keys by making a copy of the `wallet.dat` file. To restore, you then replace any existing `wallet.dat` file in the [data directory](/faq/#where-is-the-default-data-directory-on-each-platform) and start ZecWallet as normal. 
 
 !!! danger "Create a new backup after each new address generated"
     As new addresses are generated you will need to create an updated backup, else the new private keys will not be included.
@@ -97,15 +97,15 @@ To import a private key, choose **File->Import private key** from the menu. You 
 
 ![Import private key](images/import-private-key.png)
 
-## zeq-qt-wallet options
+## ZecWallet options
 
 zec-qt wallet has a number of options that allow you to customise how the application behaves and may be accessed in the **Settings->Options** menu as shown below.
 
-![zec-qt-wallet options](images/options.png)
+![ZecWallet options](images/options.png)
 
 ### Remember shielded transactions
 
-By default `zcashd` will not store information about your outgoing fully shielded transactions (z->z). If this option is selected, zec-qt-wallet will store outgoing transactions locally so that any shielded spends will appear in the transactions tab. If you do not wish these transactions to be saved by zec-qt-wallet simply toggle the option for **Remember shielded transactions**. At any point, you may clear your shielded transaction history locally by choosing the **Clear History** button (there is no way of recovering this data once cleared).
+By default `zcashd` will not store information about your outgoing fully shielded transactions (z->z). If this option is selected, ZecWallet will store outgoing transactions locally so that any shielded spends will appear in the transactions tab. If you do not wish these transactions to be saved by ZecWallet simply toggle the option for **Remember shielded transactions**. At any point, you may clear your shielded transaction history locally by choosing the **Clear History** button (there is no way of recovering this data once cleared).
 
 ### Allow custom fees
 
@@ -113,7 +113,7 @@ Choose this option to allow the ability to change the default 0.0001 ZEC transac
 
 ### Shield change to your Sapling address
 
-Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address which can lead to your funds being spread over multiple addresses. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the **Shield change from t-Addresses to your sapling address** option. This was implemented in Bitcoin (and inherited in Zcash transparent addresses) as a privacy measure to prevent trivial linking of transactions on the blockchain so shielded (z) addresses do not have this property and any change is returned to the sending (z) address.
+Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address which can lead to your funds being spread over multiple addresses. ZecWallet allows you to set an option to automatically send this change to a Sapling address via the **Shield change from t-Addresses to your sapling address** option. This was implemented in Bitcoin (and inherited in Zcash transparent addresses) as a privacy measure to prevent trivial linking of transactions on the blockchain so shielded (z) addresses do not have this property and any change is returned to the sending (z) address.
 
 ### Connect via TOR
 
@@ -121,9 +121,9 @@ When using Zcash [it does nothing to preserve your network level privacy](https:
 
 You will first need to have TOR installed which you may do from the [official site](https://www.torproject.org/download/download.html). You will need to download and run the TOR Expert Bundle (not the TOR browser). TOR is also available on all popular package managers, e.g. macOS `brew install tor` or Debian `apt install tor`.
 
-Once running, choose the option in zec-qt-wallet to **Connect via TOR** and the following line will be added to your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file to configure TOR usage `proxy=127.0.0.1:9050`. Restart zec-qt-wallet to enable the service running over TOR.
+Once running, choose the option in ZecWallet to **Connect via TOR** and the following line will be added to your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file to configure TOR usage `proxy=127.0.0.1:9050`. Restart ZecWallet to enable the service running over TOR.
 
-Use the advanced options when installing zec-qt-wallet to run `zcashd` over TOR from the initial startup, so your IP is never exposed to the network.
+Use the advanced options when installing ZecWallet to run `zcashd` over TOR from the initial startup, so your IP is never exposed to the network.
 
 !!! warning "Parameters are not currently downloaded over TOR"
     The Zcash parameters that are downloaded on the first launch are not done so over TOR, depending on your network configuration.
@@ -172,7 +172,7 @@ You can only include a memo when sending **to** a shielded address. To include a
 
 ### Including a reply-to address
 
-If you want to send a reply-to address in the memo field, for example, if you are using the memo field as an encrypted chat application, zec-qt-wallet allows you to include a reply-to address in a standard format. To use, press the **Include Reply Address** and the sending address will automatically be inserted.
+If you want to send a reply-to address in the memo field, for example, if you are using the memo field as an encrypted chat application, ZecWallet allows you to include a reply-to address in a standard format. To use, press the **Include Reply Address** and the sending address will automatically be inserted.
 
 ![Memo reply to address](images/memo-reply-address.png)
 
@@ -184,7 +184,7 @@ If you receive a transaction with a memo that contains a [reply address](#/using
 
 ## Exporting transactions
 
-zec-qt-wallet allows you to export all transactions via the **File->Export Transactions** menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: 
+ZecWallet allows you to export all transactions via the **File->Export Transactions** menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: 
 
 | Type    | Address | Date/Time                | Amount | Memo               |
 | ---     | ---     | ---                      | ---    | ---                |
@@ -192,11 +192,11 @@ zec-qt-wallet allows you to export all transactions via the **File->Export Trans
 
 ## Apps
 
-zec-qt-wallet bundles some applications to make common tasks simpler.
+ZecWallet bundles some applications to make common tasks simpler.
 
 ### Using z-board.net
 
-[z-board.net](http://z-board.net/) is a message board based on the [encrypted memo field](/using-zec-qt-wallet/#encrypted-memo-field). When using shielded addresses messages are anonymous. zec-qt-wallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address without manually adding it.
+[z-board.net](http://z-board.net/) is a message board based on the [encrypted memo field](/using-zec-qt-wallet/#encrypted-memo-field). When using shielded addresses messages are anonymous. ZecWallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address without manually adding it.
 
 ![zboard](images/zboard.png)
 
@@ -206,7 +206,7 @@ See the [page on the turnstile migration](#turnstile-migration) for full details
 
 ## Customising `zcash.conf`
 
-The `zcash.conf` file may be used to customise how the underlying `zcashd` software behaves. There are many [configuration options available](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html). When zec-qt-wallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random rpcpassword. The location of `zcash.conf` varies by system. It is located in the following location on each platform:
+The `zcash.conf` file may be used to customise how the underlying `zcashd` software behaves. There are many [configuration options available](https://zcash.readthedocs.io/en/latest/rtd_pages/zcash_conf_guide.html). When ZecWallet is installed it creates this file with sensible defaults such as connecting to the mainnet and a random rpcpassword. The location of `zcash.conf` varies by system. It is located in the following location on each platform:
 
 * Windows: `%HOMEPATH%\AppData\Roaming\Zcash\zcash.conf`
 * macOS: `~/Library/Application Support/Zcash/zcash.conf`
@@ -214,7 +214,7 @@ The `zcash.conf` file may be used to customise how the underlying `zcashd` softw
 
 ## Connecting to an external `zcashd`
 
-If you have an external `zcashd` running zec-qt-wallet will attempt to connect to it automatically. If this fails you can manually set the required settings via the **Edit->Settings** menu item and specifying the connection details in the **zcashd connection** tab.
+If you have an external `zcashd` running ZecWallet will attempt to connect to it automatically. If this fails you can manually set the required settings via the **Edit->Settings** menu item and specifying the connection details in the **zcashd connection** tab.
 
 Note that the easiest way to connect to a remote node is to SSH to it with port forwarding:
 
@@ -222,7 +222,7 @@ Note that the easiest way to connect to a remote node is to SSH to it with port 
 ssh -L8232:127.0.0.1:8232 user@remotehost
 ```
 
-You can disable the embedded `zcashd` and force zec-qt-wallet to only connect to an external node by starting zec-qt-wallet with the `-no-embedded` option.
+You can disable the embedded `zcashd` and force ZecWallet to only connect to an external node by starting ZecWallet with the `-no-embedded` option.
 
 !!! danger "Exposing RPC port"
     Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash, and take over the OS account running zcashd.

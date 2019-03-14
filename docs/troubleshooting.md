@@ -20,7 +20,7 @@ On Windows `%HOMEPATH%` is typically `C:\Users\username` where `username` is you
 
 ## The `zec-qt-wallet.log` file
 
-As with the `debug.log` file, the `zec-qt-wallet.log` file will help to identify issues with the zec-qt-wallet application. Providing the latest output of this file can help in troubleshooting issues. The location of this file is in the following location for each platform: 
+As with the `debug.log` file, the `zec-qt-wallet.log` file will help to identify issues with the ZecWallet application. Providing the latest output of this file can help in troubleshooting issues. The location of this file is in the following location for each platform: 
 
 * Windows: `%HOMEPATH%\AppData\Roaming\zec-qt-wallet-org\zec-qt-wallet\zec-qt-wallet.log`
 * macOS: `/Users/gareth/Library/Application Support/zec-qt-wallet-org/zec-qt-wallet/zec-qt-wallet.log`
@@ -28,9 +28,9 @@ As with the `debug.log` file, the `zec-qt-wallet.log` file will help to identify
 
 ## My node isn't syncing or is slow to sync
 
-If your node isn't syncing or is slow to sync, first check that you are running the [latest version](https://github.com/ZcashFoundation/zec-qt-wallet/releases) of zec-qt-wallet then check that you have connections to other nodes as you may have a network issue. zec-qt-wallet will display if you are connected via the application footer. 
+If your node isn't syncing or is slow to sync, first check that you are running the [latest version](https://github.com/ZcashFoundation/zec-qt-wallet/releases) of ZecWallet then check that you have connections to other nodes as you may have a network issue. ZecWallet will display if you are connected via the application footer. 
 
-![zec-qt-wallet connections](images/connections.png)
+![ZecWallet connections](images/connections.png)
 
 You can also find this information in the **zcashd** tab on the main menu (if you are running the embedded `zcashd`) and it will list the number of connections to other peers, which should be greater than 0. If you do not have any connections then check your internet connection, then check that the [ports required](/troubleshooting/#zcashd-ports) for `zcashd` are not blocked and that you have not specified a TOR connection in the options but do not have TOR running.
 
@@ -59,7 +59,7 @@ See the section on [syncing issues](/troubleshooting/#my-node-isnt-syncing) for 
 
 ## Some of my shielded transactions are not displayed in the transaction tab
 
-By default, `zcashd` does not store outgoing shielded transactions. To overcome this, zec-qt-wallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to **Remember shielded transactions** is selected in the [wallet options](/using-zec-qt-wallet/#remember-shielded-transactions). There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.
+By default, `zcashd` does not store outgoing shielded transactions. To overcome this, ZecWallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to **Remember shielded transactions** is selected in the [wallet options](/using-zec-qt-wallet/#remember-shielded-transactions). There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.
 
 ## Sending from Sprout address to Sapling gives an error
 
@@ -70,11 +70,11 @@ You cannot send directly from a Sprout address (zc) to a Sapling address (zs) as
 !!! info "Potentially slow wallet rescan"
     Depending on the number of addresses in your wallet (particularly shielded addresses) a wallet rescan can be slow. Simply leave it running until the process is complete.
 
-If you need to perform a wallet rescan due to missing transactions or balance errors you will need to start `zcashd` with the `-rescan` option. There are a couple of methods to achieve this and this process will be improved in future versions of the zec-qt-wallet.
+If you need to perform a wallet rescan due to missing transactions or balance errors you will need to start `zcashd` with the `-rescan` option. There are a couple of methods to achieve this and this process will be improved in future versions of the ZecWallet.
 
 ### Via an external `zcashd`
 
-If you are running the embedded `zcashd` you will need to run `zcashd` externally to run the rescan and once complete you can safely shut down the external `zcashd` and run zec-qt-wallet as normal. With zec-qt-wallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).
+If you are running the embedded `zcashd` you will need to run `zcashd` externally to run the rescan and once complete you can safely shut down the external `zcashd` and run ZecWallet as normal. With ZecWallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).
 
 * Windows (installer): `cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcashd.exe" -rescan"`
 * Windows (binaries): `zcashd.exe -rescan` from the directory of the downloaded binaries.
@@ -82,9 +82,9 @@ If you are running the embedded `zcashd` you will need to run `zcashd` externall
 * Linux (deb): `zcashd -rescan` 
 * Linux (binaries): `./zcashd -rescan` from the directory of the downloaded binaries.
 
-Then open zec-qt-wallet and it should connect to the running `zcashd` and you can monitor the progress of the rescan on the startup screen.
+Then open ZecWallet and it should connect to the running `zcashd` and you can monitor the progress of the rescan on the startup screen.
 
-Note that the command above will open an instance of `zcashd` in the foreground, you can change this behaviour by adding the `-daemon` option. You will need to manually stop `zcashd` as zec-qt-wallet will not close an externally running node. The simplest method is to run the `zcash-cli` stop command:
+Note that the command above will open an instance of `zcashd` in the foreground, you can change this behaviour by adding the `-daemon` option. You will need to manually stop `zcashd` as ZecWallet will not close an externally running node. The simplest method is to run the `zcash-cli` stop command:
 
 * Windows (installer): `cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcash-cli.exe" stop"`
 * Windows (binaries): `zcash-cli.exe stop` from the directory of the downloaded binaries.
@@ -92,11 +92,11 @@ Note that the command above will open an instance of `zcashd` in the foreground,
 * Linux (deb): `zcash-cli stop`
 * Linux (binaries): `./zcash-cli stop` from the directory of the downloaded binaries.
 
-Once the rescan has been completed and the external `zcashd` node has been stopped you can continue to run zec-qt-wallet as normal.
+Once the rescan has been completed and the external `zcashd` node has been stopped you can continue to run ZecWallet as normal.
 
 ### Editing `zcash.conf`
 
-As an alternative to the external `zcashd` you can edit the [`zcash.conf` file](/using-zec-qt-wallet/#customising-zcashconf) and add the line `rescan=1` and then start zec-qt-wallet normally. After you have opened zec-qt-wallet and the rescan is complete you must remove the line from `zcash.conf` to prevent the wallet from rescanning every time it is opened and close zec-qt-wallet as normal.
+As an alternative to the external `zcashd` you can edit the [`zcash.conf` file](/using-zec-qt-wallet/#customising-zcashconf) and add the line `rescan=1` and then start ZecWallet normally. After you have opened ZecWallet and the rescan is complete you must remove the line from `zcash.conf` to prevent the wallet from rescanning every time it is opened and close ZecWallet as normal.
 
 ## How to perform a reindex
 
@@ -116,16 +116,16 @@ If your balance is not being correctly displayed, first ensure that your softwar
 
 ### Could not start embedded zcashd
 
-This means zec-qt-wallet couldn't start its embedded `zcashd` for some reason. zec-qt-wallet will show you another dialog box with the error reported from `zcashd` for debugging purposes as well. You might be able to solve this by simply restarting zec-qt-wallet, but if you repeatedly see this error, it might be one of the following reasons:
+This means ZecWallet couldn't start its embedded `zcashd` for some reason. ZecWallet will show you another dialog box with the error reported from `zcashd` for debugging purposes as well. You might be able to solve this by simply restarting zec-qt-wallet, but if you repeatedly see this error, it might be one of the following reasons:
 
-* If you compiled zec-qt-wallet yourself and are running it: `zcashd` doesn't come with the GitHub repository, so you'll have to compile `zcashd` separately and copy it over into your zec-qt-wallet directory.
-* You might have corrupt zcash params: In this case, you may try deleting your params and letting zec-qt-wallet download them again.
+* If you compiled ZecWallet yourself and are running it: `zcashd` doesn't come with the GitHub repository, so you'll have to compile `zcashd` separately and copy it over into your ZecWallet directory.
+* You might have corrupt zcash params: In this case, you may try deleting your params and letting ZecWallet download them again.
 
-If all else fails, you can run an external `zcashd` and zec-qt-wallet will connect to it.
+If all else fails, you can run an external `zcashd` and ZecWallet will connect to it.
 
 ### Authentication error
 
-Normally, zec-qt-wallet can pick up the rpcuser/rpcpassword from [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf). If it doesn't for some reason, you can set the username/password in the **File->Settings** menu. If you are connecting to a remote node, make sure that `zcashd` on the remote machine is accepting connections from your machine. The target machine's firewall needs to allow connections from your host and also `zcashd` is set to be configured to accept connections from this host.
+Normally, ZecWallet can pick up the rpcuser/rpcpassword from [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf). If it doesn't for some reason, you can set the username/password in the **File->Settings** menu. If you are connecting to a remote node, make sure that `zcashd` on the remote machine is accepting connections from your machine. The target machine's firewall needs to allow connections from your host and also `zcashd` is set to be configured to accept connections from this host.
 
 !!! danger "Using the RPC port over a remote interface is NOT RECOMMENDED"
     Using the RPC port over a remote interface is NOT RECOMMENDED, because

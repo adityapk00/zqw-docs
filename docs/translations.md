@@ -1,4 +1,4 @@
-# Translating zec-qt-wallet
+# Translating ZecWallet
 
 ---
 
@@ -19,11 +19,11 @@ Windows and Mac builds for standalone Qt Linguist are [available here](https://g
 Once you have updated the translations in the `*.ts` file, please create a [pull request](https://github.com/ZcashFoundation/zec-qt-wallet/compare) for the file. Please remember to "confirm" the translations from the Linguist menu (or remove the "unfinished" tag from XML element, if you are editing manually).
 
 !!! tip "Incomplete translations"
-    You don't have to translate all the strings. You can do this incrementally, and zec-qt-wallet will use all available translated strings, else fall back to English.
+    You don't have to translate all the strings. You can do this incrementally, and ZecWallet will use all available translated strings, else fall back to English.
 
 ## Testing translations
 
-If you want to test the translations locally, you'll have to compile zec-qt-wallet. Please see [compiling from source](/compile-from-source/) instructions.
+If you want to test the translations locally, you'll have to compile ZecWallet. Please see [compiling from source](/compile-from-source/) instructions.
 
 Save the linguist file, and then, from a command prompt (remember to replace `ln` with your language code):
 
@@ -36,8 +36,8 @@ Save the linguist file, and then, from a command prompt (remember to replace `ln
 mv res/zec_<ln>.qm res/zec_qt_wallet_<ln>.qm
 ```
 
-After this, you can launch your compiled zec-qt-wallet with a LANG environment variable to force zec-qt-wallet to use that language.
+After this, you can launch your compiled ZecWallet with a LANG environment variable to force ZecWallet to use that language.
 
 ``` bash
-LANG=es ./zec-qt-wallet
+LANG=es ./zecwallet
 ```

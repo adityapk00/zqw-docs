@@ -5,7 +5,7 @@
 
 ### Where do I download the software?
 
-zec-qt-wallet is available to download from the [Zcash Foundation GitHub repository](https://github.com/ZcashFoundation/zec-qt-wallet). The [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) lists the latest available downloads for each platform.
+ZecWallet is available to download from the [Zcash Foundation GitHub repository](https://github.com/ZcashFoundation/zec-qt-wallet). The [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) lists the latest available downloads for each platform.
 
 The Android application, which is still in beta, may be downloaded [from here](https://github.com/adityapk00/zqwandroid/releases).
 
@@ -15,13 +15,13 @@ See the [installation](/installation/#download-and-install) section for more det
 
 ### How do I verify the download file?
 
-Starting from v0.5.10 all [zec-qt-wallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed. You may download the detached signatures on the [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and verify that the software was signed with the published [public key](https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc). In addition, each release contains SHA256 checksums that may additionally be verified. For more information, see the [Verifying the download](/installation/#verifying-the-download) section of the [Installation guide](/installation/).
+Starting from v0.5.10 all [ZecWallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed. You may download the detached signatures on the [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and verify that the software was signed with the published [public key](https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc). In addition, each release contains SHA256 checksums that may additionally be verified. For more information, see the [Verifying the download](/installation/#verifying-the-download) section of the [Installation guide](/installation/).
 
 ## Blockchain
 
-### Is zec-qt-wallet a light client?
+### Is ZecWallet a light client?
 
-No, zec-qt-wallet requires a full `zcashd` node to operate. A [light client protocol](https://z.cash/blog/zcash-reference-wallet-light-client-protocol/) is currently in development that would substantially reduce the storage and bandwidth requirements for a light wallet. Currently, to use shielded transactions, you need to run a full node.
+No, ZecWallet requires a full `zcashd` node to operate. A [light client protocol](https://z.cash/blog/zcash-reference-wallet-light-client-protocol/) is currently in development that would substantially reduce the storage and bandwidth requirements for a light wallet. Currently, to use shielded transactions, you need to run a full node.
 
 ### How large is the blockchain?
 
@@ -29,11 +29,11 @@ Currently, the blockchain data directory is around 22GB (Feb 2019) and will cont
 
 ### Can I change the location of the data directory?
 
-If you are starting zec-qt-wallet for the first time, then you can choose the **Advanced Config** option and select the desired location of your data directory, which may, for example, be on a separate disk. 
+If you are starting ZecWallet for the first time, then you can choose the **Advanced Config** option and select the desired location of your data directory, which may, for example, be on a separate disk. 
 
 ![Choose data directory](images/choose-data-dir.png)
 
-If you have an existing data directory you would like to move, you can achieve this through the following steps, with zec-qt-wallet closed:
+If you have an existing data directory you would like to move, you can achieve this through the following steps, with ZecWallet closed:
 
 * Create the new directory.
 * Move everything in your [existing data directory](/faq/#where-is-the-default-data-directory-on-each-platform) to the new location with the exception of `zcash.conf` which must remain in the original data directory location.
@@ -94,7 +94,7 @@ By default, the location of the data directory, which stores the wallet, `zcash.
 
 `zcash.conf` is located in the [default data directory](/faq/#where-is-the-default-data-directory-on-each-platform) and will be in this location even if the `datadir` parameter has been set to a custom value.
 
-### Can I use zec-qt-wallet with an external node?
+### Can I use ZecWallet with an external node?
 
 Yes, see [this section](/using-zec-qt-wallet/#connecting-to-an-external-zcashd) for how to connect to an external `zcashd`.
 
@@ -104,22 +104,22 @@ To find the version of `zcashd` you are running simply hover over the blockchain
 
 ![zcashd version](images/zcashd-version.png)
 
-### Does zec-qt-wallet work on testnet?
+### Does ZecWallet work on testnet?
 
-Yes, zec-qt-wallet will work on testnet. To do so add the following lines to your [zcash.conf](using-zec-qt-wallet/#customising-zcashconf) file, replacing the existing values if present:
+Yes, ZecWallet will work on testnet. To do so add the following lines to your [zcash.conf](using-zec-qt-wallet/#customising-zcashconf) file, replacing the existing values if present:
 
 ``` bash
 addnode=testnet.z.cash
 testnet=1
 ```
 
-### Does zec-qt-wallet support payment disclosure?
+### Does ZecWallet support payment disclosure?
 
 Not yet. While [payment disclosure](https://z.cash/blog/viewing-keys-selective-disclosure/) works on Sprout addresses, `zcashd` has not yet been updated to support Sapling. There is [a plan to support this](https://github.com/ZcashFoundation/zec-qt-wallet/issues/47) once implemented by `zcashd`.
 
-### Does zec-qt-wallet support viewing keys?
+### Does ZecWallet support viewing keys?
 
-Not yet, as `zcashd` doesn’t currently support Sapling viewing keys and will be implemented in zec-qt-wallet once supported.
+Not yet, as `zcashd` doesn’t currently support Sapling viewing keys and will be implemented in ZecWallet once supported.
 
 ## Wallet
 
@@ -129,11 +129,11 @@ No, wallet encryption is [currently disabled](https://github.com/zcash/zcash/blo
 
 ### Why does my change go to a new address?
 
-Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address. zec-qt-wallet allows you to set an option to automatically send this change to a Sapling address via the application [**Options**](/using-zec-qt-wallet/#zeq-qt-wallet-options). As the 'feature' was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.
+Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address. ZecWallet allows you to set an option to automatically send this change to a Sapling address via the application [**Options**](/using-zec-qt-wallet/#zeq-qt-wallet-options). As the 'feature' was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.
 
 ### Will zec-qt wallet remember my outgoing shielded sends?
 
-Yes, by default zec-qt-wallet will store shielded sends locally as `zcashd` does not provide this information. You can override this behaviour via the [**Options**](/using-zec-qt-wallet/#zeq-qt-wallet-options) setting and you can remove any stored transactions at any time by choosing the **Clear History** button (note that these will not be later recoverable if you delete them).
+Yes, by default ZecWallet will store shielded sends locally as `zcashd` does not provide this information. You can override this behaviour via the [**Options**](/using-zec-qt-wallet/#zeq-qt-wallet-options) setting and you can remove any stored transactions at any time by choosing the **Clear History** button (note that these will not be later recoverable if you delete them).
 
 ### How do I read a memo?
 
@@ -141,7 +141,7 @@ If there is a [memo](/using-zec-qt-wallet/#encrypted-memo-field) attached to a t
 
 ![Memo](images/memo.png)
 
-### Can I use zec-qt-wallet with a hardware wallet?
+### Can I use ZecWallet with a hardware wallet?
 
 No, this is currently not supported.
 
@@ -153,7 +153,7 @@ No, addresses cannot be removed from the wallet. It is advised that you [export 
 
 #### Can I import private keys from a recovery phrase / BIP39 Mnemonic?
 
-No, zec-qt-wallet cannot import private keys from a recovery phrase directly. To do so you will need to extract your private keys from the recovery phrase. You can use a tool such as [https://iancoleman.io/bip39/](https://iancoleman.io/bip39/) entering the BIP39 Mnemonic (your recovery phrase) and choosing Zcash as the coin.
+No, ZecWallet cannot import private keys from a recovery phrase directly. To do so you will need to extract your private keys from the recovery phrase. You can use a tool such as [https://iancoleman.io/bip39/](https://iancoleman.io/bip39/) entering the BIP39 Mnemonic (your recovery phrase) and choosing Zcash as the coin.
 
 Once you have entered these values look for the section entitled **Derived Addresses** which will list all the derived addresses and private keys for those addresses. You will need to [import the private keys](using-zec-qt-wallet/#importing-private-keys) for any transparent addresses where you have funds, remembering that [change in transparent addresses goes to a new address](/faq/#why-does-my-change-go-to-a-new-address).
 
@@ -166,7 +166,7 @@ No, this is not supported.
 
 #### Can I export the Sapling HD seed?
 
-Sapling does [implement an HD wallet](https://z.cash/blog/sapling-in-hd/) however at present the only way to extract this is to perform the `z_exportwallet` command via `zcashd` and is unsupported in zec-qt-wallet due to needing to write to an export directory. To extract the Sapling HD seed you need to run `zcash-cli z_exportwallet` after specifying an `exportdir` in `zcash.conf`. See [these instructions](/troubleshooting/#via-an-external-zcashd) for more details on working with the Zcash RPC CLI. 
+Sapling does [implement an HD wallet](https://z.cash/blog/sapling-in-hd/) however at present the only way to extract this is to perform the `z_exportwallet` command via `zcashd` and is unsupported in ZecWallet due to needing to write to an export directory. To extract the Sapling HD seed you need to run `zcash-cli z_exportwallet` after specifying an `exportdir` in `zcash.conf`. See [these instructions](/troubleshooting/#via-an-external-zcashd) for more details on working with the Zcash RPC CLI. 
 
 #### Can I import the Sapling HD seed?
 
@@ -174,13 +174,13 @@ Not at present, however, this feature will be added when supported by `zcashd`.
 
 ### Can I mine with zec-qt-wallet?
 
-No, zec-qt-wallet is a wallet and full node. While you can configure `zcashd` to run the built-in CPU miner, this isn't practical to run on mainnet and you need alternative hardware and software to run. See [this page](https://www.zcashcommunity.com/mining/) for more information on mining.
+No, ZecWallet is a wallet and full node. While you can configure `zcashd` to run the built-in CPU miner, this isn't practical to run on mainnet and you need alternative hardware and software to run. See [this page](https://www.zcashcommunity.com/mining/) for more information on mining.
 
 ## WinZEC
 
 ### How do I upgrade from WinZEC / zcash4mac / zcash4win?
 
-[WinZEC](http://winzec.com/) and its predecessor zcash4win (and zcash4mac) have now been deprecated. You can simply install zec-qt-wallet and it'll use the existing data directory and wallet from any previous installation and operate as normal.
+[WinZEC](http://winzec.com/) and its predecessor zcash4win (and zcash4mac) have now been deprecated. You can simply install ZecWallet and it'll use the existing data directory and wallet from any previous installation and operate as normal.
 
 ### Can I import the WinZEC address book?
 
@@ -188,6 +188,6 @@ Yes, in the [Address Book](/using-zec-qt-wallet/#address-book) click to **Import
 
 ![Import address book](images/import-address-book.png)
 
-## In what languages is zec-qt-wallet available?
+## In what languages is ZecWallet available?
 
 Currently, it is available in French, Spanish, Portuguese and Italian. If you want to help by translating see the [Translating zec-qt-wallet](/translations/) page.
