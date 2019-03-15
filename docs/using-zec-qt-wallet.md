@@ -1,4 +1,4 @@
-# Using zec-qt-wallet
+# Using ZecWallet
 ---
 
 ## Getting started

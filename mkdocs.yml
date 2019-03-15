@@ -54,7 +54,9 @@ nav:
     - Installing on Windows, Mac and Linux: installation.md
     - Compiling from source: compile-from-source.md
     - Setting up a build environment: setting-up-build-env.md
-  - Using ZecWallet: using-zec-qt-wallet.md
+  - Getting Started: 
+    - Using ZecWallet: using-zec-qt-wallet.md
+    - Video Tutorials: video-tutorials.md
   - Troubleshooting Issues: troubleshooting.md
   - Turnstile Migration: turnstile-migration.md
   - Android Companion App: android.md
