@@ -15,6 +15,9 @@ If you are using the embedded `zcashd` and it is your first time using the softw
 !!! info "Initial Sync"
     The blockchain is around **22GB** in size and will take around 8+ hours to download. Monitor the progress via the sync progress in the bottom right corner of ZecWallet.
 
+!!! quote ""
+    [**Video**: Verifying node synchronization](/video-tutorials/#verifying-node-synchronization)    
+
 ## Generating a new address
 
 Visiting the **Receive** tab of ZecWallet will show all current addresses in the wallet and enable you to generate new ones. To learn about the different types of addresses available in Zcash which are transparent, shielded (Sprout and Sapling) please visit [this page](https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html). It is not possible to remove an address from the wallet once it has been generated.
@@ -30,6 +33,9 @@ Optionally, add a label to easily identify the address and add it to your addres
 
 ZecWallet will also show if the address has been previously used.
 
+!!! quote ""
+    [**Video**: Receive a Transaction](/video-tutorials/#receiving-transactions)
+
 ## Sending a transaction
 
 Once you've generated an address and have sent some funds to it, you can send some ZEC. Click on the **Send** tab:
@@ -42,6 +48,9 @@ Choose an address with funds in it and enter the recipient address. You may spec
 
 !!! info "Shielded send requirements"
     Sending Sapling transaction require little resource usage and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 70-90 seconds and require an additional 1.3GB of memory to perform the spend. 
+
+!!! quote ""
+    [**Video**: Send a Transaction](/video-tutorials/#sending-transactions)    
 
 ### Viewing transaction on explorer
 
@@ -63,12 +72,15 @@ You can import an address book in csv format and users of WinZEC can [import an 
 
 ![Import Address Book](images/import-address-book.png)
 
+!!! quote ""
+    [**Video**: Using Labels](/video-tutorials/#using-labels)    
+
 ## Backing up
 
 ZecWallet provides multiple options to ensure your wallet and keys are backed up. It is important that you perform regular backups if you are not exclusively using Sapling addresses and have the Sapling seed. While Sapling has a [HD wallet](https://z.cash/blog/sapling-in-hd/), support for importing the seed is not yet available.
 
 !!! warning "It is not yet possible to import a Sapling HD seed"
-    While Sapling provides a [HD wallet](https://z.cash/blog/sapling-in-hd/) the feature for importing the seed does not yet exist, so while your funds would not be lost in the situation where you have the seed they would be rendered unusable until this feature is added. Therefore it is recommended you keep regular backups of either private keys or the `wallet.dat` file until this feature is implemented. 
+    While Sapling provides a [HD wallet](https://z.cash/blog/sapling-in-hd/) the feature for importing the seed does not yet exist, so while your funds would not be lost in the situation where you have the seed they would be rendered unusable until this feature is added. Therefore it is recommended you keep regular backups of either private keys or the `wallet.dat` file until this feature is implemented.
 
 ### Export a single private key
 
@@ -80,7 +92,10 @@ To export a single private key on the **Balance** tab right click on the address
 
 You can export all private keys for addresses in your wallet by choosing the **File->Export all private keys** menu option. This will provide a list of all private keys in the wallet.
 
-Note that by default when `zcashd` starts it creates 100 transparent addresses for the keypool for use as change addresses, hence this list will always contain at least 100 transparent address keys, not all of which have been used. 
+Note that by default when `zcashd` starts it creates 100 transparent addresses for the keypool for use as change addresses, hence this list will always contain at least 100 transparent address keys, not all of which have been used.
+
+!!! quote ""
+    [**Video**: Exporting private keys](/video-tutorials/#export-private-keys)
 
 ### Backing up wallet.dat
 
@@ -96,6 +111,9 @@ While this is a convenient method of backing up, it means that you are restricte
 To import a private key, choose **File->Import private key** from the menu. You may paste in multiple keys, one per line that will be imported into the wallet. Note that depending on the number of keys to import and if they are shielded addresses it may take some time for the import to be completed.
 
 ![Import private key](images/import-private-key.png)
+
+!!! quote ""
+    [**Video**: Import private keys](/video-tutorials/#import-private-key) 
 
 ## ZecWallet options
 
@@ -127,7 +145,6 @@ Use the advanced options when installing ZecWallet to run `zcashd` over TOR from
 
 !!! warning "Parameters are not currently downloaded over TOR"
     The Zcash parameters that are downloaded on the first launch are not done so over TOR, depending on your network configuration.
-
 
 #### Onion Nodes
 
@@ -170,6 +187,9 @@ You can only include a memo when sending **to** a shielded address. To include a
 
 ![Memo](images/send-memo.png)
 
+!!! quote ""
+    [**Video**: Using the encrypted memo field](/video-tutorials/#using-memos) 
+
 ### Including a reply-to address
 
 If you want to send a reply-to address in the memo field, for example, if you are using the memo field as an encrypted chat application, ZecWallet allows you to include a reply-to address in a standard format. To use, press the **Include Reply Address** and the sending address will automatically be inserted.
@@ -199,6 +219,9 @@ ZecWallet bundles some applications to make common tasks simpler.
 [z-board.net](http://z-board.net/) is a message board based on the [encrypted memo field](/using-zec-qt-wallet/#encrypted-memo-field). When using shielded addresses messages are anonymous. ZecWallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address without manually adding it.
 
 ![zboard](images/zboard.png)
+
+!!! quote ""
+    [**Video**: Posting to z-board.net](/video-tutorials/#posting-to-z-boardnet) 
 
 ### Turnstile migration
 
