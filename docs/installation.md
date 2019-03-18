@@ -1,4 +1,4 @@
-# Installing zec-qt-wallet
+# Installing ZecWallet
 ---
 
 ## Download and Install

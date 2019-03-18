@@ -60,7 +60,7 @@ make -j$(nproc) MXE_TARGETS=x86_64-w64-mingw32.static qtbase qtwebsockets
 ### Build ZecWallet
 
 ``` bash
-git clone git@github.com:ZcashFoundation/zec-qt-wallet.git
+git clone --recursive git@github.com:ZcashFoundation/zec-qt-wallet.git
 ~/Qt/5.11.2/static/bin/qmake zec-qt-wallet.pro CONFIG+=debug-spec linux-clang
 
 make -j$(nproc)
