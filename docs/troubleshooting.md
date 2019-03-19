@@ -57,6 +57,10 @@ If you send a transaction before the node is fully synced, or perhaps due to net
 
 See the section on [syncing issues](/troubleshooting/#my-node-isnt-syncing) for common resolutions to this issue.
 
+## I can't generate a new shielded (z) address
+
+When the wallet is first launched, and before it has synced, the Sprout **New Address** button is greyed out, and it is not possible to generate a new shielded address. Sprout addresses have been deprecated in ZecWallet to encourage the use of Sapling ones. The ability to create Sapling addresses is only displayed in ZecWallet once the Sapling activation height is reached (block 419200). If you need to generate a new shielded address before the wallet has synced you may do so directly from the [command line interface](/faq/#how-do-i-use-the-zcash-cli-command) using the `z_getnewaddress` (Sapling) or `z_getnewaddress sprout` (legacy Sprout).
+
 ## Some of my shielded transactions are not displayed in the transaction tab
 
 By default, `zcashd` does not store outgoing shielded transactions. To overcome this, ZecWallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to **Remember shielded transactions** is selected in the [wallet options](/using-zec-qt-wallet/#remember-shielded-transactions). There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.
