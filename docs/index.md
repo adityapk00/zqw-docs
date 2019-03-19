@@ -10,6 +10,6 @@
 
 ![Zec QT Wallet](images/screenshot-sub.png)
 
-<div class="downloadbinbutton"><a href="https://github.com/ZcashFoundation/zecwallet/releases"><button class="button">Download for MacOS/Windows/Linux</button></a></div>
+<div class="downloadbinbutton"><a href="https://github.com/ZcashFoundation/zecwallet/releases"><button class="button">Download for macOS/Windows/Linux</button></a></div>
 
 _ZecWallet is NOT an official wallet, and is not affiliated with the Electric Coin Company in any way._

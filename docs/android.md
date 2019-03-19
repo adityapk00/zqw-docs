@@ -3,7 +3,7 @@
 ---
 
 !!! warning "The Android app is beta software."
-    Although everything will work fine on mainnet, since this is beta software, it is recommended you run it on the Zcash testnet. Add `testnet=1` into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) to [enable the testnet](/faq/#does-zec-qt-wallet-work-on-testnet).
+    Although everything will work fine on mainnet, since this is beta software, it is recommended you run it on the Zcash testnet. Add `testnet=1` into your [`zcash.conf`](/using-zecwallet/#customising-zcashconf) to [enable the testnet](/faq/#does-zecwallet-work-on-testnet).
 
 **ZecWallet Android** is an Android frontend for ZecWallet that lets you send and receive shielded payments from your mobile phone. It is available on the [Google Play Store](https://play.google.com/store/apps/details?id=com.adityapk.zcash.zqwandroid) or via [direct download of the APK](https://github.com/adityapk00/zqwandroid/releases).
 
@@ -23,9 +23,9 @@ If you're installing the APK directly, you'll need to allow `Install from untrus
 
 ## Android App FAQ
 
-### What is a "direct connection" vs "Allow connections over the internet via zecqtwallet wormhole"
+### What is a "direct connection" vs "Allow connections over the internet via ZecWallet wormhole"
 
-When your phone and your desktop are on the same network (eg. on your home network), your phone can directly reach your desktop over your local network (if there are no firewalls blocking the connection). In this scenario, your phone directly communicates with your desktop zec-qt-wallet. This is the default.
+When your phone and your desktop are on the same network (eg. on your home network), your phone can directly reach your desktop over your local network (if there are no firewalls blocking the connection). In this scenario, your phone directly communicates with your desktop ZecWallet. This is the default.
 
 If your phone is on a different network (if you're connected via 4G/LTE, for example) or if your desktop ZecWallet is behind a firewall, your phone can't directly reach your desktop. In this scenario, your phone and desktop both connect to a service run by ZecWallet (called wormhole.zecqtwallet.com), which routes information between your phone and your desktop.
 

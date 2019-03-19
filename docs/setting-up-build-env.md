@@ -118,7 +118,7 @@ Install [Xcode](https://developer.apple.com/xcode/) or the [Xcode Command Line T
 From a terminal:
 
 ``` bash
-cd ~/github/zec-qt-wallet/
+cd ~/github/zecwallet/
 APP_VERSION=0.3.0 src/scripts/mkmacdmg.sh
 ```
 This will build the app and package it into a dmg and place it in the `artifacts/` folder
@@ -148,7 +148,7 @@ After all these 3 machines have been set up, we can build all the release artifa
 (Replace `u1604 `and `macmini` with names of the Linux and macOS machines respectively)
 
 ``` bash
-cd ~/github/zec-qt-wallet
+cd ~/github/zecwallet
 .\src\scripts\dobuild.ps1 -version 0.4.1 -prev 0.4.0 -server u1604 -macserver macmini
 ```
 

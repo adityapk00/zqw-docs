@@ -47,7 +47,7 @@ By default `zcashd` runs on the following ports.
 * **18232** for testnet RPC
 * **18233** for testnet peer-to-peer network
 
-You may override any of these values in [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf).
+You may override any of these values in [`zcash.conf`](/using-zecwallet/#customising-zcashconf).
 
 ## My transaction didn't get mined
 
@@ -80,9 +80,9 @@ If you need to perform a wallet rescan due to missing transactions or balance er
 
 If you are running the embedded `zcashd` you will need to run `zcashd` externally to run the rescan and once complete you can safely shut down the external `zcashd` and run ZecWallet as normal. With ZecWallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).
 
-* Windows (installer): `cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcashd.exe" -rescan"`
+* Windows (installer): `cmd /C ""C:\Program Files (x86)\zecwallet\zcashd.exe" -rescan"`
 * Windows (binaries): `zcashd.exe -rescan` from the directory of the downloaded binaries.
-* macOS: `/Applications/zec-qt-wallet.app/Contents/MacOS/zcashd -rescan`
+* macOS: `/Applications/zecwallet.app/Contents/MacOS/zcashd -rescan`
 * Linux (deb): `zcashd -rescan` 
 * Linux (binaries): `./zcashd -rescan` from the directory of the downloaded binaries.
 
@@ -90,9 +90,9 @@ Then open ZecWallet and it should connect to the running `zcashd` and you can mo
 
 Note that the command above will open an instance of `zcashd` in the foreground, you can change this behaviour by adding the `-daemon` option. You will need to manually stop `zcashd` as ZecWallet will not close an externally running node. The simplest method is to run the `zcash-cli` stop command:
 
-* Windows (installer): `cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcash-cli.exe" stop"`
+* Windows (installer): `cmd /C ""C:\Program Files (x86)\zecwallet\zcash-cli.exe" stop"`
 * Windows (binaries): `zcash-cli.exe stop` from the directory of the downloaded binaries.
-* macOS: `/Applications/zec-qt-wallet.app/Contents/MacOS/zcash-cli stop`
+* macOS: `/Applications/zecwallet.app/Contents/MacOS/zcash-cli stop`
 * Linux (deb): `zcash-cli stop`
 * Linux (binaries): `./zcash-cli stop` from the directory of the downloaded binaries.
 
@@ -100,7 +100,7 @@ Once the rescan has been completed and the external `zcashd` node has been stopp
 
 ### Editing `zcash.conf`
 
-As an alternative to the external `zcashd` you can edit the [`zcash.conf` file](/using-zec-qt-wallet/#customising-zcashconf) and add the line `rescan=1` and then start ZecWallet normally. After you have opened ZecWallet and the rescan is complete you must remove the line from `zcash.conf` to prevent the wallet from rescanning every time it is opened and close ZecWallet as normal.
+As an alternative to the external `zcashd` you can edit the [`zcash.conf` file](/using-zecwallet/#customising-zcashconf) and add the line `rescan=1` and then start ZecWallet normally. After you have opened ZecWallet and the rescan is complete you must remove the line from `zcash.conf` to prevent the wallet from rescanning every time it is opened and close ZecWallet as normal.
 
 ## How to perform a reindex
 
@@ -120,7 +120,7 @@ If your balance is not being correctly displayed, first ensure that your softwar
 
 ### Could not start embedded zcashd
 
-This means ZecWallet couldn't start its embedded `zcashd` for some reason. ZecWallet will show you another dialog box with the error reported from `zcashd` for debugging purposes as well. You might be able to solve this by simply restarting zec-qt-wallet, but if you repeatedly see this error, it might be one of the following reasons:
+This means ZecWallet couldn't start its embedded `zcashd` for some reason. ZecWallet will show you another dialog box with the error reported from `zcashd` for debugging purposes as well. You might be able to solve this by simply restarting ZecWallet, but if you repeatedly see this error, it might be one of the following reasons:
 
 * If you compiled ZecWallet yourself and are running it: `zcashd` doesn't come with the GitHub repository, so you'll have to compile `zcashd` separately and copy it over into your ZecWallet directory.
 * You might have corrupt zcash params: In this case, you may try deleting your params and letting ZecWallet download them again.
@@ -129,7 +129,7 @@ If all else fails, you can run an external `zcashd` and ZecWallet will connect t
 
 ### Authentication error
 
-Normally, ZecWallet can pick up the rpcuser/rpcpassword from [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf). If it doesn't for some reason, you can set the username/password in the **File->Settings** menu. If you are connecting to a remote node, make sure that `zcashd` on the remote machine is accepting connections from your machine. The target machine's firewall needs to allow connections from your host and also `zcashd` is set to be configured to accept connections from this host.
+Normally, ZecWallet can pick up the rpcuser/rpcpassword from [`zcash.conf`](/using-zecwallet/#customising-zcashconf). If it doesn't for some reason, you can set the username/password in the **File->Settings** menu. If you are connecting to a remote node, make sure that `zcashd` on the remote machine is accepting connections from your machine. The target machine's firewall needs to allow connections from your host and also `zcashd` is set to be configured to accept connections from this host.
 
 !!! danger "Using the RPC port over a remote interface is NOT RECOMMENDED"
     Using the RPC port over a remote interface is NOT RECOMMENDED, because
@@ -142,4 +142,4 @@ Normally, ZecWallet can pick up the rpcuser/rpcpassword from [`zcash.conf`](/usi
 The most likely cause for this is that you are trying to spend unconfirmed funds. Unlike Bitcoin, the Zcash protocol doesn't let you spent unconfirmed funds. Wait for at least one confirmation and then retry the transaction.
 
 ## My issue isn't resolved
-Open an [issue on GitHub](https://github.com/ZcashFoundation/zecwallet/issues) or tweet at [@zecqtwallet](https://twitter.com/zecqtwallet) for help.
+Open an [issue on GitHub](https://github.com/ZcashFoundation/zecwallet/issues) or tweet at [@zecwallet](https://twitter.com/zecwallet) for help.

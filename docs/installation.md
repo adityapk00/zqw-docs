@@ -3,30 +3,30 @@
 
 ## Download and Install
 
-ZecWallet runs on Windows, macOS and Linux and is [available to download](https://github.com/ZcashFoundation/zecwallet/releases) from the releases page of the project [GitHub repository](https://github.com/ZcashFoundation/zecwallet/). Follow the instructions below for the platform of your choice to install zec-qt-wallet. To compile from source see [this section](compile-from-source).
+ZecWallet runs on Windows, macOS and Linux and is [available to download](https://github.com/ZcashFoundation/zecwallet/releases) from the releases page of the project [GitHub repository](https://github.com/ZcashFoundation/zecwallet/). Follow the instructions below for the platform of your choice to install ZecWallet. To compile from source see [this section](compile-from-source).
 
 ??? info "Windows instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zecwallet/releases) and run the .msi installer (named `Windows-installer-zec-qt-wallet-v0.6.2.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zecwallet/releases) the release binary (named `Windows-binaries-zec-qt-wallet-v0.6.2.zip`), unzip it and double click on ZecWalletto start.
+    [Download](https://github.com/ZcashFoundation/zecwallet/releases) and run the .msi installer (named `Windows-installer-zecwallet-v0.6.2.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zecwallet/releases) the release binary (named `Windows-binaries-zecwallet-v0.6.2.zip`), unzip it and double click on ZecWallet to start.
 
 ??? info "macOS instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zecwallet/releases) the macOS release named `macOS-zec-qt-wallet-v0.6.2.dmg`
+    [Download](https://github.com/ZcashFoundation/zecwallet/releases) the macOS release named `macOS-zecwallet-v0.6.2.dmg`
     and double-click on the .dmg file to open it, and drag ZecWalleton to the Applications link to install. You will need to give authorisation for the program to run.
 
 ??? info "Linux instructions (click to expand)"
 
     If you are on Debian/Ubuntu, download the `.deb` package and install it.
     
-    `sudo dpkg -i linux-deb-zec-qt-wallet-v0.6.2.deb`
+    `sudo dpkg -i linux-deb-zecwallet-v0.6.2.deb`
     
     `sudo apt install -f`
 
     Or you can download and run the binaries directly.
     
-    `tar -xvf zec-qt-wallet-v0.6.2.tar.gz`
+    `tar -xvf zecwallet-v0.6.2.tar.gz`
     
-    `./zec-qt-wallet-v0.6.2/zec-qt-wallet` 
+    `./zecwallet-v0.6.2/zecwallet` 
 
 ## Verifying the download
 
@@ -56,7 +56,7 @@ Once the key has been imported, you can run the following command to verify the 
 Assuming a good signature, you will see a similar output to the below.
 
 ```
-gpg --verify macOS-zec-qt-wallet-v0.6.2.dmg.sig macOS-zec-qt-wallet-v0.6.2.dmg
+gpg --verify macOS-zecwallet-v0.6.2.dmg.sig macOS-zecwallet-v0.6.2.dmg
 gpg: Signature made Wed 20 Feb 11:06:04 2019 PST
 gpg:                using RSA key C23172D0C9569591ECEC8ECB0E1E90279521EBB4
 gpg: Good signature from "adityapk00 (PGP Key for zec-qt-wallet) <zcash@adityapk.com>" [full]
@@ -67,8 +67,8 @@ gpg: Good signature from "adityapk00 (PGP Key for zec-qt-wallet) <zcash@adityapk
 The file `sha256sum-v0.6.2.txt` contains the SHA256 checksums for each download. You can verify that the file you downloaded matches this checksum via the following command:
 
 ```
-sha256sum macOS-zec-qt-wallet-v0.6.2.dmg
-b8adcac91a138adb471e729e02696479b5680f98590003fe5bede6862a5e2d38  macOS-zec-qt-wallet-v0.6.2.dmg
+sha256sum macOS-zecwallet-v0.6.2.dmg
+b8adcac91a138adb471e729e02696479b5680f98590003fe5bede6862a5e2d38  macOS-zecwallet-v0.6.2.dmg
 ```
 
 ## zcashd
@@ -93,9 +93,9 @@ See the instructions for [setting up a build environment](/setting-up-build-env)
 
 ## Upgrading
 
-It is important to keep your version of ZecWalletup to date as new features are regularly added and bugs fixed. To download follow the [instructions to install](/installation/#download-and-install) as your data directory and wallet will be untouched throughout. 
+It is important to keep your version of ZecWallet up to date as new features are regularly added and bugs fixed. To download, follow the [instructions to install](/installation/#download-and-install) as your data directory and wallet will be untouched throughout. 
 
 !!! warning "`zcashd` reaches end of service halt after 16 weeks"
-    If you are using the embedded `zcashd` then after 16 weeks from release `zcashd` will reach an end of service halt and will shut down. Simply update your version of `zec-qt-wallet` to continue as it will contain updated releases of `zcashd`.
+    If you are using the embedded `zcashd` then after 16 weeks from release `zcashd` will reach an end of service halt and will shut down. Simply update your version of `ZecWallet` to continue as it will contain updated releases of `zcashd`.
 
-ZecWallet also has an update notifier that will notify you if there's a new release of ZecWalletavailable.
+ZecWallet also has an update notifier that will notify you if there's a new release of ZecWallet available.

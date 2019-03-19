@@ -2,7 +2,7 @@
 site_name: 'ZecWallet Docs'
 site_description: 'ZecWallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS'
 site_author: 'Zcash Foundation'
-site_url: 'https://docs.zecqtwallet.com'
+site_url: 'https://docs.zecwallet.co'
 
 # Repository
 repo_name: 'ZcashFoundation/zecwallet'
@@ -28,7 +28,7 @@ extra:
     - type: 'github'
       link: 'https://github.com/ZcashFoundation/zecwallet/'
     - type: 'twitter'
-      link: 'https://twitter.com/zecqtwallet'
+      link: 'https://twitter.com/zecwallet'
 
 # Extensions
 markdown_extensions:
@@ -55,7 +55,7 @@ nav:
     - Compiling from source: compile-from-source.md
     - Setting up a build environment: setting-up-build-env.md
   - Getting Started: 
-    - Using ZecWallet: using-zec-qt-wallet.md
+    - Using ZecWallet: using-zecwallet.md
     - Video Tutorials: video-tutorials.md
   - Troubleshooting Issues: troubleshooting.md
   - Turnstile Migration: turnstile-migration.md

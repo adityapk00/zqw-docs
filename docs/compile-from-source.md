@@ -19,11 +19,11 @@ sudo apt install libgl1-mesa-dev
 
 ``` bash
 git clone https://github.com/ZcashFoundation/zecwallet.git
-cd zec-qt-wallet
+cd zecwallet
 /path/to/qt5/bin/qmake zec-qt-wallet.pro CONFIG+=debug
 make -j$(nproc)
 
-./zec-qt-wallet
+./zecwallet
 ```
 
 ## Building on Windows
@@ -34,11 +34,11 @@ From the VS Tools command prompt:
 
 ``` bash
 git clone https://github.com/ZcashFoundation/zecwallet.git
-cd zec-qt-wallet
+cd zecwallet
 c:\Qt5\bin\qmake.exe zec-qt-wallet.pro -spec win32-msvc CONFIG+=debug
 nmake
 
-debug\zec-qt-wallet.exe
+debug\zecwallet.exe
 ```
 
 To create the Visual Studio project files so you can compile and run from Visual Studio:
@@ -52,9 +52,9 @@ You need to install the [Xcode](https://developer.apple.com/xcode/) app or the [
 
 ``` bash
 git clone https://github.com/ZcashFoundation/zecwallet.git
-cd zec-qt-wallet
+cd zecwallet
 /path/to/qt5/bin/qmake zec-qt-wallet.pro CONFIG+=debug
 make 
 
-./zec-qt-wallet.app/Contents/MacOS/zec-qt-wallet
+./zecwallet.app/Contents/MacOS/zecwallet
 ```
