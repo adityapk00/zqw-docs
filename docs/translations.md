@@ -2,7 +2,7 @@
 
 ---
 
-To help with translations, first clone/fork the [`zec-qt-wallet` repository](https://github.com/ZcashFoundation/zec-qt-wallet). In the `res/` folder, you will find a number of `*.ts` files which contain the translations. If you don't find your language listed, please copy the `zec-qt-wallet_template.ts` file and use that.
+To help with translations, first clone/fork the [`zec-qt-wallet` repository](https://github.com/ZcashFoundation/zecwallet). In the `res/` folder, you will find a number of `*.ts` files which contain the translations. If you don't find your language listed, please copy the `zec-qt-wallet_template.ts` file and use that.
 
 You can open the `*.ts` file (which is an XML file) and enter the translated strings manually using your favourite text editor, and enter the translations in the `translation` XML tag. It might be more productive to use the [Qt Linguist tool](/translations/#installing-and-using-qt-linguist), which provides a nice UI that has additional context and easily manages the strings for translations.
 
@@ -16,7 +16,7 @@ Windows and Mac builds for standalone Qt Linguist are [available here](https://g
 
 ## Submitting translations
 
-Once you have updated the translations in the `*.ts` file, please create a [pull request](https://github.com/ZcashFoundation/zec-qt-wallet/compare) for the file. Please remember to "confirm" the translations from the Linguist menu (or remove the "unfinished" tag from XML element, if you are editing manually).
+Once you have updated the translations in the `*.ts` file, please create a [pull request](https://github.com/ZcashFoundation/zecwallet/compare) for the file. Please remember to "confirm" the translations from the Linguist menu (or remove the "unfinished" tag from XML element, if you are editing manually).
 
 !!! tip "Incomplete translations"
     You don't have to translate all the strings. You can do this incrementally, and ZecWallet will use all available translated strings, else fall back to English.

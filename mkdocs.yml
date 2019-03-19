@@ -5,8 +5,8 @@ site_author: 'Zcash Foundation'
 site_url: 'https://docs.zecqtwallet.com'
 
 # Repository
-repo_name: 'ZcashFoundation/zec-qt-wallet'
-repo_url: 'https://github.com/ZcashFoundation/zec-qt-wallet'
+repo_name: 'ZcashFoundation/zecwallet'
+repo_url: 'https://github.com/ZcashFoundation/zecwallet'
 edit_uri: 'https://github.com/adityapk00/zqw-docs/tree/master/docs'
 
 # Configuration
@@ -26,7 +26,7 @@ theme:
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/ZcashFoundation/zec-qt-wallet/'
+      link: 'https://github.com/ZcashFoundation/zecwallet/'
     - type: 'twitter'
       link: 'https://twitter.com/zecqtwallet'
 

@@ -5,7 +5,7 @@
 
 ### Where do I download the software?
 
-ZecWallet is available to download from the [Zcash Foundation GitHub repository](https://github.com/ZcashFoundation/zec-qt-wallet). The [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) lists the latest available downloads for each platform.
+ZecWallet is available to download from the [Zcash Foundation GitHub repository](https://github.com/ZcashFoundation/zecwallet). The [releases page](https://github.com/ZcashFoundation/zecwallet/releases) lists the latest available downloads for each platform.
 
 The Android application, which is still in beta, may be downloaded [from here](https://github.com/adityapk00/zqwandroid/releases).
 
@@ -15,7 +15,7 @@ See the [installation](/installation/#download-and-install) section for more det
 
 ### How do I verify the download file?
 
-Starting from v0.5.10 all [ZecWallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed. You may download the detached signatures on the [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and verify that the software was signed with the published [public key](https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc). In addition, each release contains SHA256 checksums that may additionally be verified. For more information, see the [Verifying the download](/installation/#verifying-the-download) section of the [Installation guide](/installation/).
+Starting from v0.5.10 all [ZecWallet releases](https://github.com/ZcashFoundation/zecwallet/releases) are signed. You may download the detached signatures on the [releases page](https://github.com/ZcashFoundation/zecwallet/releases) and verify that the software was signed with the published [public key](https://raw.githubusercontent.com/ZcashFoundation/zecwallet/master/public_key.asc). In addition, each release contains SHA256 checksums that may additionally be verified. For more information, see the [Verifying the download](/installation/#verifying-the-download) section of the [Installation guide](/installation/).
 
 ## Blockchain
 
@@ -115,7 +115,7 @@ testnet=1
 
 ### Does ZecWallet support payment disclosure?
 
-Not yet. While [payment disclosure](https://z.cash/blog/viewing-keys-selective-disclosure/) works on Sprout addresses, `zcashd` has not yet been updated to support Sapling. There is [a plan to support this](https://github.com/ZcashFoundation/zec-qt-wallet/issues/47) once implemented by `zcashd`.
+Not yet. While [payment disclosure](https://z.cash/blog/viewing-keys-selective-disclosure/) works on Sprout addresses, `zcashd` has not yet been updated to support Sapling. There is [a plan to support this](https://github.com/ZcashFoundation/zecwallet/issues/47) once implemented by `zcashd`.
 
 ### Does ZecWallet support viewing keys?
 

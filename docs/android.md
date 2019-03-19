@@ -12,7 +12,7 @@
 </div>
 
 ### Run ZecWallet
-In order to let your Android phone connect to your desktop, you need to run the desktop [ZecWallet](https://github.com/ZcashFoundation/zec-qt-wallet).
+In order to let your Android phone connect to your desktop, you need to run the desktop [ZecWallet](https://github.com/ZcashFoundation/zecwallet).
 
 After your node is synced, go to `Apps -> Connect Mobile App` to view the connection QR Code, which you can scan from the Android App.
 

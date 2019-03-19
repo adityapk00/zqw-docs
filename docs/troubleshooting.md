@@ -28,7 +28,7 @@ As with the `debug.log` file, the `zec-qt-wallet.log` file will help to identify
 
 ## My node isn't syncing or is slow to sync
 
-If your node isn't syncing or is slow to sync, first check that you are running the [latest version](https://github.com/ZcashFoundation/zec-qt-wallet/releases) of ZecWallet then check that you have connections to other nodes as you may have a network issue. ZecWallet will display if you are connected via the application footer. 
+If your node isn't syncing or is slow to sync, first check that you are running the [latest version](https://github.com/ZcashFoundation/zecwallet/releases) of ZecWallet then check that you have connections to other nodes as you may have a network issue. ZecWallet will display if you are connected via the application footer. 
 
 ![ZecWallet connections](images/connections.png)
 
@@ -138,4 +138,4 @@ Normally, ZecWallet can pick up the rpcuser/rpcpassword from [`zcash.conf`](/usi
 The most likely cause for this is that you are trying to spend unconfirmed funds. Unlike Bitcoin, the Zcash protocol doesn't let you spent unconfirmed funds. Wait for at least one confirmation and then retry the transaction.
 
 ## My issue isn't resolved
-Open an [issue on GitHub](https://github.com/ZcashFoundation/zec-qt-wallet/issues) or tweet at [@zecqtwallet](https://twitter.com/zecqtwallet) for help.
+Open an [issue on GitHub](https://github.com/ZcashFoundation/zecwallet/issues) or tweet at [@zecqtwallet](https://twitter.com/zecqtwallet) for help.

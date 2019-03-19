@@ -3,15 +3,15 @@
 
 ## Download and Install
 
-ZecWallet runs on Windows, macOS and Linux and is [available to download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) from the releases page of the project [GitHub repository](https://github.com/ZcashFoundation/zec-qt-wallet/). Follow the instructions below for the platform of your choice to install zec-qt-wallet. To compile from source see [this section](compile-from-source).
+ZecWallet runs on Windows, macOS and Linux and is [available to download](https://github.com/ZcashFoundation/zecwallet/releases) from the releases page of the project [GitHub repository](https://github.com/ZcashFoundation/zecwallet/). Follow the instructions below for the platform of your choice to install zec-qt-wallet. To compile from source see [this section](compile-from-source).
 
 ??? info "Windows instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) and run the .msi installer (named `Windows-installer-zec-qt-wallet-v0.6.2.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the release binary (named `Windows-binaries-zec-qt-wallet-v0.6.2.zip`), unzip it and double click on ZecWalletto start.
+    [Download](https://github.com/ZcashFoundation/zecwallet/releases) and run the .msi installer (named `Windows-installer-zec-qt-wallet-v0.6.2.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zecwallet/releases) the release binary (named `Windows-binaries-zec-qt-wallet-v0.6.2.zip`), unzip it and double click on ZecWalletto start.
 
 ??? info "macOS instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zec-qt-wallet/releases) the macOS release named `macOS-zec-qt-wallet-v0.6.2.dmg`
+    [Download](https://github.com/ZcashFoundation/zecwallet/releases) the macOS release named `macOS-zec-qt-wallet-v0.6.2.dmg`
     and double-click on the .dmg file to open it, and drag ZecWalleton to the Applications link to install. You will need to give authorisation for the program to run.
 
 ??? info "Linux instructions (click to expand)"
@@ -30,13 +30,13 @@ ZecWallet runs on Windows, macOS and Linux and is [available to download](https:
 
 ## Verifying the download
 
-Starting from v0.5.10 all [ZecWallet releases](https://github.com/ZcashFoundation/zec-qt-wallet/releases) are signed and contain checksums that may be validated to ensure the integrity of the downloaded software. The current signatures and checksums are available to download via the signatures-v0.6.2.tar.gz file on the [releases page](https://github.com/ZcashFoundation/zec-qt-wallet/releases).
+Starting from v0.5.10 all [ZecWallet releases](https://github.com/ZcashFoundation/zecwallet/releases) are signed and contain checksums that may be validated to ensure the integrity of the downloaded software. The current signatures and checksums are available to download via the signatures-v0.6.2.tar.gz file on the [releases page](https://github.com/ZcashFoundation/zecwallet/releases).
 
 ### Signatures
 
 #### Import public key
 
-The public key is available to download from [the GitHub repository](https://raw.githubusercontent.com/ZcashFoundation/zec-qt-wallet/master/public_key.asc). Save the file and import via: 
+The public key is available to download from [the GitHub repository](https://raw.githubusercontent.com/ZcashFoundation/zecwallet/master/public_key.asc). Save the file and import via: 
 
 `gpg --import public_key.asc`
 
