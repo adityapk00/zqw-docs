@@ -13,7 +13,7 @@
         <meta name="description" content="ZecWallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
       
       
-        <link rel="canonical" href="https://docs.zecqtwallet.com/troubleshooting/">
+        <link rel="canonical" href="https://docs.zecwallet.co/troubleshooting/">
       
       
         <meta name="author" content="Zcash Foundation">
@@ -119,7 +119,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://docs.zecqtwallet.com" title="ZecWallet Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-header-nav__button md-logo">
           
             <img src="../images/logo.svg" width="24" height="24">
           
@@ -209,7 +209,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://docs.zecqtwallet.com" title="ZecWallet Docs" class="md-nav__button md-logo">
+    <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-nav__button md-logo">
       
         <img src="../images/logo.svg" width="48" height="48">
       
@@ -336,7 +336,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../using-zec-qt-wallet/" title="Using ZecWallet" class="md-nav__link">
+    <a href="../using-zecwallet/" title="Using ZecWallet" class="md-nav__link">
       Using ZecWallet
     </a>
   </li>
@@ -839,7 +839,7 @@
 <li><strong>18232</strong> for testnet RPC</li>
 <li><strong>18233</strong> for testnet peer-to-peer network</li>
 </ul>
-<p>You may override any of these values in <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a>.</p>
+<p>You may override any of these values in <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code></a>.</p>
 <h2 id="my-transaction-didnt-get-mined">My transaction didn&rsquo;t get mined<a class="headerlink" href="#my-transaction-didnt-get-mined" title="Permanent link">&para;</a></h2>
 <p>If you send a transaction before the node is fully synced, or perhaps due to network congestion then the transaction may fail and be returned to your wallet due to the <a href="https://z.cash/blog/transaction-expiry/">Transaction Expiry</a> feature. When a user submits a transaction to the network, by default it will persist in the mempool for 20 blocks (currently approximately 50 minutes). If it has not been mined after that period, it is no longer valid and will be evicted from all mempools. The value will return to the sender’s wallet. </p>
 <h2 id="zcashd-has-no-connections"><code>zcashd</code> has no connections<a class="headerlink" href="#zcashd-has-no-connections" title="Permanent link">&para;</a></h2>
@@ -859,24 +859,24 @@
 <h3 id="via-an-external-zcashd">Via an external <code>zcashd</code><a class="headerlink" href="#via-an-external-zcashd" title="Permanent link">&para;</a></h3>
 <p>If you are running the embedded <code>zcashd</code> you will need to run <code>zcashd</code> externally to run the rescan and once complete you can safely shut down the external <code>zcashd</code> and run ZecWallet as normal. With ZecWallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).</p>
 <ul>
-<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcashd.exe" -rescan"</code></li>
+<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zecwallet\zcashd.exe" -rescan"</code></li>
 <li>Windows (binaries): <code>zcashd.exe -rescan</code> from the directory of the downloaded binaries.</li>
-<li>macOS: <code>/Applications/zec-qt-wallet.app/Contents/MacOS/zcashd -rescan</code></li>
+<li>macOS: <code>/Applications/zecwallet.app/Contents/MacOS/zcashd -rescan</code></li>
 <li>Linux (deb): <code>zcashd -rescan</code> </li>
 <li>Linux (binaries): <code>./zcashd -rescan</code> from the directory of the downloaded binaries.</li>
 </ul>
 <p>Then open ZecWallet and it should connect to the running <code>zcashd</code> and you can monitor the progress of the rescan on the startup screen.</p>
 <p>Note that the command above will open an instance of <code>zcashd</code> in the foreground, you can change this behaviour by adding the <code>-daemon</code> option. You will need to manually stop <code>zcashd</code> as ZecWallet will not close an externally running node. The simplest method is to run the <code>zcash-cli</code> stop command:</p>
 <ul>
-<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zec-qt-wallet\zcash-cli.exe" stop"</code></li>
+<li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zecwallet\zcash-cli.exe" stop"</code></li>
 <li>Windows (binaries): <code>zcash-cli.exe stop</code> from the directory of the downloaded binaries.</li>
-<li>macOS: <code>/Applications/zec-qt-wallet.app/Contents/MacOS/zcash-cli stop</code></li>
+<li>macOS: <code>/Applications/zecwallet.app/Contents/MacOS/zcash-cli stop</code></li>
 <li>Linux (deb): <code>zcash-cli stop</code></li>
 <li>Linux (binaries): <code>./zcash-cli stop</code> from the directory of the downloaded binaries.</li>
 </ul>
 <p>Once the rescan has been completed and the external <code>zcashd</code> node has been stopped you can continue to run ZecWallet as normal.</p>
 <h3 id="editing-zcashconf">Editing <code>zcash.conf</code><a class="headerlink" href="#editing-zcashconf" title="Permanent link">&para;</a></h3>
-<p>As an alternative to the external <code>zcashd</code> you can edit the <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code> file</a> and add the line <code>rescan=1</code> and then start ZecWallet normally. After you have opened ZecWallet and the rescan is complete you must remove the line from <code>zcash.conf</code> to prevent the wallet from rescanning every time it is opened and close ZecWallet as normal.</p>
+<p>As an alternative to the external <code>zcashd</code> you can edit the <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code> file</a> and add the line <code>rescan=1</code> and then start ZecWallet normally. After you have opened ZecWallet and the rescan is complete you must remove the line from <code>zcash.conf</code> to prevent the wallet from rescanning every time it is opened and close ZecWallet as normal.</p>
 <h2 id="how-to-perform-a-reindex">How to perform a reindex<a class="headerlink" href="#how-to-perform-a-reindex" title="Permanent link">&para;</a></h2>
 <p>A reindex is sometimes required when the blockchain data becomes corrupted or you wish to enable certain features. When a reindex happens the full blockchain is redownloaded so it will take some time to complete and should only be performed where absolutely necessary.</p>
 <p>To complete a reindex simply <a href="/troubleshooting/#how-to-perform-a-wallet-rescan">follow the instruction for a wallet rescan</a> replacing <code>-rescan</code> with <code>-reindex</code>.</p>
@@ -888,14 +888,14 @@
 <p>If your balance is not being correctly displayed, first ensure that your software is up to date and that your node is fully synced. If your balance is still incorrect you can perform a manual <a href="/troubleshooting/#how-to-perform-a-wallet-rescan">wallet rescan</a> which will rescan the blockchain for missing wallet transactions on startup. Depending on the number of (shielded) addresses in the wallet, this can be (very) slow so just leave it running until complete and your balance should be reflected accurately.</p>
 <h2 id="common-error-messages">Common error messages<a class="headerlink" href="#common-error-messages" title="Permanent link">&para;</a></h2>
 <h3 id="could-not-start-embedded-zcashd">Could not start embedded zcashd<a class="headerlink" href="#could-not-start-embedded-zcashd" title="Permanent link">&para;</a></h3>
-<p>This means ZecWallet couldn&rsquo;t start its embedded <code>zcashd</code> for some reason. ZecWallet will show you another dialog box with the error reported from <code>zcashd</code> for debugging purposes as well. You might be able to solve this by simply restarting zec-qt-wallet, but if you repeatedly see this error, it might be one of the following reasons:</p>
+<p>This means ZecWallet couldn&rsquo;t start its embedded <code>zcashd</code> for some reason. ZecWallet will show you another dialog box with the error reported from <code>zcashd</code> for debugging purposes as well. You might be able to solve this by simply restarting ZecWallet, but if you repeatedly see this error, it might be one of the following reasons:</p>
 <ul>
 <li>If you compiled ZecWallet yourself and are running it: <code>zcashd</code> doesn&rsquo;t come with the GitHub repository, so you&rsquo;ll have to compile <code>zcashd</code> separately and copy it over into your ZecWallet directory.</li>
 <li>You might have corrupt zcash params: In this case, you may try deleting your params and letting ZecWallet download them again.</li>
 </ul>
 <p>If all else fails, you can run an external <code>zcashd</code> and ZecWallet will connect to it.</p>
 <h3 id="authentication-error">Authentication error<a class="headerlink" href="#authentication-error" title="Permanent link">&para;</a></h3>
-<p>Normally, ZecWallet can pick up the rpcuser/rpcpassword from <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a>. If it doesn&rsquo;t for some reason, you can set the username/password in the <strong>File-&gt;Settings</strong> menu. If you are connecting to a remote node, make sure that <code>zcashd</code> on the remote machine is accepting connections from your machine. The target machine&rsquo;s firewall needs to allow connections from your host and also <code>zcashd</code> is set to be configured to accept connections from this host.</p>
+<p>Normally, ZecWallet can pick up the rpcuser/rpcpassword from <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code></a>. If it doesn&rsquo;t for some reason, you can set the username/password in the <strong>File-&gt;Settings</strong> menu. If you are connecting to a remote node, make sure that <code>zcashd</code> on the remote machine is accepting connections from your machine. The target machine&rsquo;s firewall needs to allow connections from your host and also <code>zcashd</code> is set to be configured to accept connections from this host.</p>
 <div class="admonition danger">
 <p class="admonition-title">Using the RPC port over a remote interface is NOT RECOMMENDED</p>
 <p>Using the RPC port over a remote interface is NOT RECOMMENDED, because
@@ -906,7 +906,7 @@ over the OS account running zcashd.</p>
 <h3 id="not-enough-balance-when-sending-transactions">Not enough balance when sending transactions<a class="headerlink" href="#not-enough-balance-when-sending-transactions" title="Permanent link">&para;</a></h3>
 <p>The most likely cause for this is that you are trying to spend unconfirmed funds. Unlike Bitcoin, the Zcash protocol doesn&rsquo;t let you spent unconfirmed funds. Wait for at least one confirmation and then retry the transaction.</p>
 <h2 id="my-issue-isnt-resolved">My issue isn&rsquo;t resolved<a class="headerlink" href="#my-issue-isnt-resolved" title="Permanent link">&para;</a></h2>
-<p>Open an <a href="https://github.com/ZcashFoundation/zecwallet/issues">issue on GitHub</a> or tweet at <a href="https://twitter.com/zecqtwallet">@zecqtwallet</a> for help.</p>
+<p>Open an <a href="https://github.com/ZcashFoundation/zecwallet/issues">issue on GitHub</a> or tweet at <a href="https://twitter.com/zecwallet">@zecwallet</a> for help.</p>
                 
                   
                 
@@ -979,7 +979,7 @@ over the OS account running zcashd.</p>
     
       <a href="https://github.com/ZcashFoundation/zecwallet/" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/zecwallet" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 

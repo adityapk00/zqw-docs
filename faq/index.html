@@ -13,7 +13,7 @@
         <meta name="description" content="ZecWallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
       
       
-        <link rel="canonical" href="https://docs.zecqtwallet.com/faq/">
+        <link rel="canonical" href="https://docs.zecwallet.co/faq/">
       
       
         <meta name="author" content="Zcash Foundation">
@@ -119,7 +119,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://docs.zecqtwallet.com" title="ZecWallet Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-header-nav__button md-logo">
           
             <img src="../images/logo.svg" width="24" height="24">
           
@@ -209,7 +209,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://docs.zecqtwallet.com" title="ZecWallet Docs" class="md-nav__button md-logo">
+    <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-nav__button md-logo">
       
         <img src="../images/logo.svg" width="48" height="48">
       
@@ -336,7 +336,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../using-zec-qt-wallet/" title="Using ZecWallet" class="md-nav__link">
+    <a href="../using-zecwallet/" title="Using ZecWallet" class="md-nav__link">
       Using ZecWallet
     </a>
   </li>
@@ -647,8 +647,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#will-zec-qt-wallet-remember-my-outgoing-shielded-sends" title="Will zec-qt wallet remember my outgoing shielded sends?" class="md-nav__link">
-    Will zec-qt wallet remember my outgoing shielded sends?
+  <a href="#will-zecwallet-remember-my-outgoing-shielded-sends" title="Will ZecWallet remember my outgoing shielded sends?" class="md-nav__link">
+    Will ZecWallet remember my outgoing shielded sends?
   </a>
   
 </li>
@@ -716,8 +716,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#can-i-mine-with-zec-qt-wallet" title="Can I mine with zec-qt-wallet?" class="md-nav__link">
-    Can I mine with zec-qt-wallet?
+  <a href="#can-i-mine-with-zecwallet" title="Can I mine with ZecWallet?" class="md-nav__link">
+    Can I mine with ZecWallet?
   </a>
   
 </li>
@@ -1031,8 +1031,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#will-zec-qt-wallet-remember-my-outgoing-shielded-sends" title="Will zec-qt wallet remember my outgoing shielded sends?" class="md-nav__link">
-    Will zec-qt wallet remember my outgoing shielded sends?
+  <a href="#will-zecwallet-remember-my-outgoing-shielded-sends" title="Will ZecWallet remember my outgoing shielded sends?" class="md-nav__link">
+    Will ZecWallet remember my outgoing shielded sends?
   </a>
   
 </li>
@@ -1100,8 +1100,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#can-i-mine-with-zec-qt-wallet" title="Can I mine with zec-qt-wallet?" class="md-nav__link">
-    Can I mine with zec-qt-wallet?
+  <a href="#can-i-mine-with-zecwallet" title="Can I mine with ZecWallet?" class="md-nav__link">
+    Can I mine with ZecWallet?
   </a>
   
 </li>
@@ -1193,8 +1193,8 @@
 <ul>
 <li>Create the new directory.</li>
 <li>Move everything in your <a href="/faq/#where-is-the-default-data-directory-on-each-platform">existing data directory</a> to the new location with the exception of <code>zcash.conf</code> which must remain in the original data directory location.</li>
-<li>Update <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> to add the line <code>datadir=/your/new/path</code> specifying the path to the newly created folder.</li>
-<li>Restart zec-qt-wallet.</li>
+<li>Update <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code></a> to add the line <code>datadir=/your/new/path</code> specifying the path to the newly created folder.</li>
+<li>Restart ZecWallet.</li>
 </ul>
 <h3 id="can-i-move-the-params-directory">Can I move the params directory?<a class="headerlink" href="#can-i-move-the-params-directory" title="Permanent link">&para;</a></h3>
 <p>No, unlike the data directory there is no configurable option to specify the params directory and <code>zcashd</code> expects the params directory to be in the following locations:</p>
@@ -1217,7 +1217,7 @@
 <h3 id="can-i-use-funds-with-zero-confirmations">Can I use funds with zero confirmations?<a class="headerlink" href="#can-i-use-funds-with-zero-confirmations" title="Permanent link">&para;</a></h3>
 <p>No, Zcash requires that you have at least 1 confirmation before sending. Trying to spend unconfirmed funds will <a href="/troubleshooting/#not-enough-balance-when-sending-transactions">result in an error</a>.</p>
 <h3 id="can-i-use-a-custom-fee">Can I use a custom fee?<a class="headerlink" href="#can-i-use-a-custom-fee" title="Permanent link">&para;</a></h3>
-<p>Yes, though it is advised to use the default 0.0001 fee to prevent your transactions from being distinguishable, you may override this behaviour in the app <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a>.</p>
+<p>Yes, though it is advised to use the default 0.0001 fee to prevent your transactions from being distinguishable, you may override this behaviour in the app <a href="/using-zecwallet/#zeqwallet-options"><strong>Options</strong></a>.</p>
 <h3 id="whats-the-difference-between-transparent-sprout-and-sapling-addresses">What&rsquo;s the difference between Transparent, Sprout and Sapling addresses?<a class="headerlink" href="#whats-the-difference-between-transparent-sprout-and-sapling-addresses" title="Permanent link">&para;</a></h3>
 <p>Transparent addresses start with a <strong>t</strong> prefix and are transparent like Bitcoin and offer no privacy properties. Sprout addresses have a <strong>zc</strong> prefix and are the first generation of shielded addresses. Sprout addresses have been superseded by Sapling addresses which have a <strong>zs</strong> prefix. While Sprout addresses may still be used, it is recommended to use Sapling addresses due to the <a href="/faq/#how-long-does-a-sapling-transaction-take">performance improvements</a> and updated system parameters. To move funds between Sprout and Sapling addresses see the <a href="/turnstile-migration/">turnstile migration documentation</a>. For more detailed information on the types of addresses in Zcash <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html">see this page</a>.</p>
 <p>Note that on testnet, transparent addresses have a prefix <strong>tm</strong>, Sprout have a <strong>zt</strong> prefix and Sapling <strong>ztestsapling</strong>.</p>
@@ -1234,12 +1234,12 @@
 <h3 id="where-is-zcashconf-located">Where is <code>zcash.conf</code> located?<a class="headerlink" href="#where-is-zcashconf-located" title="Permanent link">&para;</a></h3>
 <p><code>zcash.conf</code> is located in the <a href="/faq/#where-is-the-default-data-directory-on-each-platform">default data directory</a> and will be in this location even if the <code>datadir</code> parameter has been set to a custom value.</p>
 <h3 id="can-i-use-zecwallet-with-an-external-node">Can I use ZecWallet with an external node?<a class="headerlink" href="#can-i-use-zecwallet-with-an-external-node" title="Permanent link">&para;</a></h3>
-<p>Yes, see <a href="/using-zec-qt-wallet/#connecting-to-an-external-zcashd">this section</a> for how to connect to an external <code>zcashd</code>.</p>
+<p>Yes, see <a href="/using-zecwallet/#connecting-to-an-external-zcashd">this section</a> for how to connect to an external <code>zcashd</code>.</p>
 <h3 id="how-do-i-find-the-version-of-zcashd-that-i-am-running">How do I find the version of zcashd that I am running?<a class="headerlink" href="#how-do-i-find-the-version-of-zcashd-that-i-am-running" title="Permanent link">&para;</a></h3>
 <p>To find the version of <code>zcashd</code> you are running simply hover over the blockchain data in the lower right-hand corner and a popup will appear with the <code>zcashd</code> version string:</p>
 <p><img alt="zcashd version" src="../images/zcashd-version.png" /></p>
 <h3 id="does-zecwallet-work-on-testnet">Does ZecWallet work on testnet?<a class="headerlink" href="#does-zecwallet-work-on-testnet" title="Permanent link">&para;</a></h3>
-<p>Yes, ZecWallet will work on testnet. To do so add the following lines to your <a href="using-zec-qt-wallet/#customising-zcashconf">zcash.conf</a> file, replacing the existing values if present:</p>
+<p>Yes, ZecWallet will work on testnet. To do so add the following lines to your <a href="using-zecwallet/#customising-zcashconf">zcash.conf</a> file, replacing the existing values if present:</p>
 <div class="codehilite"><pre><span></span><span class="nv">addnode</span><span class="o">=</span>testnet.z.cash
 <span class="nv">testnet</span><span class="o">=</span><span class="m">1</span>
 </pre></div>
@@ -1251,25 +1251,25 @@
 <p>Not yet, as <code>zcashd</code> doesn’t currently support Sapling viewing keys and will be implemented in ZecWallet once supported.</p>
 <h3 id="how-do-i-use-the-zcash-cli-command">How do I use the zcash-cli command?<a class="headerlink" href="#how-do-i-use-the-zcash-cli-command" title="Permanent link">&para;</a></h3>
 <p>You may interact with the <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/payment_api.html">Zcash Payment API</a> via RPC calls using the Zcash command line interface. You may wish to do this to enable advanced functionality or to debug issues outside of the ZecWallet interface. See <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/payment_api.html">this page</a> for an overview of the Zcash RPC commands available. To use, follow the instructions for <a href="/troubleshooting/#via-an-external-zcashd">using the <code>zcash-cli stop</code> command</a> simply replacing <code>stop</code> with the command you wish to run. For example, to query the detail of a completed shielded transaction on a Mac you would run:</p>
-<p><code>/Applications/zec-qt-wallet.app/Contents/MacOS/zcash-cli z_getoperationresult</code></p>
+<p><code>/Applications/zecwallet.app/Contents/MacOS/zcash-cli z_getoperationresult</code></p>
 <h2 id="wallet">Wallet<a class="headerlink" href="#wallet" title="Permanent link">&para;</a></h2>
 <h3 id="is-the-wallet-encrypted">Is the wallet encrypted?<a class="headerlink" href="#is-the-wallet-encrypted" title="Permanent link">&para;</a></h3>
 <p>No, wallet encryption is <a href="https://github.com/zcash/zcash/blob/master/doc/security-warnings.md#wallet-encryption">currently disabled</a> by <code>zcashd</code>. You should use full-disk encryption (or encryption of your home directory) to protect your <code>wallet.dat</code> file at rest, and should assume (even unprivileged) users who are running on your OS can read your <code>wallet.dat</code> file.</p>
 <h3 id="why-does-my-change-go-to-a-new-address">Why does my change go to a new address?<a class="headerlink" href="#why-does-my-change-go-to-a-new-address" title="Permanent link">&para;</a></h3>
-<p>Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address. ZecWallet allows you to set an option to automatically send this change to a Sapling address via the application <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a>. As the &lsquo;feature&rsquo; was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.</p>
-<h3 id="will-zec-qt-wallet-remember-my-outgoing-shielded-sends">Will zec-qt wallet remember my outgoing shielded sends?<a class="headerlink" href="#will-zec-qt-wallet-remember-my-outgoing-shielded-sends" title="Permanent link">&para;</a></h3>
-<p>Yes, by default ZecWallet will store shielded sends locally as <code>zcashd</code> does not provide this information. You can override this behaviour via the <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options"><strong>Options</strong></a> setting and you can remove any stored transactions at any time by choosing the <strong>Clear History</strong> button (note that these will not be later recoverable if you delete them).</p>
+<p>Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address. ZecWallet allows you to set an option to automatically send this change to a Sapling address via the application <a href="/using-zecwallet/#zeqwallet-options"><strong>Options</strong></a>. As the &lsquo;feature&rsquo; was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.</p>
+<h3 id="will-zecwallet-remember-my-outgoing-shielded-sends">Will ZecWallet remember my outgoing shielded sends?<a class="headerlink" href="#will-zecwallet-remember-my-outgoing-shielded-sends" title="Permanent link">&para;</a></h3>
+<p>Yes, by default ZecWallet will store shielded sends locally as <code>zcashd</code> does not provide this information. You can override this behaviour via the <a href="/using-zecwallet/#zeqwallet-options"><strong>Options</strong></a> setting and you can remove any stored transactions at any time by choosing the <strong>Clear History</strong> button (note that these will not be later recoverable if you delete them).</p>
 <h3 id="how-do-i-read-a-memo">How do I read a memo?<a class="headerlink" href="#how-do-i-read-a-memo" title="Permanent link">&para;</a></h3>
-<p>If there is a <a href="/using-zec-qt-wallet/#encrypted-memo-field">memo</a> attached to a transaction then it will be visible by a message icon in the transaction listing. Simply right-click the transaction and choose <strong>View Memo</strong> to read its encrypted contents.</p>
+<p>If there is a <a href="/using-zecwallet/#encrypted-memo-field">memo</a> attached to a transaction then it will be visible by a message icon in the transaction listing. Simply right-click the transaction and choose <strong>View Memo</strong> to read its encrypted contents.</p>
 <p><img alt="Memo" src="../images/memo.png" /></p>
 <h3 id="can-i-use-zecwallet-with-a-hardware-wallet">Can I use ZecWallet with a hardware wallet?<a class="headerlink" href="#can-i-use-zecwallet-with-a-hardware-wallet" title="Permanent link">&para;</a></h3>
 <p>No, this is currently not supported.</p>
 <h3 id="can-i-remove-an-address-from-the-wallet">Can I remove an address from the wallet?<a class="headerlink" href="#can-i-remove-an-address-from-the-wallet" title="Permanent link">&para;</a></h3>
-<p>No, addresses cannot be removed from the wallet. It is advised that you <a href="/using-zec-qt-wallet/#export-a-single-private-key">export the private keys</a> for addresses you are interested in and then delete the <code>wallet.dat</code> file. You can then <a href="/using-zec-qt-wallet/#importing-private-keys">import the private keys</a> you require in a fresh, empty wallet.</p>
+<p>No, addresses cannot be removed from the wallet. It is advised that you <a href="/using-zecwallet/#export-a-single-private-key">export the private keys</a> for addresses you are interested in and then delete the <code>wallet.dat</code> file. You can then <a href="/using-zecwallet/#importing-private-keys">import the private keys</a> you require in a fresh, empty wallet.</p>
 <h3 id="seed-phrases">Seed phrases<a class="headerlink" href="#seed-phrases" title="Permanent link">&para;</a></h3>
 <h4 id="can-i-import-private-keys-from-a-recovery-phrase-bip39-mnemonic">Can I import private keys from a recovery phrase / BIP39 Mnemonic?<a class="headerlink" href="#can-i-import-private-keys-from-a-recovery-phrase-bip39-mnemonic" title="Permanent link">&para;</a></h4>
 <p>No, ZecWallet cannot import private keys from a recovery phrase directly. To do so you will need to extract your private keys from the recovery phrase. You can use a tool such as <a href="https://iancoleman.io/bip39/">https://iancoleman.io/bip39/</a> entering the BIP39 Mnemonic (your recovery phrase) and choosing Zcash as the coin.</p>
-<p>Once you have entered these values look for the section entitled <strong>Derived Addresses</strong> which will list all the derived addresses and private keys for those addresses. You will need to <a href="using-zec-qt-wallet/#importing-private-keys">import the private keys</a> for any transparent addresses where you have funds, remembering that <a href="/faq/#why-does-my-change-go-to-a-new-address">change in transparent addresses goes to a new address</a>.</p>
+<p>Once you have entered these values look for the section entitled <strong>Derived Addresses</strong> which will list all the derived addresses and private keys for those addresses. You will need to <a href="using-zecwallet/#importing-private-keys">import the private keys</a> for any transparent addresses where you have funds, remembering that <a href="/faq/#why-does-my-change-go-to-a-new-address">change in transparent addresses goes to a new address</a>.</p>
 <div class="admonition danger">
 <p class="admonition-title">Be very careful with your recovery seed</p>
 <p>Access to your recovery seed allows anyone to steal all of your Zcash. Though the tool listed above runs locally in your browser and is fully open source, you can always <a href="https://iancoleman.io/bip39/">save the HTML</a> file and run on an airgapped offline device for extra security.</p>
@@ -1280,16 +1280,16 @@
 <p>Sapling does <a href="https://z.cash/blog/sapling-in-hd/">implement an HD wallet</a> however at present the only way to extract this is to perform the <code>z_exportwallet</code> command via <code>zcashd</code> and is unsupported in ZecWallet due to needing to write to an export directory. To extract the Sapling HD seed you need to run <code>zcash-cli z_exportwallet</code> after specifying an <code>exportdir</code> in <code>zcash.conf</code>. See <a href="/troubleshooting/#via-an-external-zcashd">these instructions</a> for more details on working with the Zcash RPC CLI. </p>
 <h4 id="can-i-import-the-sapling-hd-seed">Can I import the Sapling HD seed?<a class="headerlink" href="#can-i-import-the-sapling-hd-seed" title="Permanent link">&para;</a></h4>
 <p>Not at present, however, this feature will be added when supported by <code>zcashd</code>.</p>
-<h3 id="can-i-mine-with-zec-qt-wallet">Can I mine with zec-qt-wallet?<a class="headerlink" href="#can-i-mine-with-zec-qt-wallet" title="Permanent link">&para;</a></h3>
+<h3 id="can-i-mine-with-zecwallet">Can I mine with ZecWallet?<a class="headerlink" href="#can-i-mine-with-zecwallet" title="Permanent link">&para;</a></h3>
 <p>No, ZecWallet is a wallet and full node. While you can configure <code>zcashd</code> to run the built-in CPU miner, this isn&rsquo;t practical to run on mainnet and you need alternative hardware and software to run. See <a href="https://www.zcashcommunity.com/mining/">this page</a> for more information on mining.</p>
 <h2 id="winzec">WinZEC<a class="headerlink" href="#winzec" title="Permanent link">&para;</a></h2>
 <h3 id="how-do-i-upgrade-from-winzec-zcash4mac-zcash4win">How do I upgrade from WinZEC / zcash4mac / zcash4win?<a class="headerlink" href="#how-do-i-upgrade-from-winzec-zcash4mac-zcash4win" title="Permanent link">&para;</a></h3>
 <p><a href="http://winzec.com/">WinZEC</a> and its predecessor zcash4win (and zcash4mac) have now been deprecated. You can simply install ZecWallet and it&rsquo;ll use the existing data directory and wallet from any previous installation and operate as normal.</p>
 <h3 id="can-i-import-the-winzec-address-book">Can I import the WinZEC address book?<a class="headerlink" href="#can-i-import-the-winzec-address-book" title="Permanent link">&para;</a></h3>
-<p>Yes, in the <a href="/using-zec-qt-wallet/#address-book">Address Book</a> click to <strong>Import Address Book</strong> and browse to the location of the WinZEC address book file. By default this will be <code>%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv</code> where <code>%/HOMEPATH%</code> is typically <code>C:\Users\username\</code> and you may need to enable viewing hidden files to browse to the <code>AppData</code> folder location.</p>
+<p>Yes, in the <a href="/using-zecwallet/#address-book">Address Book</a> click to <strong>Import Address Book</strong> and browse to the location of the WinZEC address book file. By default this will be <code>%HOMEPATH%\AppData\Local\ZcashSwingWalletUI\addressBook.csv</code> where <code>%/HOMEPATH%</code> is typically <code>C:\Users\username\</code> and you may need to enable viewing hidden files to browse to the <code>AppData</code> folder location.</p>
 <p><img alt="Import address book" src="../images/import-address-book.png" /></p>
 <h2 id="in-what-languages-is-zecwallet-available">In what languages is ZecWallet available?<a class="headerlink" href="#in-what-languages-is-zecwallet-available" title="Permanent link">&para;</a></h2>
-<p>Currently, it is available in French, Spanish, Portuguese and Italian. If you want to help by translating see the <a href="/translations/">Translating zec-qt-wallet</a> page.</p>
+<p>Currently, it is available in French, Spanish, Portuguese and Italian. If you want to help by translating see the <a href="/translations/">Translating ZecWallet</a> page.</p>
 <h2 id="why-are-there-references-to-both-zec-qt-wallet-as-well-as-zecwallet">Why are there references to both zec-qt-wallet as well as ZecWallet?<a class="headerlink" href="#why-are-there-references-to-both-zec-qt-wallet-as-well-as-zecwallet" title="Permanent link">&para;</a></h2>
 <p>The original wallet was named <strong>zec-qt-wallet</strong> and was renamed in March 2019 to <strong>ZecWallet</strong> so any references to the wallet before that date will use the zec-qt-wallet name. The previous name of zec-qt-wallet may remain in places where updating would cause issues with signing releases and upgrades.</p>
                 
@@ -1364,7 +1364,7 @@
     
       <a href="https://github.com/ZcashFoundation/zecwallet/" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/zecwallet" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 

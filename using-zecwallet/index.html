@@ -13,7 +13,7 @@
         <meta name="description" content="ZecWallet is a z-Addr first, Sapling compatible wallet and full node for zcashd that runs on Linux, Windows and macOS">
       
       
-        <link rel="canonical" href="https://docs.zecqtwallet.com/using-zec-qt-wallet/">
+        <link rel="canonical" href="https://docs.zecwallet.co/using-zecwallet/">
       
       
         <meta name="author" content="Zcash Foundation">
@@ -119,7 +119,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://docs.zecqtwallet.com" title="ZecWallet Docs" class="md-header-nav__button md-logo">
+        <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-header-nav__button md-logo">
           
             <img src="../images/logo.svg" width="24" height="24">
           
@@ -209,7 +209,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://docs.zecqtwallet.com" title="ZecWallet Docs" class="md-nav__button md-logo">
+    <a href="https://docs.zecwallet.co" title="ZecWallet Docs" class="md-nav__button md-logo">
       
         <img src="../images/logo.svg" width="48" height="48">
       
@@ -948,7 +948,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/adityapk00/zqw-docs/tree/master/docs/using-zec-qt-wallet.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/adityapk00/zqw-docs/tree/master/docs/using-zecwallet.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="using-zecwallet">Using ZecWallet<a class="headerlink" href="#using-zecwallet" title="Permanent link">&para;</a></h1>
@@ -959,7 +959,7 @@
 <p>The first time ZecWallet starts it will create a <code>zcash.conf</code> file with default configuration values as well as downloading the parameters required for sending and validating shielded transactions. These parameters are currently around 1.7GB in size and only need to be downloaded once.</p>
 </div>
 <p>Now that you have ZecWallet <a href="/installation">installed</a> it is time to start using the software. </p>
-<p>If you are using the embedded <code>zcashd</code> and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> file created specifying some default configuration values. The blockchain will then begin to sync, which is a time-consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner of ZecWallet which displays the number of blocks downloaded and a sync percentage.</p>
+<p>If you are using the embedded <code>zcashd</code> and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code></a> file created specifying some default configuration values. The blockchain will then begin to sync, which is a time-consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner of ZecWallet which displays the number of blocks downloaded and a sync percentage.</p>
 <p><img alt="Syncing" src="../images/sync.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">Initial Sync</p>
@@ -972,7 +972,7 @@
 <p>Visiting the <strong>Receive</strong> tab of ZecWallet will show all current addresses in the wallet and enable you to generate new ones. To learn about the different types of addresses available in Zcash which are transparent, shielded (Sprout and Sapling) please visit <a href="https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html">this page</a>. It is not possible to remove an address from the wallet once it has been generated.</p>
 <div class="admonition tip">
 <p class="admonition-title">Backup after generating a new address</p>
-<p>Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be <a href="https://z.cash/blog/sapling-in-hd/">recreated from a seed</a> whereas transparent or Sprout addresses either require the private key or a <code>wallet.dat</code> backup made after the address was created. See the <a href="/using-zec-qt-wallet/#backing-up">Backing up section</a> for more details.</p>
+<p>Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be <a href="https://z.cash/blog/sapling-in-hd/">recreated from a seed</a> whereas transparent or Sprout addresses either require the private key or a <code>wallet.dat</code> backup made after the address was created. See the <a href="/using-zecwallet/#backing-up">Backing up section</a> for more details.</p>
 </div>
 <p><img alt="Receive Tab" src="../images/addresses.png" /></p>
 <p>Transparent addresses are automatically created when clicking the <strong>t-Addr</strong> button as transparent addresses should not be reused. Unlike transparent addresses, it is fine to <a href="https://z.cash/blog/shielded-address-contexts/">reuse shielded addresses</a> and so new addresses can be manually created on-demand via the <strong>New Address</strong> button.</p>
@@ -985,7 +985,7 @@
 <p>Once you&rsquo;ve generated an address and have sent some funds to it, you can send some ZEC. Click on the <strong>Send</strong> tab:</p>
 <p><img alt="Send Tab" src="../images/send.png" /></p>
 <p>You can only send funds with at least one confirmation. While transactions are being confirmed, they are easily identifiable as they are highlighted in red.</p>
-<p>Choose an address with funds in it and enter the recipient address. You may specify multiple recipients per transaction, and there may be a mixture of transparent and shielded recipients. <a href="/using-zec-qt-wallet/#encrypted-memo-field">The Memo field</a> is only available when sending <strong>to</strong> a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the <a href="/using-zec-qt-wallet/#zeq-qt-wallet-options">Options section</a> if you wish to customise this behaviour and understand the implications.</p>
+<p>Choose an address with funds in it and enter the recipient address. You may specify multiple recipients per transaction, and there may be a mixture of transparent and shielded recipients. <a href="/using-zecwallet/#encrypted-memo-field">The Memo field</a> is only available when sending <strong>to</strong> a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the <a href="/using-zecwallet/#zecwallet-options">Options section</a> if you wish to customise this behaviour and understand the implications.</p>
 <div class="admonition info">
 <p class="admonition-title">Shielded send requirements</p>
 <p>Sending Sapling transaction require little resource usage and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 70-90 seconds and require an additional 1.3GB of memory to perform the spend. </p>
@@ -1035,7 +1035,7 @@
 <p><a href="/video-tutorials/#import-private-key"><strong>Video</strong>: Import private keys</a> </p>
 </div>
 <h2 id="zecwallet-options">ZecWallet options<a class="headerlink" href="#zecwallet-options" title="Permanent link">&para;</a></h2>
-<p>zec-qt wallet has a number of options that allow you to customise how the application behaves and may be accessed in the <strong>Settings-&gt;Options</strong> menu as shown below.</p>
+<p>ZecWallet has a number of options that allow you to customise how the application behaves and may be accessed in the <strong>Settings-&gt;Options</strong> menu as shown below.</p>
 <p><img alt="ZecWallet options" src="../images/options.png" /></p>
 <h3 id="remember-shielded-transactions">Remember shielded transactions<a class="headerlink" href="#remember-shielded-transactions" title="Permanent link">&para;</a></h3>
 <p>By default <code>zcashd</code> will not store information about your outgoing fully shielded transactions (z-&gt;z). If this option is selected, ZecWallet will store outgoing transactions locally so that any shielded spends will appear in the transactions tab. If you do not wish these transactions to be saved by ZecWallet simply toggle the option for <strong>Remember shielded transactions</strong>. At any point, you may clear your shielded transaction history locally by choosing the <strong>Clear History</strong> button (there is no way of recovering this data once cleared).</p>
@@ -1046,14 +1046,14 @@
 <h3 id="connect-via-tor">Connect via TOR<a class="headerlink" href="#connect-via-tor" title="Permanent link">&para;</a></h3>
 <p>When using Zcash <a href="https://z.cash/support/security/privacy-security-recommendations">it does nothing to preserve your network level privacy</a> so a unique IP address can allow network observers to correlate your Zcash transactions with each other and with your other traffic. To overcome this, you may use TOR to obfuscate your IP address.</p>
 <p>You will first need to have TOR installed which you may do from the <a href="https://www.torproject.org/download/download.html">official site</a>. You will need to download and run the TOR Expert Bundle (not the TOR browser). TOR is also available on all popular package managers, e.g. macOS <code>brew install tor</code> or Debian <code>apt install tor</code>.</p>
-<p>Once running, choose the option in ZecWallet to <strong>Connect via TOR</strong> and the following line will be added to your <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> file to configure TOR usage <code>proxy=127.0.0.1:9050</code>. Restart ZecWallet to enable the service running over TOR.</p>
+<p>Once running, choose the option in ZecWallet to <strong>Connect via TOR</strong> and the following line will be added to your <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code></a> file to configure TOR usage <code>proxy=127.0.0.1:9050</code>. Restart ZecWallet to enable the service running over TOR.</p>
 <p>Use the advanced options when installing ZecWallet to run <code>zcashd</code> over TOR from the initial startup, so your IP is never exposed to the network.</p>
 <div class="admonition warning">
 <p class="admonition-title">Parameters are not currently downloaded over TOR</p>
 <p>The Zcash parameters that are downloaded on the first launch are not done so over TOR, depending on your network configuration.</p>
 </div>
 <h4 id="onion-nodes">Onion Nodes<a class="headerlink" href="#onion-nodes" title="Permanent link">&para;</a></h4>
-<p>You can connect to Zcash nodes only behind onion addresses by adding the following into your <a href="/using-zec-qt-wallet/#customising-zcashconf"><code>zcash.conf</code></a> file, which will ensure that your IP address is not exposed to any Zcash-related services when running ZecWallet.</p>
+<p>You can connect to Zcash nodes only behind onion addresses by adding the following into your <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code></a> file, which will ensure that your IP address is not exposed to any Zcash-related services when running ZecWallet.</p>
 <div class="codehilite"><pre><span></span>proxy=127.0.0.1:9050
 onlynet=onion
 </pre></div>
@@ -1093,7 +1093,7 @@ addnode=zcashuhmzycmlwld.onion
 <p>If you want to send a reply-to address in the memo field, for example, if you are using the memo field as an encrypted chat application, ZecWallet allows you to include a reply-to address in a standard format. To use, press the <strong>Include Reply Address</strong> and the sending address will automatically be inserted.</p>
 <p><img alt="Memo reply to address" src="../images/memo-reply-address.png" /></p>
 <h3 id="replying-to-a-memo">Replying to a memo<a class="headerlink" href="#replying-to-a-memo" title="Permanent link">&para;</a></h3>
-<p>If you receive a transaction with a memo that contains a <a href="#/using-zec-qt-wallet/#including-a-reply-address">reply address</a>, you can reply to it directly from the transactions table. Simply right-click the transaction and choose <strong>Reply to xxx</strong>.</p>
+<p>If you receive a transaction with a memo that contains a <a href="#/using-zecwallet/#including-a-reply-address">reply address</a>, you can reply to it directly from the transactions table. Simply right-click the transaction and choose <strong>Reply to xxx</strong>.</p>
 <p><img alt="Reply to a memo" src="../images/memo-reply-to.png" /></p>
 <h2 id="exporting-transactions">Exporting transactions<a class="headerlink" href="#exporting-transactions" title="Permanent link">&para;</a></h2>
 <p>ZecWallet allows you to export all transactions via the <strong>File-&gt;Export Transactions</strong> menu item. You will be prompted where to store the exported file and it will be saved as a csv file with the following headers: </p>
@@ -1120,7 +1120,7 @@ addnode=zcashuhmzycmlwld.onion
 <h2 id="apps">Apps<a class="headerlink" href="#apps" title="Permanent link">&para;</a></h2>
 <p>ZecWallet bundles some applications to make common tasks simpler.</p>
 <h3 id="using-z-boardnet">Using z-board.net<a class="headerlink" href="#using-z-boardnet" title="Permanent link">&para;</a></h3>
-<p><a href="http://z-board.net/">z-board.net</a> is a message board based on the <a href="/using-zec-qt-wallet/#encrypted-memo-field">encrypted memo field</a>. When using shielded addresses messages are anonymous. ZecWallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address without manually adding it.</p>
+<p><a href="http://z-board.net/">z-board.net</a> is a message board based on the <a href="/using-zecwallet/#encrypted-memo-field">encrypted memo field</a>. When using shielded addresses messages are anonymous. ZecWallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address without manually adding it.</p>
 <p><img alt="zboard" src="../images/zboard.png" /></p>
 <div class="admonition quote">
 <p><a href="/video-tutorials/#posting-to-z-boardnet"><strong>Video</strong>: Posting to z-board.net</a> </p>
@@ -1218,7 +1218,7 @@ addnode=zcashuhmzycmlwld.onion
     
       <a href="https://github.com/ZcashFoundation/zecwallet/" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://twitter.com/zecqtwallet" class="md-footer-social__link fa fa-twitter"></a>
+      <a href="https://twitter.com/zecwallet" class="md-footer-social__link fa fa-twitter"></a>
     
   </div>
 
