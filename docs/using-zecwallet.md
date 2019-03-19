@@ -8,7 +8,7 @@
 
 Now that you have ZecWallet [installed](/installation) it is time to start using the software. 
 
-If you are using the embedded `zcashd` and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file created specifying some default configuration values. The blockchain will then begin to sync, which is a time-consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner of ZecWallet which displays the number of blocks downloaded and a sync percentage.
+If you are using the embedded `zcashd` and it is your first time using the software, the system parameters will be downloaded from the internet (~1.7GB) and a [`zcash.conf`](/using-zecwallet/#customising-zcashconf) file created specifying some default configuration values. The blockchain will then begin to sync, which is a time-consuming process taking anywhere of the order of 8 hours to days depending on your hardware and network performance. You can monitor the progress in the bottom right corner of ZecWallet which displays the number of blocks downloaded and a sync percentage.
 
 ![Syncing](images/sync.png)
 
@@ -23,7 +23,7 @@ If you are using the embedded `zcashd` and it is your first time using the softw
 Visiting the **Receive** tab of ZecWallet will show all current addresses in the wallet and enable you to generate new ones. To learn about the different types of addresses available in Zcash which are transparent, shielded (Sprout and Sapling) please visit [this page](https://zcash.readthedocs.io/en/latest/rtd_pages/addresses.html). It is not possible to remove an address from the wallet once it has been generated.
 
 !!! tip "Backup after generating a new address"
-    Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be [recreated from a seed](https://z.cash/blog/sapling-in-hd/) whereas transparent or Sprout addresses either require the private key or a `wallet.dat` backup made after the address was created. See the [Backing up section](/using-zec-qt-wallet/#backing-up) for more details.
+    Whenever a new address is generated you should ensure that you have a backup of the address. Only Sapling uses a HD wallet and can be [recreated from a seed](https://z.cash/blog/sapling-in-hd/) whereas transparent or Sprout addresses either require the private key or a `wallet.dat` backup made after the address was created. See the [Backing up section](/using-zecwallet/#backing-up) for more details.
 
 ![Receive Tab](images/addresses.png)
 
@@ -44,7 +44,7 @@ Once you've generated an address and have sent some funds to it, you can send so
 
 You can only send funds with at least one confirmation. While transactions are being confirmed, they are easily identifiable as they are highlighted in red.
 
-Choose an address with funds in it and enter the recipient address. You may specify multiple recipients per transaction, and there may be a mixture of transparent and shielded recipients. [The Memo field](/using-zec-qt-wallet/#encrypted-memo-field) is only available when sending **to** a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the [Options section](/using-zec-qt-wallet/#zeq-qt-wallet-options) if you wish to customise this behaviour and understand the implications.
+Choose an address with funds in it and enter the recipient address. You may specify multiple recipients per transaction, and there may be a mixture of transparent and shielded recipients. [The Memo field](/using-zecwallet/#encrypted-memo-field) is only available when sending **to** a shielded address (either Sprout or Sapling). The default mining fee is 0.0001 ZEC which is recommended for all transactions. See the [Options section](/using-zecwallet/#zecwallet-options) if you wish to customise this behaviour and understand the implications.
 
 !!! info "Shielded send requirements"
     Sending Sapling transaction require little resource usage and happen in a few seconds. If you still have funds in legacy Sprout addresses sending times are typically around 70-90 seconds and require an additional 1.3GB of memory to perform the spend. 
@@ -117,7 +117,7 @@ To import a private key, choose **File->Import private key** from the menu. You 
 
 ## ZecWallet options
 
-zec-qt wallet has a number of options that allow you to customise how the application behaves and may be accessed in the **Settings->Options** menu as shown below.
+ZecWallet has a number of options that allow you to customise how the application behaves and may be accessed in the **Settings->Options** menu as shown below.
 
 ![ZecWallet options](images/options.png)
 
@@ -139,7 +139,7 @@ When using Zcash [it does nothing to preserve your network level privacy](https:
 
 You will first need to have TOR installed which you may do from the [official site](https://www.torproject.org/download/download.html). You will need to download and run the TOR Expert Bundle (not the TOR browser). TOR is also available on all popular package managers, e.g. macOS `brew install tor` or Debian `apt install tor`.
 
-Once running, choose the option in ZecWallet to **Connect via TOR** and the following line will be added to your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file to configure TOR usage `proxy=127.0.0.1:9050`. Restart ZecWallet to enable the service running over TOR.
+Once running, choose the option in ZecWallet to **Connect via TOR** and the following line will be added to your [`zcash.conf`](/using-zecwallet/#customising-zcashconf) file to configure TOR usage `proxy=127.0.0.1:9050`. Restart ZecWallet to enable the service running over TOR.
 
 Use the advanced options when installing ZecWallet to run `zcashd` over TOR from the initial startup, so your IP is never exposed to the network.
 
@@ -148,7 +148,7 @@ Use the advanced options when installing ZecWallet to run `zcashd` over TOR from
 
 #### Onion Nodes
 
-You can connect to Zcash nodes only behind onion addresses by adding the following into your [`zcash.conf`](/using-zec-qt-wallet/#customising-zcashconf) file, which will ensure that your IP address is not exposed to any Zcash-related services when running ZecWallet.
+You can connect to Zcash nodes only behind onion addresses by adding the following into your [`zcash.conf`](/using-zecwallet/#customising-zcashconf) file, which will ensure that your IP address is not exposed to any Zcash-related services when running ZecWallet.
 
 ```
 proxy=127.0.0.1:9050
@@ -198,7 +198,7 @@ If you want to send a reply-to address in the memo field, for example, if you ar
 
 ### Replying to a memo
 
-If you receive a transaction with a memo that contains a [reply address](#/using-zec-qt-wallet/#including-a-reply-address), you can reply to it directly from the transactions table. Simply right-click the transaction and choose **Reply to xxx**.
+If you receive a transaction with a memo that contains a [reply address](#/using-zecwallet/#including-a-reply-address), you can reply to it directly from the transactions table. Simply right-click the transaction and choose **Reply to xxx**.
 
 ![Reply to a memo](images/memo-reply-to.png)
 
@@ -216,7 +216,7 @@ ZecWallet bundles some applications to make common tasks simpler.
 
 ### Using z-board.net
 
-[z-board.net](http://z-board.net/) is a message board based on the [encrypted memo field](/using-zec-qt-wallet/#encrypted-memo-field). When using shielded addresses messages are anonymous. ZecWallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address without manually adding it.
+[z-board.net](http://z-board.net/) is a message board based on the [encrypted memo field](/using-zecwallet/#encrypted-memo-field). When using shielded addresses messages are anonymous. ZecWallet integrates with the z-board.net service by allowing you to choose topics and post to the correct address without manually adding it.
 
 ![zboard](images/zboard.png)
 
