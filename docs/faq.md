@@ -191,3 +191,7 @@ Yes, in the [Address Book](/using-zec-qt-wallet/#address-book) click to **Import
 ## In what languages is ZecWallet available?
 
 Currently, it is available in French, Spanish, Portuguese and Italian. If you want to help by translating see the [Translating zec-qt-wallet](/translations/) page.
+
+## Why are there references to both zec-qt-wallet as well as ZecWallet?
+
+The original wallet was named **zec-qt-wallet** and was renamed in March 2019 to **ZecWallet** so any references to the wallet before that date will use the zec-qt-wallet name. The previous name of zec-qt-wallet may remain in places where updating would cause issues with signing releases and upgrades.
