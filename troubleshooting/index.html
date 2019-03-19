@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
     
     
       
@@ -131,19 +131,22 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <span class="md-header-nav__topic">
-              ZecWallet Docs
-            </span>
-            <span class="md-header-nav__topic">
-              Troubleshooting Issues
-            </span>
+            
+              <span class="md-header-nav__topic">
+                ZecWallet Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Troubleshooting Issues
+              </span>
+            
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -166,6 +169,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -176,18 +180,20 @@
 
   
 
-<a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
+
+  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ZcashFoundation/zecwallet
     </div>
-  
-  <div class="md-source__repository">
-    ZcashFoundation/zecwallet
-  </div>
-</a>
+  </a>
+
           </div>
         </div>
       
@@ -223,18 +229,20 @@
 
   
 
-<a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
+
+  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ZcashFoundation/zecwallet
     </div>
-  
-  <div class="md-source__repository">
-    ZcashFoundation/zecwallet
-  </div>
-</a>
+  </a>
+
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -429,6 +437,13 @@
         <li class="md-nav__item">
   <a href="#zcashd-has-no-connections" title="zcashd has no connections" class="md-nav__link">
     zcashd has no connections
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-cant-generate-a-new-shielded-z-address" title="I can't generate a new shielded (z) address" class="md-nav__link">
+    I can't generate a new shielded (z) address
   </a>
   
 </li>
@@ -675,6 +690,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i-cant-generate-a-new-shielded-z-address" title="I can't generate a new shielded (z) address" class="md-nav__link">
+    I can't generate a new shielded (z) address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Some of my shielded transactions are not displayed in the transaction tab" class="md-nav__link">
     Some of my shielded transactions are not displayed in the transaction tab
   </a>
@@ -830,6 +852,8 @@
 <p>If you send a transaction before the node is fully synced, or perhaps due to network congestion then the transaction may fail and be returned to your wallet due to the <a href="https://z.cash/blog/transaction-expiry/">Transaction Expiry</a> feature. When a user submits a transaction to the network, by default it will persist in the mempool for 20 blocks (currently approximately 50 minutes). If it has not been mined after that period, it is no longer valid and will be evicted from all mempools. The value will return to the sender’s wallet. </p>
 <h2 id="zcashd-has-no-connections"><code>zcashd</code> has no connections<a class="headerlink" href="#zcashd-has-no-connections" title="Permanent link">&para;</a></h2>
 <p>See the section on <a href="/troubleshooting/#my-node-isnt-syncing">syncing issues</a> for common resolutions to this issue.</p>
+<h2 id="i-cant-generate-a-new-shielded-z-address">I can&rsquo;t generate a new shielded (z) address<a class="headerlink" href="#i-cant-generate-a-new-shielded-z-address" title="Permanent link">&para;</a></h2>
+<p>When the wallet is first launched, and before it has synced, the Sprout <strong>New Address</strong> button is greyed out, and it is not possible to generate a new shielded address. Sprout addresses have been deprecated in ZecWallet to encourage the use of Sapling ones. The ability to create Sapling addresses is only displayed in ZecWallet once the Sapling activation height is reached (block 419200). If you need to generate a new shielded address before the wallet has synced you may do so directly from the <a href="/faq/#how-do-i-use-the-zcash-cli-command">command line interface</a> using the <code>z_getnewaddress</code> (Sapling) or <code>z_getnewaddress sprout</code> (legacy Sprout).</p>
 <h2 id="some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab">Some of my shielded transactions are not displayed in the transaction tab<a class="headerlink" href="#some-of-my-shielded-transactions-are-not-displayed-in-the-transaction-tab" title="Permanent link">&para;</a></h2>
 <p>By default, <code>zcashd</code> does not store outgoing shielded transactions. To overcome this, ZecWallet will store shielded sends locally and this option may be disabled and any saved transactions cleared. If you are missing any outgoing shielded transactions check that the option to <strong>Remember shielded transactions</strong> is selected in the <a href="/using-zec-qt-wallet/#remember-shielded-transactions">wallet options</a>. There is no way (currently) of recovering the information about outgoing fully shielded spends if this option is disabled.</p>
 <h2 id="sending-from-sprout-address-to-sapling-gives-an-error">Sending from Sprout address to Sapling gives an error<a class="headerlink" href="#sending-from-sprout-address-to-sapling-gives-an-error" title="Permanent link">&para;</a></h2>
@@ -958,6 +982,7 @@ over the OS account running zcashd.</p>
           Material for MkDocs</a>
       </div>
       
+        
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
@@ -967,13 +992,14 @@ over the OS account running zcashd.</p>
     
   </div>
 
+      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b806dc00.js"></script>
+      <script src="../assets/javascripts/application.a353778b.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
