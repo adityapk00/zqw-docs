@@ -5,7 +5,7 @@
 **ZecWallet** is a z-Addr first, Sapling compatible wallet and full node for `zcashd` that runs on Linux, Windows and macOS.
 
 <div class="video_container">
-    <iframe src="https://www.youtube-nocookie.com/embed/qyIjX4sq_k4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+    <iframe src="https://www.youtube-nocookie.com/embed/CS6tH4kVh7I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
 </div>
 
 ![Zec QT Wallet](images/screenshot-sub.png)
