@@ -121,6 +121,12 @@ Not yet. While [payment disclosure](https://z.cash/blog/viewing-keys-selective-d
 
 Not yet, as `zcashd` doesn’t currently support Sapling viewing keys and will be implemented in ZecWallet once supported.
 
+### How do I use the zcash-cli command?
+
+You may interact with the [Zcash Payment API](https://zcash.readthedocs.io/en/latest/rtd_pages/payment_api.html) via RPC calls using the Zcash command line interface. You may wish to do this to enable advanced functionality or to debug issues outside of the ZecWallet interface. See [this page](https://zcash.readthedocs.io/en/latest/rtd_pages/payment_api.html) for an overview of the Zcash RPC commands available. To use, follow the instructions for [using the `zcash-cli stop` command](https://docs.zecwallet.co/troubleshooting/#via-an-external-zcashd) simply replacing `stop` with the command you wish to run. For example, to query the detail of a completed shielded transaction on a Mac you would run:
+
+`/Applications/zec-qt-wallet.app/Contents/MacOS/zcash-cli z_getoperationresult`
+
 ## Wallet
 
 ### Is the wallet encrypted?
