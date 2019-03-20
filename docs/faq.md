@@ -135,7 +135,7 @@ No, wallet encryption is [currently disabled](https://github.com/zcash/zcash/blo
 
 ### Why does my change go to a new address?
 
-Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address. ZecWallet allows you to set an option to automatically send this change to a Sapling address via the application [**Options**](/using-zecwallet/#zeqwallet-options). As the 'feature' was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.
+Like Bitcoin, when using transparent addresses, change from a transaction goes to a new transparent address. ZecWallet allows you to set an option to automatically send this change to a Sapling address via the application [**Options**](/using-zecwallet/#zecwallet-options). As the 'feature' was added in Bitcoin as a measure to preserve privacy and prevent trivial linking of transactions on the blockchain, shielded (z) addresses do not have this property and any change is returned to the sending (z) address by default.
 
 ### Will ZecWallet remember my outgoing shielded sends?
 
