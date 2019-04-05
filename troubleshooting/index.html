@@ -463,6 +463,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#embedded-zcashd" title="Embedded zcashd" class="md-nav__link">
+    Embedded zcashd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#via-an-external-zcashd" title="Via an external zcashd" class="md-nav__link">
     Via an external zcashd
   </a>
@@ -484,6 +491,13 @@
         <li class="md-nav__item">
   <a href="#how-to-perform-a-reindex" title="How to perform a reindex" class="md-nav__link">
     How to perform a reindex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unknown-errors" title=""Unknown Errors"" class="md-nav__link">
+    "Unknown Errors"
   </a>
   
 </li>
@@ -711,6 +725,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#embedded-zcashd" title="Embedded zcashd" class="md-nav__link">
+    Embedded zcashd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#via-an-external-zcashd" title="Via an external zcashd" class="md-nav__link">
     Via an external zcashd
   </a>
@@ -732,6 +753,13 @@
         <li class="md-nav__item">
   <a href="#how-to-perform-a-reindex" title="How to perform a reindex" class="md-nav__link">
     How to perform a reindex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unknown-errors" title=""Unknown Errors"" class="md-nav__link">
+    "Unknown Errors"
   </a>
   
 </li>
@@ -855,9 +883,10 @@
 <p class="admonition-title">Potentially slow wallet rescan</p>
 <p>Depending on the number of addresses in your wallet (particularly shielded addresses) a wallet rescan can be slow. Simply leave it running until the process is complete.</p>
 </div>
-<p>If you need to perform a wallet rescan due to missing transactions or balance errors you will need to start <code>zcashd</code> with the <code>-rescan</code> option. There are a couple of methods to achieve this and this process will be improved in future versions of the ZecWallet.</p>
+<h3 id="embedded-zcashd">Embedded zcashd<a class="headerlink" href="#embedded-zcashd" title="Permanent link">&para;</a></h3>
+<p>If you are using the embedded zcashd (There is a &ldquo;zcashd&rdquo; tab in ZecWallet), you can go to <code>Edit -&gt; Settings -&gt; Troubleshooting</code> and select the &ldquo;rescan&rdquo; option and click apply. You&rsquo;ll need to restart ZecWallet to start the rescan.</p>
 <h3 id="via-an-external-zcashd">Via an external <code>zcashd</code><a class="headerlink" href="#via-an-external-zcashd" title="Permanent link">&para;</a></h3>
-<p>If you are running the embedded <code>zcashd</code> you will need to run <code>zcashd</code> externally to run the rescan and once complete you can safely shut down the external <code>zcashd</code> and run ZecWallet as normal. With ZecWallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).</p>
+<p>If you are running the external <code>zcashd</code> you will need to restart <code>zcashd</code> after shutting down ZecWallet.  With ZecWallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).</p>
 <ul>
 <li>Windows (installer): <code>cmd /C ""C:\Program Files (x86)\zecwallet\zcashd.exe" -rescan"</code></li>
 <li>Windows (binaries): <code>zcashd.exe -rescan</code> from the directory of the downloaded binaries.</li>
@@ -874,7 +903,6 @@
 <li>Linux (deb): <code>zcash-cli stop</code></li>
 <li>Linux (binaries): <code>./zcash-cli stop</code> from the directory of the downloaded binaries.</li>
 </ul>
-<p>Once the rescan has been completed and the external <code>zcashd</code> node has been stopped you can continue to run ZecWallet as normal.</p>
 <h3 id="editing-zcashconf">Editing <code>zcash.conf</code><a class="headerlink" href="#editing-zcashconf" title="Permanent link">&para;</a></h3>
 <p>As an alternative to the external <code>zcashd</code> you can edit the <a href="/using-zecwallet/#customising-zcashconf"><code>zcash.conf</code> file</a> and add the line <code>rescan=1</code> and then start ZecWallet normally. After you have opened ZecWallet and the rescan is complete you must remove the line from <code>zcash.conf</code> to prevent the wallet from rescanning every time it is opened and close ZecWallet as normal.</p>
 <h2 id="how-to-perform-a-reindex">How to perform a reindex<a class="headerlink" href="#how-to-perform-a-reindex" title="Permanent link">&para;</a></h2>
@@ -884,6 +912,19 @@
 </pre></div>
 
 
+<h2 id="unknown-errors">&ldquo;Unknown Errors&rdquo;<a class="headerlink" href="#unknown-errors" title="Permanent link">&para;</a></h2>
+<p>If you are seeing &ldquo;Unknown Error&rdquo; error messages, your Zcash params may have become corrupt, and ZecWallet or zcashd are having trouble. You should delete the zcash params directory and restart ZecWallet.</p>
+<p>Delete all the files under these directories:</p>
+<ul>
+<li>Windows: <code>%HOMEPATH%\AppData\Roaming\ZcashParams\</code></li>
+<li>macOS: <code>~/Library/Application Support/ZcashParams/</code></li>
+<li>Linux: <code>~/.zcash-params/</code></li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Large Download</p>
+<p>The params files together are about 1.7GB in size, so your download may take a while</p>
+</div>
+<p>ZecWallet will then re-download the params files when restarted. </p>
 <h2 id="the-displayed-balance-is-incorrect">The displayed balance is incorrect<a class="headerlink" href="#the-displayed-balance-is-incorrect" title="Permanent link">&para;</a></h2>
 <p>If your balance is not being correctly displayed, first ensure that your software is up to date and that your node is fully synced. If your balance is still incorrect you can perform a manual <a href="/troubleshooting/#how-to-perform-a-wallet-rescan">wallet rescan</a> which will rescan the blockchain for missing wallet transactions on startup. Depending on the number of (shielded) addresses in the wallet, this can be (very) slow so just leave it running until complete and your balance should be reflected accurately.</p>
 <h2 id="common-error-messages">Common error messages<a class="headerlink" href="#common-error-messages" title="Permanent link">&para;</a></h2>
