@@ -74,11 +74,12 @@ You cannot send directly from a Sprout address (zc) to a Sapling address (zs) as
 !!! info "Potentially slow wallet rescan"
     Depending on the number of addresses in your wallet (particularly shielded addresses) a wallet rescan can be slow. Simply leave it running until the process is complete.
 
-If you need to perform a wallet rescan due to missing transactions or balance errors you will need to start `zcashd` with the `-rescan` option. There are a couple of methods to achieve this and this process will be improved in future versions of the ZecWallet.
+### Embedded zcashd
+If you are using the embedded zcashd (There is a "zcashd" tab in ZecWallet), you can go to `Edit -> Settings -> Troubleshooting` and select the "rescan" option and click apply. You'll need to restart ZecWallet to start the rescan.
 
 ### Via an external `zcashd`
 
-If you are running the embedded `zcashd` you will need to run `zcashd` externally to run the rescan and once complete you can safely shut down the external `zcashd` and run ZecWallet as normal. With ZecWallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).
+If you are running the external `zcashd` you will need to restart `zcashd` after shutting down ZecWallet.  With ZecWallet closed open a terminal/command prompt and run the following command depending on your platform (and adjust accordingly to match your system if required).
 
 * Windows (installer): `cmd /C ""C:\Program Files (x86)\zecwallet\zcashd.exe" -rescan"`
 * Windows (binaries): `zcashd.exe -rescan` from the directory of the downloaded binaries.
@@ -96,7 +97,6 @@ Note that the command above will open an instance of `zcashd` in the foreground,
 * Linux (deb): `zcash-cli stop`
 * Linux (binaries): `./zcash-cli stop` from the directory of the downloaded binaries.
 
-Once the rescan has been completed and the external `zcashd` node has been stopped you can continue to run ZecWallet as normal.
 
 ### Editing `zcash.conf`
 
@@ -111,6 +111,22 @@ To complete a reindex simply [follow the instruction for a wallet rescan](/troub
 ``` bash
 zcashd -reindex
 ```
+
+## "Unknown Errors"
+If you are seeing "Unknown Error" error messages, your Zcash params may have become corrupt, and ZecWallet or zcashd are having trouble. You should delete the zcash params directory and restart ZecWallet.
+
+Delete all the files under these directories:
+
+* Windows: `%HOMEPATH%\AppData\Roaming\ZcashParams\`
+* macOS: `~/Library/Application Support/ZcashParams/`
+* Linux: `~/.zcash-params/`
+
+
+!!! info "Large Download"
+    The params files together are about 1.7GB in size, so your download may take a while
+
+
+ZecWallet will then re-download the params files when restarted. 
 
 ## The displayed balance is incorrect
 
