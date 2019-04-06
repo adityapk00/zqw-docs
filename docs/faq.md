@@ -186,7 +186,7 @@ No, ZecWallet is a wallet and full node. While you can configure `zcashd` to run
 
 ### How do I upgrade from WinZEC / zcash4mac / zcash4win?
 
-[WinZEC](http://winzec.com/) and its predecessor zcash4win (and zcash4mac) have now been deprecated. You can simply install ZecWallet and it'll use the existing data directory and wallet from any previous installation and operate as normal.
+WinZEC and its predecessor zcash4win (and zcash4mac) have now been deprecated. You can simply install ZecWallet and it'll use the existing data directory and wallet from any previous installation and operate as normal.
 
 ### Can I import the WinZEC address book?
 
