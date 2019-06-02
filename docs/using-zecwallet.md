@@ -75,6 +75,20 @@ You can import an address book in csv format and users of WinZEC can [import an 
 !!! quote ""
     [**Video**: Using Labels](/video-tutorials/#using-labels)    
 
+## Payment Requests
+
+ZecWallet lets you request Zcash payments using shielded transactions. **Select File->Request Zcash** and enter the Sapling address of the user you are requesting Zcash from, along with the amount and an optional memo.
+
+![Request Zcash](images/payment-requests-1.png)
+
+The payment request is sent to the user's Sapling address as a memo.
+
+![Receive Payment Request](images/payment-requests-2.png)
+
+The user can right-click and choose **View Payment Request** from the context menu and selects **Pay** to send the payment to the designated address.
+
+![Pay Payment Request](images/payment-requests-3.png)
+
 ## Backing up
 
 ZecWallet provides multiple options to ensure your wallet and keys are backed up. It is important that you perform regular backups if you are not exclusively using Sapling addresses and have the Sapling seed. While Sapling has a [HD wallet](https://z.cash/blog/sapling-in-hd/), support for importing the seed is not yet available.
