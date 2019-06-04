@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
     
     
       
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -131,22 +131,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                ZecWallet Docs
-              </span>
-              <span class="md-header-nav__topic">
-                Using ZecWallet
-              </span>
-            
+            <span class="md-header-nav__topic">
+              ZecWallet Docs
+            </span>
+            <span class="md-header-nav__topic">
+              Using ZecWallet
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -169,7 +166,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -180,20 +176,18 @@
 
   
 
-
-  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ZcashFoundation/zecwallet
+<a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ZcashFoundation/zecwallet
+  </div>
+</a>
           </div>
         </div>
       
@@ -229,20 +223,18 @@
 
   
 
-
-  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      ZcashFoundation/zecwallet
+<a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    ZcashFoundation/zecwallet
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -593,6 +585,13 @@
         <li class="md-nav__item">
   <a href="#connecting-to-an-external-zcashd" title="Connecting to an external zcashd" class="md-nav__link">
     Connecting to an external zcashd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastsync" title="FastSync" class="md-nav__link">
+    FastSync
   </a>
   
 </li>
@@ -954,6 +953,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#fastsync" title="FastSync" class="md-nav__link">
+    FastSync
+  </a>
+  
+</li>
+      
       
       
       
@@ -1175,6 +1181,17 @@ addnode=zcashuhmzycmlwld.onion
 <p class="admonition-title">Exposing RPC port</p>
 <p>Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash, and take over the OS account running zcashd.</p>
 </div>
+<h2 id="fastsync">FastSync<a class="headerlink" href="#fastsync" title="Permanent link">&para;</a></h2>
+<p>If you are running ZecWallet for the first time and don&rsquo;t have an existing zcashd node, the first thing ZecWallet will do is configure your <code>zcash.conf</code> and download the blockchain to do the initial sync. This can be a very time consuming process, and ZecWallet can speed it up for you by doing a &ldquo;fast sync&rdquo;.</p>
+<p><img alt="Fast Sync" src="../images/fastsync.png" /></p>
+<p>During a fast sync, ZecWallet&rsquo;s embedded zcashd skips some expensive checks for blocks (Specifically, it skips various checks for Transactions in a block), speeding up the initial sync by 25% - 33%, and since you don&rsquo;t have a wallet yet, you are probably OK skipping these expensive checks in order to get a faster initial sync. </p>
+<div class="admonition info">
+<p>The checks are skipped only during initial block download and only up to the highest checkpoint available. </p>
+</div>
+<p>Once you have caught up to the zcash blockchain, or pass the highest available checkpoint, all checks are resumed as usual. The <code>Fast Sync</code> is enabled by default if this is the first time you are launching ZecWallet and ZecWallet can&rsquo;t find an existing zcashd. </p>
+<div class="admonition warn">
+<p>Fast Sync is only available via the embedded zcashd. It is not available if you are running an external zcashd. </p>
+</div>
                 
                   
                 
@@ -1242,7 +1259,6 @@ addnode=zcashuhmzycmlwld.onion
           Material for MkDocs</a>
       </div>
       
-        
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
@@ -1252,14 +1268,13 @@ addnode=zcashuhmzycmlwld.onion
     
   </div>
 
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.a353778b.js"></script>
+      <script src="../assets/javascripts/application.b806dc00.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
