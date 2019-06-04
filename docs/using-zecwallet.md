@@ -263,3 +263,20 @@ You can disable the embedded `zcashd` and force ZecWallet to only connect to an 
 
 !!! danger "Exposing RPC port"
     Using the RPC port over a remote interface is NOT RECOMMENDED, because that will cause the rpcpassword to be transmitted over the network unencrypted, allowing any observer to steal your keys and Zcash, and take over the OS account running zcashd.
+
+## FastSync
+
+If you are running ZecWallet for the first time and don't have an existing zcashd node, the first thing ZecWallet will do is configure your `zcash.conf` and download the blockchain to do the initial sync. This can be a very time consuming process, and ZecWallet can speed it up for you by doing a "fast sync".
+
+![Fast Sync](images/fastsync.png)
+
+During a fast sync, ZecWallet's embedded zcashd skips some expensive checks for blocks (Specifically, it skips various checks for Transactions in a block), speeding up the initial sync by 25% - 33%, and since you don't have a wallet yet, you are probably OK skipping these expensive checks in order to get a faster initial sync. 
+
+!!! info ""
+    The checks are skipped only during initial block download and only up to the highest checkpoint available. 
+
+Once you have caught up to the zcash blockchain, or pass the highest available checkpoint, all checks are resumed as usual. The `Fast Sync` is enabled by default if this is the first time you are launching ZecWallet and ZecWallet can't find an existing zcashd. 
+
+!!! warn ""
+    Fast Sync is only available via the embedded zcashd. It is not available if you are running an external zcashd. 
+
