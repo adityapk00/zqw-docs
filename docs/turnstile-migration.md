@@ -21,7 +21,7 @@ Please see the [zcashd blog post](https://electriccoin.co/blog/sprout-to-sapling
 To check on the progress of the turnstile at any time, visit **Apps->Sapling Turnstile** and you will be presented with the full migration history detailing all transactions that have occurred as well as the amount left to migrate.
 
 !!! info "Closing the wallet during the migration."
-    If you shut down the wallet, then no funds will be migrated. The wallet will start to prepare transactions 5 blocks before the 500 block height interval (to allow for the time to create Sprout transactions) so the wallet should be open during this period. If the wallet is not open and a 500 block height interval passes, no action will take place until the next 500 block height interval.
+    If you are not using an external zcashd and shut down the wallet, then no funds will be migrated. The wallet will start to prepare transactions 5 blocks before the 500 block height interval (to allow for the time to create Sprout transactions) so the wallet should be open during this period. If the wallet is not open and a 500 block height interval passes, no action will take place until the next 500 block height interval.
 
 ### Aborting the turnstile migration
 
