@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
     
     
       
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.572ca0f0.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+      <script src="../assets/javascripts/modernizr.962652e9.js"></script>
     
     
       
@@ -131,19 +131,22 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            <span class="md-header-nav__topic">
-              ZecWallet Docs
-            </span>
-            <span class="md-header-nav__topic">
-              Using ZecWallet
-            </span>
+            
+              <span class="md-header-nav__topic">
+                ZecWallet Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Using ZecWallet
+              </span>
+            
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -166,6 +169,7 @@
     </div>
   </div>
 </div>
+          
         
       </div>
       
@@ -176,18 +180,20 @@
 
   
 
-<a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
+
+  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ZcashFoundation/zecwallet
     </div>
-  
-  <div class="md-source__repository">
-    ZcashFoundation/zecwallet
-  </div>
-</a>
+  </a>
+
           </div>
         </div>
       
@@ -223,18 +229,20 @@
 
   
 
-<a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
+
+  <a href="https://github.com/ZcashFoundation/zecwallet/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      ZcashFoundation/zecwallet
     </div>
-  
-  <div class="md-source__repository">
-    ZcashFoundation/zecwallet
-  </div>
-</a>
+  </a>
+
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -408,6 +416,13 @@
         <li class="md-nav__item">
   <a href="#address-book" title="Address book" class="md-nav__link">
     Address book
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payment-requests" title="Payment Requests" class="md-nav__link">
+    Payment Requests
   </a>
   
 </li>
@@ -763,6 +778,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#payment-requests" title="Payment Requests" class="md-nav__link">
+    Payment Requests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#backing-up" title="Backing up" class="md-nav__link">
     Backing up
   </a>
@@ -1006,6 +1028,13 @@
 <div class="admonition quote">
 <p><a href="/video-tutorials/#using-labels"><strong>Video</strong>: Using Labels</a>    </p>
 </div>
+<h2 id="payment-requests">Payment Requests<a class="headerlink" href="#payment-requests" title="Permanent link">&para;</a></h2>
+<p>ZecWallet lets you request Zcash payments using shielded transactions. <strong>Select File-&gt;Request Zcash</strong> and enter the Sapling address of the user you are requesting Zcash from, along with the amount and an optional memo.</p>
+<p><img alt="Request Zcash" src="../images/payment-requests-1.png" /></p>
+<p>The payment request is sent to the user&rsquo;s Sapling address as a memo.</p>
+<p><img alt="Receive Payment Request" src="../images/payment-requests-2.png" /></p>
+<p>The user can right-click and choose <strong>View Payment Request</strong> from the context menu and selects <strong>Pay</strong> to send the payment to the designated address.</p>
+<p><img alt="Pay Payment Request" src="../images/payment-requests-3.png" /></p>
 <h2 id="backing-up">Backing up<a class="headerlink" href="#backing-up" title="Permanent link">&para;</a></h2>
 <p>ZecWallet provides multiple options to ensure your wallet and keys are backed up. It is important that you perform regular backups if you are not exclusively using Sapling addresses and have the Sapling seed. While Sapling has a <a href="https://z.cash/blog/sapling-in-hd/">HD wallet</a>, support for importing the seed is not yet available.</p>
 <div class="admonition warning">
@@ -1213,6 +1242,7 @@ addnode=zcashuhmzycmlwld.onion
           Material for MkDocs</a>
       </div>
       
+        
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
@@ -1222,13 +1252,14 @@ addnode=zcashuhmzycmlwld.onion
     
   </div>
 
+      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../assets/javascripts/application.b806dc00.js"></script>
+      <script src="../assets/javascripts/application.a353778b.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
