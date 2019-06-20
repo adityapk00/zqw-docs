@@ -61,6 +61,9 @@ nav:
   - Turnstile Migration: turnstile-migration.md
   - Android Companion App: android.md
   - Translating ZecWallet: translations.md
+  - Zec Paper Wallet: 
+    - Running the UI: paper.md
+    - Using the CLI: paper-cli.md
   - FAQ: faq.md
   - Privacy Policy: privacypolicy.md
   - Terms of Service: termsofservice.md
