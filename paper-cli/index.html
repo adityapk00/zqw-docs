@@ -545,6 +545,13 @@
 <p>To generate a Zcash paper wallet and save it as a PDF, run
 <code>./zecpaperwallet -z 3 --format pdf zecpaper-output.pdf</code></p>
 <p>This will generate 3 shielded z-addresses and their corresponding private keys, and save them in a PDF file called <code>zecpaper-output.pdf</code></p>
+<h2 id="vanity-addresses">Vanity Addresses<a class="headerlink" href="#vanity-addresses" title="Permanent link">&para;</a></h2>
+<p>You can generate a &ldquo;vanity address&rdquo; (that is, an address starting with a given prefix) by specifying a <code>--vanity</code> argument with the prefix you want.</p>
+<p>Note that generating vanity addresses with a prefix longer than 4-5 characters is computationally expensive. You can run it on multiple CPUs on your computer by specifying the <code>--threads</code> option.</p>
+<div class="codehilite"><pre><span></span>./zecpaperwallet --vanity &quot;zrocks&quot; --threads 24
+</pre></div>
+
+
 <h1 id="compiling-from-source">Compiling from Source<a class="headerlink" href="#compiling-from-source" title="Permanent link">&para;</a></h1>
 <p>zecpaperwallet is built with rust. To compile from source, you <a href="https://www.rust-lang.org/tools/install">install Rust</a>. Basically, you need to:</p>
 <div class="codehilite"><pre><span></span>curl https://sh.rustup.rs -sSf | sh
@@ -589,6 +596,9 @@ cargo build --release
                                   <span class="n">containing</span> <span class="mi">32</span><span class="o">-</span><span class="mi">64</span> <span class="n">characters</span>
     <span class="o">-</span><span class="n">f</span><span class="p">,</span> <span class="o">--</span><span class="n">format</span> <span class="o">&lt;</span><span class="n">FORMAT</span><span class="o">&gt;</span>         <span class="n">What</span> <span class="n">format</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">the</span> <span class="n">output</span> <span class="k">in</span> <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="n">json</span><span class="p">]</span>  <span class="p">[</span><span class="n">possible</span> <span class="nl">values</span><span class="p">:</span> <span class="n">pdf</span><span class="p">,</span> <span class="n">json</span><span class="p">]</span>
     <span class="o">-</span><span class="n">t</span><span class="p">,</span> <span class="o">--</span><span class="n">taddrs</span> <span class="o">&lt;</span><span class="n">t_addresses</span><span class="o">&gt;</span>    <span class="n">Numbe</span> <span class="n">rof</span> <span class="n">T</span> <span class="n">addresses</span> <span class="n">to</span> <span class="n">generate</span> <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="o">--</span><span class="n">threads</span> <span class="o">&lt;</span><span class="n">threads</span><span class="o">&gt;</span>       <span class="n">Number</span> <span class="n">of</span> <span class="n">threads</span> <span class="n">to</span> <span class="n">use</span> <span class="k">for</span> <span class="n">the</span> <span class="n">vanity</span> <span class="n">address</span> <span class="n">generator</span><span class="p">.</span> <span class="n">Set</span> <span class="n">this</span> <span class="n">to</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span>
+                                  <span class="n">CPUs</span> <span class="n">you</span> <span class="n">have</span> <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="o">--</span><span class="n">vanity</span> <span class="o">&lt;</span><span class="n">vanity</span><span class="o">&gt;</span>         <span class="n">Generate</span> <span class="n">a</span> <span class="n">vanity</span> <span class="n">address</span> <span class="n">with</span> <span class="n">the</span> <span class="n">given</span> <span class="n">prefix</span>
     <span class="o">-</span><span class="n">z</span><span class="p">,</span> <span class="o">--</span><span class="n">zaddrs</span> <span class="o">&lt;</span><span class="n">z_addresses</span><span class="o">&gt;</span>    <span class="n">Number</span> <span class="n">of</span> <span class="n">Z</span> <span class="n">addresses</span> <span class="p">(</span><span class="n">Sapling</span><span class="p">)</span> <span class="n">to</span> <span class="n">generate</span> <span class="p">[</span><span class="k">default</span><span class="o">:</span> <span class="mi">1</span><span class="p">]</span>
 
 <span class="nl">ARGS</span><span class="p">:</span>
