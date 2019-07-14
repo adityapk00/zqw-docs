@@ -4,8 +4,8 @@
 
 [The Sapling turnstile](https://zcash.readthedocs.io/en/latest/rtd_pages/sapling_turnstile.html) is an auditing mechanism for the number of ZEC in circulation. The Sapling turnstile provides accounting for the ZEC held in Sprout shielded addresses as they are migrated to Sapling shielded addresses. To achieve this, owners of shielded ZEC are required to send their balances through the transparent value pool, thus revealing the balance, before sending to Sapling shielded addresses.
 
-!!! tip "Upgrade to version 0.7.0 or higher to use the native migration tool in zcashd"
-    Starting from [v0.7.0](https://github.com/ZcashFoundation/zecwallet/releases/tag/0.7.0) there is support for the native Sprout to Sapling migration tool in zcashd. Documentation for the previous custom migration tool available in ZecWallet is [archived here](/turnstile-migration-archived).
+!!! tip "Upgrade to version 0.7.2 or higher to use the native migration tool in zcashd"
+    Starting from [v0.7.2](https://github.com/ZcashFoundation/zecwallet/releases/tag/0.7.2) there is support for the native Sprout to Sapling migration tool in zcashd. Documentation for the previous custom migration tool available in ZecWallet is [archived here](/turnstile-migration-archived).
 
 ![Turnstile migration tool](images/migration-tool.png)
 

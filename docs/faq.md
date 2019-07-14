@@ -199,5 +199,27 @@ Yes, in the [Address Book](/using-zecwallet/#address-book) click to **Import Add
 Currently, it is available in French, Spanish, Portuguese and Italian. If you want to help by translating see the [Translating ZecWallet](/translations/) page.
 
 ## Why are there references to both zec-qt-wallet as well as ZecWallet?
-
+ycashfoundation/ycash/blob/master/src/chainparams.cpp
 The original wallet was named **zec-qt-wallet** and was renamed in March 2019 to **ZecWallet** so any references to the wallet before that date will use the zec-qt-wallet name. The previous name of zec-qt-wallet may remain in places where updating would cause issues with signing releases and upgrades.
+
+## Ycash
+
+### What is Ycash?
+Ycash is a "friendly-fork" of the Zcash blockchain that activates at block height 570,000. You can learn more [on the Ycash Foundation's website](https://ycash.xyz)
+
+### How do I claim my Ycash?
+After the Ycash fork, you'll be able to "claim" your YEC on the Ycash Blockchain if you have control of your private keys. If you're a ZecWallet user, you can use the following process:
+
+1. Wait for block 570,000
+2. After the fork, export your keys from `File -> Export Private Keys` for your Zcash Addresses
+3. Move your Zcash to a new address for all addresses that you exported the keys for
+4. Download and install [Ycash](https://www.ycash.xyz/download/)
+5. Import your keys into Ycash/YecWallet. You'll have to wait for the rescan to complete, which might take serveral hours to see your YEC.
+
+### Do I need to do something special in ZecWallet to protect myself?
+Ycash implements 2-way replay protection, and in addition has different address formats to prevent funds from either chain from being accidentally sent to the wrong address. 
+
+There is some concern over a privacy leak via [related nullifiers](https://github.com/zcash/zcash/issues/4007). To be super safe, you should send your shileded funds on Ycash to yourself before you spend them. 
+
+### How do I find out what my Ycash address is?
+You can use this online tool to [convert between Zcash and Ycash addresses](https://addressconverter.zecwallet.co).
