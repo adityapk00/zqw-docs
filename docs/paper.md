@@ -14,6 +14,7 @@ You can also enter some random characters that will add entropy to the random nu
 ## Saving as PDFs
 To generate a Zcash paper wallet, click the `Save to PDF` button or select `File -> Save to PDF`. All your current wallets will be saved to the PDF. You can also save the wallets into a text file.
 
+
 # Compiling from Source
 zecpaperwallet is built with Qt and rust. To compile from source, you [install Rust](https://www.rust-lang.org/tools/install), and [install Qt5](https://doc.qt.io/qt-5/gettingstarted.html). 
 

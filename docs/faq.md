@@ -211,15 +211,16 @@ Ycash is a "friendly-fork" of the Zcash blockchain that activates at block heigh
 After the Ycash fork, you'll be able to "claim" your YEC on the Ycash Blockchain if you have control of your private keys. If you're a ZecWallet user, you can use the following process:
 
 1. Wait for block 570,000
-2. After the fork, export your keys from `File -> Export Private Keys` for your Zcash Addresses
-3. Move your Zcash to a new address for all addresses that you exported the keys for
-4. Download and install [Ycash](https://www.ycash.xyz/download/)
-5. Import your keys into Ycash/YecWallet. You'll have to wait for the rescan to complete, which might take serveral hours to see your YEC.
+2. Make a note of the Zcash addresses that contain funds that you want to claim on Ycash.
+3. Create new Zcash address(s) and move your funds to the new address.
+4. Export your private keys for the old zcash addresses that you noted down in Step 2 from `File -> Export All Private Keys`
+5. Download and install [Ycash](https://www.ycash.xyz/download/)
+6. Import your private keys into Ycash/YecWallet. You'll have to wait for the rescan to complete, which might take serveral hours to see your YEC.
 
 ### Do I need to do something special in ZecWallet to protect myself?
 Ycash implements 2-way replay protection, and in addition has different address formats to prevent funds from either chain from being accidentally sent to the wrong address. 
 
-There is some concern over a privacy leak via [related nullifiers](https://github.com/zcash/zcash/issues/4007). To be super safe, you should send your shileded funds on Ycash to yourself before you spend them. 
+There is some concern over a privacy leak via [related nullifiers](https://github.com/zcash/zcash/issues/4007). To be super safe, you should send your shielded funds on Ycash to yourself before you spend them. 
 
 ### How do I find out what my Ycash address is?
 You can use this online tool to [convert between Zcash and Ycash addresses](https://addressconverter.zecwallet.co).
