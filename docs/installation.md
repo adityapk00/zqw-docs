@@ -7,30 +7,30 @@ ZecWallet runs on Windows, macOS and Linux and is [available to download](https:
 
 ??? info "Windows instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zecwallet/releases) and run the .msi installer (named `Windows-installer-zecwallet-v0.7.2.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zecwallet/releases) the release binary (named `Windows-binaries-zecwallet-v0.7.2.zip`), unzip it and double click on ZecWallet to start.
+    [Download](https://github.com/ZcashFoundation/zecwallet/releases) and run the .msi installer (named `Windows-installer-zecwallet-v0.7.5.msi`) and follow the prompts. Alternately, you can [download](https://github.com/ZcashFoundation/zecwallet/releases) the release binary (named `Windows-binaries-zecwallet-v0.7.5.zip`), unzip it and double click on ZecWallet to start.
 
 ??? info "macOS instructions (click to expand)"
 
-    [Download](https://github.com/ZcashFoundation/zecwallet/releases) the macOS release named `macOS-zecwallet-v0.7.2.dmg`
+    [Download](https://github.com/ZcashFoundation/zecwallet/releases) the macOS release named `macOS-zecwallet-v0.7.5.dmg`
     and double-click on the .dmg file to open it, and drag ZecWalleton to the Applications link to install. You will need to give authorisation for the program to run.
 
 ??? info "Linux instructions (click to expand)"
 
     If you are on Debian/Ubuntu, download the `.deb` package and install it.
     
-    `sudo dpkg -i linux-deb-zecwallet-v0.7.2.deb`
+    `sudo dpkg -i linux-deb-zecwallet-v0.7.5.deb`
     
     `sudo apt install -f`
 
     Or you can download and run the binaries directly.
     
-    `tar -xvf zecwallet-v0.7.2.tar.gz`
+    `tar -xvf zecwallet-v0.7.5.tar.gz`
     
-    `./zecwallet-v0.7.2/zecwallet` 
+    `./zecwallet-v0.7.5/zecwallet` 
 
 ## Verifying the download
 
-Starting from v0.5.10 all [ZecWallet releases](https://github.com/ZcashFoundation/zecwallet/releases) are signed and contain checksums that may be validated to ensure the integrity of the downloaded software. The current signatures and checksums are available to download via the signatures-v0.7.2.tar.gz file on the [releases page](https://github.com/ZcashFoundation/zecwallet/releases).
+Starting from v0.5.10 all [ZecWallet releases](https://github.com/ZcashFoundation/zecwallet/releases) are signed and contain checksums that may be validated to ensure the integrity of the downloaded software. The current signatures and checksums are available to download via the signatures-v0.7.5.tar.gz file on the [releases page](https://github.com/ZcashFoundation/zecwallet/releases).
 
 ### Signatures
 
@@ -56,7 +56,7 @@ Once the key has been imported, you can run the following command to verify the 
 Assuming a good signature, you will see a similar output to the below.
 
 ```
-gpg --verify macOS-zecwallet-v0.7.2.dmg.sig macOS-zecwallet-v0.7.2.dmg
+gpg --verify macOS-zecwallet-v0.7.5.dmg.sig macOS-zecwallet-v0.7.5.dmg
 gpg: Signature made Wed 20 Feb 11:06:04 2019 PST
 gpg:                using RSA key C23172D0C9569591ECEC8ECB0E1E90279521EBB4
 gpg: Good signature from "adityapk00 (PGP Key for zec-qt-wallet) <zcash@adityapk.com>" [full]
@@ -64,11 +64,11 @@ gpg: Good signature from "adityapk00 (PGP Key for zec-qt-wallet) <zcash@adityapk
 
 ### Checksums
 
-The file `sha256sum-v0.7.2.txt` contains the SHA256 checksums for each download. You can verify that the file you downloaded matches this checksum via the following command:
+The file `sha256sum-v0.7.5.txt` contains the SHA256 checksums for each download. You can verify that the file you downloaded matches this checksum via the following command:
 
 ```
-sha256sum macOS-zecwallet-v0.7.2.dmg
-f818d42e2850050ff9fa22408f595d51855ceaa895336e67a0.7.261c339bc24  macOS-zecwallet-v0.7.2.dmg
+sha256sum macOS-zecwallet-v0.7.5.dmg
+f818d42e2850050ff9fa22408f595d51855ceaa895336e67a0.7.561c339bc24  macOS-zecwallet-v0.7.5.dmg
 ```
 
 ## zcashd
