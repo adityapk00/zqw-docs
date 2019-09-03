@@ -41,7 +41,7 @@ You can also disable connecting over the internet via ZecWallet wormhole in the 
 
 ### What data can the wormhole service see?
 
-All communication is encrypted end-to-end, so the wormhole service can't see the content of your messages. It can see some meta-data like the IP addresses and date/timestamps. Both your phone and your desktop connect to `wormhole.zecqtwallet.com` over HTTPS.
+All communication is encrypted end-to-end, so the wormhole service can't see the content of your messages. It can see some meta-data like the IP addresses and date/timestamps. Both your phone and your desktop connect to `wormhole.zecwallet.co` over HTTPS.
 
 ### Will it always connect via the wormhole service?
 
