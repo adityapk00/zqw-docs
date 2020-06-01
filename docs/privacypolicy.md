@@ -1,10 +1,10 @@
-# ZecWallet Android Companion App Privacy Policy
+# Zecwallet Privacy Policy
 
 ---
 
-Your privacy is important to us. It is ZecWallet's policy to completely respect your privacy regarding any information.
+Your privacy is important to us. It is Zecwallet's policy to completely respect your privacy regarding any information.
 
-ZecWallet doesn't collect any personal information and neither do we store any personal information. We do collect some metadata, like your wormhole key, and only when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we are collecting it and how it will be used.
+Zecwallet doesn't collect any personal information and neither do we store any personal information. We do collect some metadata, like your wormhole key, and only when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent. We also let you know why we are collecting it and how it will be used.
 
 We only retain collected information for as long as necessary to provide you with your requested service. What data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as unauthorised access, disclosure, copying, use or modification.
 
